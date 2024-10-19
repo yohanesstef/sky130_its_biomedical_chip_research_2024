@@ -8,129 +8,82 @@ E {}
 B 2 165 -1050 965 -650 {flags=graph
 y1=-0.044
 y2=1.9
-ypos1=-0.044
-ypos2=1.9
+ypos1=0.6022059
+ypos2=2.3566659
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.5e-07
+x2=5e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"out @ 0.35; out%0\\"
-\\"out @ 0.7; out%1\\"
-\\"out @ 1.05; out%2\\"
-\\"out @ 1.4; out%3\\"
-\\"out @ 1.75; out%4\\""
-color="7 8 9 10 11"
+node="\\"out@vcon=0; out%0\\"
+\\"out@vcon=0.1; out%1\\"
+\\"out@vcon=0.2; out%2\\"
+\\"out@vcon=0.3; out%3\\"
+\\"out@vcon=0.4; out%4\\"
+\\"out@vcon=0.5; out%5\\"
+\\"out@vcon=0.6; out%6\\"
+\\"out@vcon=0.7; out%7\\"
+\\"out@vcon=0.8; out%8\\"
+\\"out@vcon=0.9; out%9\\"
+\\"out@vcon=1; out%10\\"
+\\"out@vcon=1.1; out%11\\"
+\\"out@vcon=1.2; out%12\\"
+\\"out@vcon=1.3; out%13\\"
+\\"out@vcon=1.4; out%14\\"
+\\"out@vcon=1.5; out%15\\"
+\\"out@vcon=1.6; out%16\\"
+\\"out@vcon=1.7; out%17\\"
+\\"out@vcon=1.8; out%18\\""
+color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 digital=1
 rainbow=1}
-B 2 965 -1050 1765 -650 {flags=graph
-y1=0.22
-y2=0.48
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=1.5e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"vpbias @0.35; vpbias%0\\"
-\\"vpbias @0.7; vpbias%1\\"
-\\"vpbias @1.05; vpbias%2\\"
-\\"vpbias @1.4; vpbias%3\\"
-\\"vpbias @1.75; vpbias%4\\""
-color="7 8 9 10 11"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
-B 2 965 -1450 1765 -1050 {flags=graph
-y1=3.6e-05
-y2=9.2e-05
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=1.5e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"i(viref)@0.35; i(viref)%0\\"
-\\"i(viref)@0.7; i(viref)%1\\"
-\\"i(viref)@1.05; i(viref)%2\\"
-\\"i(viref)@1.4; i(viref)%3\\"
-\\"i(viref)@1.75; i(viref)%4\\""
-color="7 8 9 10 11"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
 B 2 165 -1450 965 -1050 {flags=graph
-y1=6.412454e-05
-y2=0.00015923364
-ypos1=0
-ypos2=2
+y1=1.6
+y2=2
+ypos1=-0.22187117
+ypos2=0.22077848
 divy=5
 subdivy=1
 unity=1
 x1=0
-x2=1.5e-07
+x2=5e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"i(vib)@0.35; i(vib)%0\\"
-\\"i(vib)@0.7; i(vib)%1\\"
-\\"i(vib)@1.05; i(vib)%2\\"
-\\"i(vib)@1.4; i(vib)%3\\"
-\\"i(vib)@1.75; i(vib)%4\\""
-color="7 8 9 10 11"
+node="\\"vcon @0; vcon%0\\"
+\\"vcon @0.1; vcon%1\\"
+\\"vcon @0.2; vcon%2\\"
+\\"vcon @0.3; vcon%3\\"
+\\"vcon @0.4; vcon%4\\"
+\\"vcon @0.5; vcon%5\\"
+\\"vcon @0.6; vcon%6\\"
+\\"vcon @0.7; vcon%7\\"
+\\"vcon @0.8; vcon%8\\"
+\\"vcon @0.9; vcon%9\\"
+\\"vcon @1; vcon%10\\"
+\\"vcon @1.1; vcon%11\\"
+\\"vcon @1.2; vcon%12\\"
+\\"vcon @1.3; vcon%13\\"
+\\"vcon @1.4; vcon%14\\"
+\\"vcon @1.5; vcon%15\\"
+\\"vcon @1.6; vcon%16\\"
+\\"vcon @1.7; vcon%17\\"
+\\"vcon @1.8; vcon%18\\""
+color="7 4 17 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
 dataset=-1
 unitx=1
 logx=0
 logy=0
-}
-B 2 1765 -1050 2565 -650 {flags=graph
-y1=1.1
-y2=1.5
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=1.5e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"vnbias @0.35; vnbias%0\\"
-\\"vnbias @0.7; vnbias%1\\"
-\\"vnbias @1.05; vnbias%2\\"
-\\"vnbias @1.4; vnbias%3\\"
-\\"vnbias @1.75; vnbias%4\\""
-color="7 8 9 10 11"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
+digital=1}
 T {*w   : widht
 *l   : length
 *p   : pmos
@@ -437,8 +390,6 @@ C {devices/param.sym} 5 -700 0 0 {name=s1 value="
 +
 +rin=100
 +rex=10k
-+
-+lres=3.5
 "
 
 
@@ -845,63 +796,6 @@ L=lres
 model=res_xhigh_po
 spiceprefix=X
 mult=1}
-C {devices/launcher.sym} 225 -630 0 0 {name=h5
-descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/vco.raw tran"
-value="
-  .option wnflag=1
-  .option safecurrents
-
-  .param val=0.35
-  .param lres=0.35
-
-  Vvdd vdd  gnd dc 1.8
-  Vcon vcon gnd dc 1.5
-
-  .control
-    save all
-    write vco.raw
-    set appendwrite
-    let l_it = 0.35
-    *while l_it <= 7.0
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-    *end
-    quit 0
-  .endc
-"}
 C {sky130_fd_pr/nfet_01v8.sym} 340 -410 0 0 {name=M29
 W=wnvc
 L=lnvc
@@ -929,57 +823,30 @@ C {devices/simulator_commands.sym} 10 -1010 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="
+  .param val=0.5
+  .param lres=2.1
+
   .option wnflag=1
   .option safecurrents
 
-  .param val=0.35
-  .param lres=2.1
-
-  Vvdd vdd  gnd dc 1.8
-  Vcon vcon gnd dc 1.5
+  Vvdd vdd gnd dc 1.8
+  Vin vcon gnd dc \{val\}
 
   .control
     reset
     save all
     write vco.raw
     set appendwrite
-    let l_it = 0.35
-    *while l_it <= 7.0
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
 
-      alterparam lres = $&l_it
+    let vval=0
+    while vval <= 1.9
+      alterparam val=$&vval
       reset
       save all
-      tran 0.01n 150n
+      tran 0.01n 2u
       write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-    *end
+      let vval = vval + 0.1
+    end
     quit 0
   .endc
 "}
@@ -987,3 +854,7 @@ C {devices/lab_pin.sym} 310 -520 0 0 {name=p10 sig_type=std_logic lab=vpbias}
 C {devices/ipin.sym} 200 -445 0 0 {name=p5 lab=vdd}
 C {devices/ipin.sym} 200 -425 0 0 {name=p12 lab=gnd}
 C {devices/lab_pin.sym} 460 -220 0 0 {name=p6 sig_type=std_logic lab=vnbias}
+C {devices/launcher.sym} 230 -630 0 0 {name=h3
+descr="load tran" 
+tclcommand="xschem raw_read $netlist_dir/vco.raw tran"
+}
