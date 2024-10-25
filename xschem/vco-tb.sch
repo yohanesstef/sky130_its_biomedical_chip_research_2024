@@ -8,150 +8,65 @@ E {}
 B 2 165 -910 965 -510 {flags=graph
 y1=-0.044
 y2=1.9
-ypos1=-0.044
-ypos2=1.9
+ypos1=-0.53949042
+ypos2=1.4813747
 divy=5
 subdivy=1
 unity=1
-x1=8.9152294e-08
-x2=1.2394151e-07
+x1=1.8273543e-07
+x2=1.9633759e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"out @ 2.1; out%0\\"
-\\"out @ 2.45; out%1\\"
-\\"out @ 2.8; out%2\\"
-\\"out @ 3.15; out%3\\"
-\\"out @ 3.5; out%4\\"
-\\"out @ 3.85; out%5\\"
-\\"out @ 4.2; out%6\\"
-\\"out @ 4.55; out%7\\"
-\\"out @ 4.9; out%8\\"
-\\"out @ 5.25; out%9\\""
-color="7 8 9 10 11 12 13 14 15 16"
+node="\\"out@vcon=0; out%0\\"
+\\"out@vcon=0.1; out%1\\"
+\\"out@vcon=0.2; out%2\\"
+\\"out@vcon=0.3; out%3\\"
+\\"out@vcon=0.4; out%4\\"
+\\"out@vcon=0.5; out%5\\"
+\\"out@vcon=0.6; out%6\\"
+\\"out@vcon=0.7; out%7\\"
+\\"out@vcon=0.8; out%8\\"
+\\"out@vcon=0.9; out%9\\"
+\\"out@vcon=1; out%10\\"
+\\"out@vcon=1.1; out%11\\"
+\\"out@vcon=1.2; out%12\\"
+\\"out@vcon=1.3; out%13\\"
+\\"out@vcon=1.4; out%14\\"
+\\"out@vcon=1.5; out%15\\"
+\\"out@vcon=1.6; out%16\\"
+\\"out@vcon=1.7; out%17\\"
+\\"out@vcon=1.8; out%18\\""
+color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 digital=1
 rainbow=1}
-B 2 965 -910 1765 -510 {flags=graph
-y1=0.742
-y2=0.882
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=8.9152294e-08
-x2=1.2394151e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"vpbias @0.35; vpbias%0\\"
-\\"vpbias @0.7; vpbias%1\\"
-\\"vpbias @1.05; vpbias%2\\"
-\\"vpbias @1.4; vpbias%3\\"
-\\"vpbias @1.75; vpbias%4\\"
-\\"vpbias @0.35; vpbias%5\\"
-\\"vpbias @0.7; vpbias%6\\"
-\\"vpbias @1.05; vpbias%7\\"
-\\"vpbias @1.4; vpbias%8\\"
-\\"vpbias @1.75; vpbias%9\\""
-color="7 8 9 10 11 12 13 14 15 16"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
-B 2 965 -1310 1765 -910 {flags=graph
-y1=1.5e-05
-y2=3.3e-05
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=8.9152294e-08
-x2=1.2394151e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"i(viref)@0.35; i(viref)%0\\"
-\\"i(viref)@0.7; i(viref)%1\\"
-\\"i(viref)@1.05; i(viref)%2\\"
-\\"i(viref)@1.4; i(viref)%3\\"
-\\"i(viref)@1.75; i(viref)%4\\"
-\\"i(viref)@0.35; i(viref)%5\\"
-\\"i(viref)@0.7; i(viref)%6\\"
-\\"i(viref)@1.05; i(viref)%7\\"
-\\"i(viref)@1.4; i(viref)%8\\"
-\\"i(viref)@1.75; i(viref)%9\\""
-color="7 8 9 10 11 12 13 14 15 16"
-dataset=-1
-unitx=1
-logx=0
-logy=0
+T {*w   : widht
+*l   : length
+*p   : pmos
+*n   : nmos
+*o   : oscilator
+*cb  : current bias
+*vb  : voltage bias
+*vc  : voltage control
+*buff: buffer} 0 -700 0 0 0.3 0.3 {}
+C {devices/launcher.sym} 225 -490 0 0 {name=h5
+descr="load tran" 
+tclcommand="xschem raw_read $netlist_dir/vco-tb.raw tran"}
+C {devices/launcher.sym} 555 -490 0 0 {name=h1
+descr="Show Raw file" 
+tclcommand="textwindow $netlist_dir/vco-tb.raw"
 }
-B 2 165 -1310 965 -910 {flags=graph
-y1=2.7e-05
-y2=5.8e-05
-ypos1=2.7e-05
-ypos2=5.8e-05
-divy=5
-subdivy=1
-unity=1
-x1=8.9152294e-08
-x2=1.2394151e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"i(vib)@0.35; i(vib)%0\\"
-\\"i(vib)@0.7; i(vib)%1\\"
-\\"i(vib)@1.05; i(vib)%2\\"
-\\"i(vib)@1.4; i(vib)%3\\"
-\\"i(vib)@1.75; i(vib)%4\\"
-\\"i(vib)@0.35; i(vib)%5\\"
-\\"i(vib)@0.7; i(vib)%6\\"
-\\"i(vib)@1.05; i(vib)%7\\"
-\\"i(vib)@1.4; i(vib)%8\\"
-\\"i(vib)@1.75; i(vib)%9\\""
-color="7 8 9 10 11 12 13 14 15 16"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
-B 2 1765 -910 2565 -510 {flags=graph
-y1=1.1
-y2=1.5
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=8.9152294e-08
-x2=1.2394151e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"vnbias @0.35; vnbias%0\\"
-\\"vnbias @0.7; vnbias%1\\"
-\\"vnbias @1.05; vnbias%2\\"
-\\"vnbias @1.4; vnbias%3\\"
-\\"vnbias @1.75; vnbias%4\\""
-color="7 8 9 10 11"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
-C {devices/param.sym} 5 -560 0 0 {name=s1 value="
+C {devices/launcher.sym} 400 -490 0 0 {name=h2
+descr="load dc" 
+tclcommand="xschem raw_read $netlist_dir/vco-tb.raw dc"
+}
+C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
+C {devices/param.sym} 5 -490 0 0 {name=s2 value="
 +wpo=4.8 
 +lpo=0.54
 +wno=2.4 
@@ -162,8 +77,8 @@ C {devices/param.sym} 5 -560 0 0 {name=s1 value="
 +wncb=0.96
 +lncb=0.36
 +
-+wpvb=2.4
-+lpvb=0.36
++wpvb=6
++lpvb=0.9
 +
 +wnvc=96
 +lnvc=0.9
@@ -175,214 +90,53 @@ C {devices/param.sym} 5 -560 0 0 {name=s1 value="
 +
 +rin=100
 +rex=10k
-+
-+lres=3.5
 "
 
 
 }
-C {sky130_fd_pr/corner.sym} 10 -730 0 0 {*name=CORNER only_toplevel=false corner=tt
+C {sky130_fd_pr/corner.sym} 200 -390 0 0 {*name=CORNER only_toplevel=false corner=sf
 
-name=TT_MODELS
+name=TT_MODELS1
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
+value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice sf
 
 .param mc_mm_switch = 0
 .param mc_pr_switch = 0
 "}
-C {devices/launcher.sym} 225 -490 0 0 {name=h5
-descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/vco.raw tran"
-value="
-  .option wnflag=1
-  .option safecurrents
-
-  .param val=0.35	
-  .param lres=2.1
-
-  Vvdd vdd  gnd dc 1.8
-  Vcon vcon gnd dc 1.4
-
-  .control
-    reset
-    save all
-    write vco.raw
-    set appendwrite
-    let l_it = 2.1
-    *while l_it <= 7.0
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-    *end
-    quit 0
-  .endc
-"}
-C {devices/launcher.sym} 555 -490 0 0 {name=h1
-descr="Show Raw file" 
-tclcommand="textwindow $netlist_dir/vco.raw"
-}
-C {devices/launcher.sym} 400 -490 0 0 {name=h2
-descr="load dc" 
-tclcommand="xschem raw_read $netlist_dir/vco.raw dc"
-}
-C {devices/simulator_commands.sym} 10 -870 0 0 {name=COMMANDS
+C {devices/simulator_commands.sym} 360 -380 0 0 {name=COMMANDS1
 simulator=ngspice
 only_toplevel=false 
 value="
+  .param val=0.5
+  .param lres=3.5
+
   .option wnflag=1
   .option safecurrents
 
-  .param val=0.35	
-  .param lres=0.35
-
-  Vvdd vdd  gnd dc 1.8
-  Vcon vcon gnd dc 1.3
+  Vvdd vdd gnd dc 1.8
+  Vin vcon gnd dc \{val\}
 
   .control
     reset
     save all
-    write vco.raw
+    write vco-tb.raw
     set appendwrite
-    let l_it = 0.35
-    *while l_it <= 7.0
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
 
-      alterparam lres = $&l_it
+    let vval=0
+    while vval <= 1.9
+      alterparam val=$&vval
       reset
       save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-
-      alterparam lres = $&l_it
-      reset
-      save all
-      tran 0.01n 150n
-      write vco.raw
-      let l_it = l_it + 0.35
-    *end
+      tran 0.01n 500n
+      write vco-tb.raw
+      let vval = vval + 0.1
+    end
     quit 0
   .endc
 "}
-C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
+C {vco.sym} 740 -350 0 0 {name=x1}
+C {devices/lab_pin.sym} 590 -350 0 0 {name=p1 sig_type=std_logic lab=vdd}
+C {devices/lab_pin.sym} 590 -370 0 0 {name=p3 sig_type=std_logic lab=vcon}
+C {devices/lab_pin.sym} 590 -330 0 0 {name=p11 sig_type=std_logic lab=gnd}
+C {devices/lab_pin.sym} 890 -370 0 1 {name=p4 sig_type=std_logic lab=out}

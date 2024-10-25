@@ -5,85 +5,6 @@ K {}
 V {}
 S {}
 E {}
-B 2 165 -1050 965 -650 {flags=graph
-y1=-0.044
-y2=1.9
-ypos1=0.6022059
-ypos2=2.3566659
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=5e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"out@vcon=0; out%0\\"
-\\"out@vcon=0.1; out%1\\"
-\\"out@vcon=0.2; out%2\\"
-\\"out@vcon=0.3; out%3\\"
-\\"out@vcon=0.4; out%4\\"
-\\"out@vcon=0.5; out%5\\"
-\\"out@vcon=0.6; out%6\\"
-\\"out@vcon=0.7; out%7\\"
-\\"out@vcon=0.8; out%8\\"
-\\"out@vcon=0.9; out%9\\"
-\\"out@vcon=1; out%10\\"
-\\"out@vcon=1.1; out%11\\"
-\\"out@vcon=1.2; out%12\\"
-\\"out@vcon=1.3; out%13\\"
-\\"out@vcon=1.4; out%14\\"
-\\"out@vcon=1.5; out%15\\"
-\\"out@vcon=1.6; out%16\\"
-\\"out@vcon=1.7; out%17\\"
-\\"out@vcon=1.8; out%18\\""
-color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=1
-rainbow=1}
-B 2 165 -1450 965 -1050 {flags=graph
-y1=1.6
-y2=2
-ypos1=-0.22187117
-ypos2=0.22077848
-divy=5
-subdivy=1
-unity=1
-x1=0
-x2=5e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="\\"vcon @0; vcon%0\\"
-\\"vcon @0.1; vcon%1\\"
-\\"vcon @0.2; vcon%2\\"
-\\"vcon @0.3; vcon%3\\"
-\\"vcon @0.4; vcon%4\\"
-\\"vcon @0.5; vcon%5\\"
-\\"vcon @0.6; vcon%6\\"
-\\"vcon @0.7; vcon%7\\"
-\\"vcon @0.8; vcon%8\\"
-\\"vcon @0.9; vcon%9\\"
-\\"vcon @1; vcon%10\\"
-\\"vcon @1.1; vcon%11\\"
-\\"vcon @1.2; vcon%12\\"
-\\"vcon @1.3; vcon%13\\"
-\\"vcon @1.4; vcon%14\\"
-\\"vcon @1.5; vcon%15\\"
-\\"vcon @1.6; vcon%16\\"
-\\"vcon @1.7; vcon%17\\"
-\\"vcon @1.8; vcon%18\\""
-color="7 4 17 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=1}
 T {*w   : widht
 *l   : length
 *p   : pmos
@@ -93,9 +14,9 @@ T {*w   : widht
 *vb  : voltage bias
 *vc  : voltage control
 *buff: buffer} 10 -240 0 0 0.3 0.3 {}
-N 360 -490 360 -440 {
+N 360 -470 360 -440 {
 lab=vpbias}
-N 360 -260 360 -210 {
+N 360 -260 360 -120 {
 lab=gnd}
 N 310 -520 320 -520 {
 lab=vpbias}
@@ -105,7 +26,7 @@ N 310 -470 360 -470 {
 lab=vpbias}
 N 320 -520 320 -510 {
 lab=vpbias}
-N 320 -510 1130 -510 {
+N 1000 -510 1130 -510 {
 lab=vpbias}
 N 1130 -520 1130 -510 {
 lab=vpbias}
@@ -127,7 +48,7 @@ N 460 -220 510 -220 {
 lab=vnbias}
 N 470 -180 470 -170 {
 lab=vnbias}
-N 470 -170 1130 -170 {
+N 1000 -170 1130 -170 {
 lab=vnbias}
 N 1130 -180 1130 -170 {
 lab=vnbias}
@@ -151,71 +72,69 @@ N 1040 -260 1040 -210 {
 lab=#net5}
 N 990 -410 1000 -410 {
 lab=#net6}
-N 990 -410 990 -290 {
+N 990 -350 990 -290 {
 lab=#net6}
 N 990 -290 1000 -290 {
 lab=#net6}
 N 860 -290 870 -290 {
 lab=#net7}
-N 860 -410 860 -290 {
+N 860 -350 860 -290 {
 lab=#net7}
 N 860 -410 870 -410 {
 lab=#net7}
 N 730 -290 740 -290 {
 lab=#net8}
-N 730 -410 730 -290 {
+N 730 -350 730 -290 {
 lab=#net8}
 N 730 -410 740 -410 {
 lab=#net8}
 N 600 -290 610 -290 {
 lab=#net9}
-N 600 -410 600 -290 {
+N 600 -340 600 -290 {
 lab=#net9}
 N 600 -410 610 -410 {
 lab=#net9}
-N 650 -380 650 -320 {
+N 650 -350 650 -320 {
 lab=#net8}
 N 650 -350 730 -350 {
 lab=#net8}
-N 780 -380 780 -320 {
+N 780 -350 780 -320 {
 lab=#net7}
 N 780 -350 860 -350 {
 lab=#net7}
-N 910 -380 910 -320 {
+N 910 -350 910 -320 {
 lab=#net6}
 N 910 -350 990 -350 {
 lab=#net6}
 N 1120 -410 1130 -410 {
 lab=#net10}
-N 1120 -410 1120 -320 {
+N 1120 -350 1120 -290 {
 lab=#net10}
-N 1040 -380 1040 -320 {
-lab=#net10}
-N 1120 -320 1120 -290 {
+N 1040 -350 1040 -320 {
 lab=#net10}
 N 1120 -290 1130 -290 {
 lab=#net10}
 N 1040 -350 1120 -350 {
 lab=#net10}
-N 1170 -380 1170 -320 {
+N 1170 -350 1170 -320 {
 lab=#net9}
-N 1320 -380 1320 -320 {
+N 1320 -350 1320 -320 {
 lab=#net11}
 N 1270 -290 1280 -290 {
 lab=#net9}
-N 1270 -410 1270 -290 {
+N 1270 -350 1270 -290 {
 lab=#net9}
 N 1270 -410 1280 -410 {
 lab=#net9}
 N 1430 -410 1440 -410 {
 lab=#net11}
-N 1430 -410 1430 -290 {
+N 1430 -350 1430 -290 {
 lab=#net11}
 N 1430 -290 1440 -290 {
 lab=#net11}
 N 1320 -350 1430 -350 {
 lab=#net11}
-N 1170 -350 1270 -350 {
+N 1230 -350 1270 -350 {
 lab=#net9}
 N 1230 -350 1230 -340 {
 lab=#net9}
@@ -233,7 +152,7 @@ N 1170 -490 1170 -440 {
 lab=#net16}
 N 1480 -420 1480 -410 {
 lab=vdd}
-N 650 -420 1480 -420 {
+N 1400 -420 1480 -420 {
 lab=vdd}
 N 650 -420 650 -410 {
 lab=vdd}
@@ -247,7 +166,7 @@ N 1170 -420 1170 -410 {
 lab=vdd}
 N 1320 -420 1320 -410 {
 lab=vdd}
-N 1480 -380 1480 -320 {
+N 1480 -350 1480 -320 {
 lab=out}
 N 1170 -190 1170 -180 {
 lab=gnd}
@@ -255,7 +174,7 @@ N 650 -190 650 -180 {
 lab=gnd}
 N 510 -190 510 -180 {
 lab=gnd}
-N 510 -190 1170 -190 {
+N 1040 -190 1170 -190 {
 lab=gnd}
 N 1040 -190 1040 -180 {
 lab=gnd}
@@ -265,7 +184,7 @@ N 780 -190 780 -180 {
 lab=gnd}
 N 360 -530 360 -520 {
 lab=vdd}
-N 360 -530 1170 -530 {
+N 1040 -530 1170 -530 {
 lab=vdd}
 N 1170 -530 1170 -520 {
 lab=vdd}
@@ -281,7 +200,7 @@ N 510 -530 510 -520 {
 lab=vdd}
 N 650 -300 650 -290 {
 lab=gnd}
-N 650 -300 1480 -300 {
+N 1405 -300 1480 -300 {
 lab=gnd}
 N 1480 -300 1480 -290 {
 lab=gnd}
@@ -297,9 +216,9 @@ N 780 -300 780 -290 {
 lab=gnd}
 N 360 -580 360 -550 {
 lab=vdd}
-N 360 -580 1320 -580 {
+N 1170 -580 1320 -580 {
 lab=vdd}
-N 1320 -580 1480 -580 {
+N 1400 -580 1480 -580 {
 lab=vdd}
 N 1480 -580 1480 -440 {
 lab=vdd}
@@ -317,9 +236,7 @@ N 650 -580 650 -550 {
 lab=vdd}
 N 510 -580 510 -550 {
 lab=vdd}
-N 360 -150 360 -120 {
-lab=gnd}
-N 360 -120 1480 -120 {
+N 1405 -120 1480 -120 {
 lab=gnd}
 N 1480 -260 1480 -120 {
 lab=gnd}
@@ -339,15 +256,13 @@ N 510 -150 510 -120 {
 lab=gnd}
 N 310 -410 320 -410 {
 lab=vcon}
-N 340 -290 340 -180 {
-lab=gnd}
-N 340 -180 340 -120 {
+N 340 -290 340 -120 {
 lab=gnd}
 N 340 -120 360 -120 {
 lab=gnd}
 N 1480 -350 1490 -350 {
 lab=out}
-N 360 -410 365 -410 {
+N 360 -410 400 -410 {
 lab=gnd}
 N 435 -580 435 -530 {
 lab=vdd}
@@ -357,14 +272,142 @@ N 1405 -300 1405 -120 {
 lab=gnd}
 N 1400 -580 1400 -420 {
 lab=vdd}
-N 510 -490 510 -375 {
-lab=#net17}
-N 510 -315 510 -210 {
+N 510 -220 510 -210 {
 lab=vnbias}
-N 360 -210 360 -150 {
+N 360 -490 360 -470 {
+lab=vpbias}
+N 870 -510 1000 -510 {
+lab=vpbias}
+N 740 -510 870 -510 {
+lab=vpbias}
+N 610 -510 740 -510 {
+lab=vpbias}
+N 470 -510 610 -510 {
+lab=vpbias}
+N 320 -510 470 -510 {
+lab=vpbias}
+N 870 -170 1000 -170 {
+lab=vnbias}
+N 740 -170 870 -170 {
+lab=vnbias}
+N 470 -170 610 -170 {
+lab=vnbias}
+N 610 -170 740 -170 {
+lab=vnbias}
+N 650 -380 650 -350 {
+lab=#net8}
+N 730 -410 730 -350 {
+lab=#net8}
+N 780 -380 780 -350 {
+lab=#net7}
+N 860 -410 860 -350 {
+lab=#net7}
+N 910 -380 910 -350 {
+lab=#net6}
+N 990 -410 990 -350 {
+lab=#net6}
+N 1040 -380 1040 -350 {
+lab=#net10}
+N 1120 -410 1120 -350 {
+lab=#net10}
+N 1320 -380 1320 -350 {
+lab=#net11}
+N 1430 -410 1430 -350 {
+lab=#net11}
+N 1170 -380 1170 -350 {
+lab=#net9}
+N 1270 -410 1270 -350 {
+lab=#net9}
+N 1170 -350 1230 -350 {
+lab=#net9}
+N 600 -410 600 -340 {
+lab=#net9}
+N 650 -420 780 -420 {
+lab=vdd}
+N 780 -420 910 -420 {
+lab=vdd}
+N 910 -420 1040 -420 {
+lab=vdd}
+N 1040 -420 1170 -420 {
+lab=vdd}
+N 1170 -420 1320 -420 {
+lab=vdd}
+N 580 -190 650 -190 {
 lab=gnd}
-N 365 -410 400 -410 {
+N 910 -190 1040 -190 {
 lab=gnd}
+N 780 -190 910 -190 {
+lab=gnd}
+N 650 -190 780 -190 {
+lab=gnd}
+N 910 -530 1040 -530 {
+lab=vdd}
+N 780 -530 910 -530 {
+lab=vdd}
+N 650 -530 780 -530 {
+lab=vdd}
+N 510 -530 650 -530 {
+lab=vdd}
+N 435 -530 510 -530 {
+lab=vdd}
+N 1170 -300 1320 -300 {
+lab=gnd}
+N 1040 -300 1170 -300 {
+lab=gnd}
+N 910 -300 1040 -300 {
+lab=gnd}
+N 780 -300 910 -300 {
+lab=gnd}
+N 650 -300 780 -300 {
+lab=gnd}
+N 1040 -580 1170 -580 {
+lab=vdd}
+N 910 -580 1040 -580 {
+lab=vdd}
+N 780 -580 910 -580 {
+lab=vdd}
+N 650 -580 780 -580 {
+lab=vdd}
+N 510 -580 650 -580 {
+lab=vdd}
+N 435 -580 510 -580 {
+lab=vdd}
+N 1170 -120 1320 -120 {
+lab=gnd}
+N 1040 -120 1170 -120 {
+lab=gnd}
+N 780 -120 910 -120 {
+lab=gnd}
+N 910 -120 1040 -120 {
+lab=gnd}
+N 650 -120 780 -120 {
+lab=gnd}
+N 580 -120 650 -120 {
+lab=gnd}
+N 360 -120 510 -120 {
+lab=gnd}
+N 1480 -380 1480 -350 {
+lab=out}
+N 360 -580 435 -580 {
+lab=vdd}
+N 360 -530 435 -530 {
+lab=vdd}
+N 510 -190 580 -190 {
+lab=gnd}
+N 510 -120 580 -120 {
+lab=gnd}
+N 1320 -300 1405 -300 {
+lab=gnd}
+N 1320 -120 1405 -120 {
+lab=gnd}
+N 1320 -580 1400 -580 {
+lab=vdd}
+N 1320 -420 1400 -420 {
+lab=vdd}
+N 360 -380 360 -320 {
+lab=#net17}
+N 510 -490 510 -220 {
+lab=vnbias}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {devices/param.sym} 5 -700 0 0 {name=s1 value="
 +wpo=4.8 
@@ -377,8 +420,8 @@ C {devices/param.sym} 5 -700 0 0 {name=s1 value="
 +wncb=0.96
 +lncb=0.36
 +
-+wpvb=2.4
-+lpvb=0.36
++wpvb=6
++lpvb=0.9
 +
 +wnvc=96
 +lnvc=0.9
@@ -388,8 +431,7 @@ C {devices/param.sym} 5 -700 0 0 {name=s1 value="
 +wnbuff=1.2
 +lnbuff=0.18
 +
-+rin=100
-+rex=10k
++lres=3.5
 "
 
 
@@ -408,16 +450,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/corner.sym} 10 -870 0 0 {*name=CORNER only_toplevel=false corner=tt
-
-name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
-
-.param mc_mm_switch = 0
-.param mc_pr_switch = 0
-"}
 C {sky130_fd_pr/pfet_01v8.sym} 340 -520 0 0 {name=M2
 W=wpvb
 L=lpvb
@@ -786,8 +818,6 @@ C {devices/lab_pin.sym} 360 -580 0 0 {name=p1 sig_type=std_logic lab=vdd}
 C {devices/lab_pin.sym} 340 -120 0 0 {name=p2 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 310 -410 0 0 {name=p3 sig_type=std_logic lab=vcon}
 C {devices/lab_pin.sym} 1490 -350 0 1 {name=p4 sig_type=std_logic lab=out}
-C {devices/ammeter.sym} 360 -350 0 0 {name=Viref savecurrent=true}
-C {devices/ammeter.sym} 510 -345 0 0 {name=Vib savecurrent=true}
 C {devices/ipin.sym} 200 -485 0 0 {name=p8 lab=vcon}
 C {devices/opin.sym} 185 -465 0 0 {name=p9 lab=out}
 C {sky130_fd_pr/res_xhigh_po.sym} 360 -290 0 0 {name=R3
@@ -811,50 +841,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 400 -410 0 1 {name=p11 sig_type=std_logic lab=gnd}
-C {devices/launcher.sym} 555 -630 0 0 {name=h1
-descr="Show Raw file" 
-tclcommand="textwindow $netlist_dir/vco.raw"
-}
-C {devices/launcher.sym} 400 -630 0 0 {name=h2
-descr="load dc" 
-tclcommand="xschem raw_read $netlist_dir/vco.raw dc"
-}
-C {devices/simulator_commands.sym} 10 -1010 0 0 {name=COMMANDS
-simulator=ngspice
-only_toplevel=false 
-value="
-  .param val=0.5
-  .param lres=2.1
-
-  .option wnflag=1
-  .option safecurrents
-
-  Vvdd vdd gnd dc 1.8
-  Vin vcon gnd dc \{val\}
-
-  .control
-    reset
-    save all
-    write vco.raw
-    set appendwrite
-
-    let vval=0
-    while vval <= 1.9
-      alterparam val=$&vval
-      reset
-      save all
-      tran 0.01n 2u
-      write vco.raw
-      let vval = vval + 0.1
-    end
-    quit 0
-  .endc
-"}
 C {devices/lab_pin.sym} 310 -520 0 0 {name=p10 sig_type=std_logic lab=vpbias}
 C {devices/ipin.sym} 200 -445 0 0 {name=p5 lab=vdd}
 C {devices/ipin.sym} 200 -425 0 0 {name=p12 lab=gnd}
 C {devices/lab_pin.sym} 460 -220 0 0 {name=p6 sig_type=std_logic lab=vnbias}
-C {devices/launcher.sym} 230 -630 0 0 {name=h3
-descr="load tran" 
-tclcommand="xschem raw_read $netlist_dir/vco.raw tran"
-}

@@ -6,30 +6,22 @@ V {}
 S {}
 E {}
 B 2 170 -750 970 -350 {flags=graph
-y1=0
-y2=2
+y1=-0.026
+y2=1.9
 ypos1=0.091416442
 ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"vin2@ 0 deg;vin2%0\\"
-\\"vin2@ 45 deg;vin2%1\\"
-\\"vin2@ 90 deg;vin2%2\\"
-\\"vin2@ 135 deg;vin2%3\\"
-\\"vin2@ 180 deg;vin2%4\\"
-\\"vin2@ 225 deg;vin2%5\\"
-\\"vin2@ 270 deg;vin2%6\\"
-\\"vin2@ 315 deg;vin2%7\\"
-\\"vin2@ 360 deg;vin2%8\\"
-\\"phase; phase%0\\""
-color="7 8 9 10 11 12 13 14 15 6"
+node="\\"out\\"
+vin1"
+color="15 4"
 dataset=-1
 unitx=1
 logx=0
@@ -43,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,8 +64,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -98,8 +90,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -117,15 +109,15 @@ color=7
 node="\\"d@ 0 deg;d%0\\""
 digital=0}
 B 2 170 -1550 970 -1150 {flags=graph
-y1=0.86
-y2=1.7
+y1=0.78
+y2=1.1
 ypos1=-0.20129197
 ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -150,8 +142,8 @@ ypos2=1.3045748
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -171,47 +163,42 @@ node="vcon
 postvcon"
 digital=1}
 B 2 1770 -750 2570 -350 {flags=graph
-y1=1.7
-y2=1.9
-ypos1=-0.20129197
-ypos2=2.330708
+y1=0
+y2=2
+ypos1=0
+ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1.3872235e-07
-x2=2.4511344e-06
+x1=2.7499871e-07
+x2=3.1174096e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-
-
+node=time
+color=4
 dataset=-1
 unitx=1
 logx=0
 logy=0
-
-
-
-color="7 8 8"
-node="m.x2.xm1.msky130_fd_pr__pfet_01v8#sbody
-m.x2.xm1.msky130_fd_pr__pfet_01v8#dbody
-m.x2.xm1.msky130_fd_pr__pfet_01v8#body"
-digital=0}
+}
 N 910 -250 940 -250 {
 lab=vcon}
-N 1050 -250 1110 -250 {
-lab=postvcon}
-N 1090 -250 1090 -170 {
-lab=postvcon}
 N 1020 -110 1090 -110 {
 lab=GND}
 N 1030 -190 1030 -170 {
 lab=#net1}
-N 1000 -250 1050 -250 {
+N 1090 -110 1170 -110 {
+lab=GND}
+N 1170 -190 1170 -170 {
+lab=postvcon}
+N 1000 -250 1270 -250 {
+lab=postvcon}
+N 1170 -250 1170 -190 {
 lab=postvcon}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Stefan Schippers"}
-C {sky130_fd_pr/corner.sym} 10 -540 0 0 {*name=CORNER only_toplevel=false corner=tt
+C {sky130_fd_pr/corner.sym} 10 -840 0 0 {*name=CORNER only_toplevel=false corner=tt
 
 name=TT_MODELS
 only_toplevel=true
@@ -221,24 +208,25 @@ value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
 .param mc_mm_switch = 0
 .param mc_pr_switch = 0
 "}
-C {devices/simulator_commands.sym} 10 -690 0 0 {name=COMMANDS
+C {devices/simulator_commands.sym} 10 -990 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="  
-  .param max_freq=120e6 period=\{1/max_freq\} time_high=\{period/2\}
+  .param max_freq=100e6 period=\{1/max_freq\} time_high=\{period/2\}
   .param delay_vin1=\{time_high\} delay_vin2=\{time_high*1.5\}
 
   .option wnflag=1
   .option safecurrents
 
-  Vvdd vdd  gnd 1.8
-  Vin1 vin1 gnd pulse(0 1.8 \{delay_vin1\} 1p 1p \{time_high\} \{period\})
-  Vin2 vin2 gnd pulse(0 1.8 \{delay_vin2\} 1p 1p \{time_high\} \{period\})
+  *Vvdd  VDDA  VSS dc 1.8
+  Vvdd1 VDD   GND dc 1.8
+  Vin1 vin1 GND pulse(0 1.8 \{delay_vin1\} 1p 1p \{time_high\} \{period\})
+  *Vin2 vin2 gnd pulse(0 1.8 \{delay_vin2\} 1p 1p \{time_high\} \{period\})
 
   .control
      reset
      save all
-     tran 0.01n 2u
+     tran 0.01n 1u
      write pll-tb.raw
      *set appendwrite
     
@@ -268,20 +256,17 @@ C {devices/launcher.sym} 605 -320 0 0 {name=h2
 descr="Show Raw file" 
 tclcommand="textwindow $netlist_dir/pll-tb.raw"
 }
-C {devices/lab_pin.sym} 260 -230 0 0 {name=p1 sig_type=std_logic lab=vin2}
+C {devices/lab_pin.sym} 260 -230 0 0 {name=p1 sig_type=std_logic lab=out}
 C {devices/lab_pin.sym} 260 -250 0 0 {name=p3 sig_type=std_logic lab=vin1}
-C {devices/lab_pin.sym} 260 -210 0 0 {name=p13 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 260 -190 0 0 {name=p15 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 560 -250 0 1 {name=p79 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} 560 -230 0 1 {name=p80 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 610 -250 0 0 {name=p2 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} 610 -230 0 0 {name=p4 sig_type=std_logic lab=D}
-C {devices/lab_pin.sym} 610 -210 0 0 {name=p5 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} 610 -190 0 0 {name=p6 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 930 -250 3 1 {name=p7 sig_type=std_logic lab=vcon}
+C {devices/lab_pin.sym} 260 -210 0 0 {name=p5 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 920 -250 3 1 {name=p7 sig_type=std_logic lab=vcon}
 C {devices/lab_pin.sym} 1020 -110 0 0 {name=p9 sig_type=std_logic lab=GND}
-C {devices/lab_pin.sym} 1110 -250 0 1 {name=p10 sig_type=std_logic lab=postvcon}
-C {devices/param.sym} 25 -210 0 0 {name=s1 value="
+C {devices/lab_pin.sym} 1240 -250 3 1 {name=p10 sig_type=std_logic lab=postvcon}
+C {devices/param.sym} 15 -690 0 0 {name=s1 value="
 +wpmos=1.26
 +lpmos=0.15
 +wnmos=0.42
@@ -309,8 +294,42 @@ value=50k
 footprint=1206
 device=resistor
 m=1}
-C {devices/capa-2.sym} 1090 -140 0 0 {name=C1
+C {devices/capa-2.sym} 1170 -140 0 0 {name=C1
 m=1
 value=5p
 footprint=1206
 device=polarized_capacitor}
+C {vco.sym} 1420 -230 0 0 {name=x3}
+C {devices/lab_pin.sym} 1570 -250 0 1 {name=p12 sig_type=std_logic lab=out}
+C {devices/param.sym} 15 -540 0 0 {name=s2 value="
++wpo=4.8 
++lpo=0.54
++wno=2.4 
++lno=0.54
++
++wpcb=4.8
++lpcb=0.36
++wncb=0.96
++lncb=0.36
++
++wpvb=2.4
++lpvb=0.36
++
++wnvc=96
++lnvc=0.9
++
++wpbuff=4.8
++lpbuff=0.18
++wnbuff=1.2
++lnbuff=0.18
++
++lres=3.5
+"
+
+
+}
+C {devices/lab_pin.sym} 260 -190 0 0 {name=p14 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 610 -210 0 0 {name=p6 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1270 -230 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 610 -190 0 0 {name=p11 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 1270 -210 0 0 {name=p13 sig_type=std_logic lab=GND}

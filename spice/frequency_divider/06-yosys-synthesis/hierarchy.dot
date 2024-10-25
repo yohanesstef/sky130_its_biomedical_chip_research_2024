@@ -1,0 +1,37 @@
+digraph "freq_psc" {
+label="freq_psc";
+rankdir="LR";
+remincross=true;
+n8 [ shape=diamond, label="out_psc", color="black", fontcolor="black"];
+n9 [ shape=diamond, label="psc_cnt", color="black", fontcolor="black"];
+n10 [ shape=octagon, label="psc", color="black", fontcolor="black"];
+n11 [ shape=octagon, label="out", color="black", fontcolor="black"];
+n12 [ shape=octagon, label="rst", color="black", fontcolor="black"];
+n13 [ shape=octagon, label="clk", color="black", fontcolor="black"];
+c16 [ shape=record, label="{{<p14> A}|$4\n$not|{<p15> Y}}",  ];
+v0 [ label="1" ];
+c18 [ shape=record, label="{{<p14> A|<p17> B}|$3\n$add|{<p15> Y}}",  ];
+c19 [ shape=record, label="{{<p14> A|<p17> B}|$2\n$lt|{<p15> Y}}",  ];
+p1 [shape=box, style=rounded, label="PROC $6\n/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:13.7-13.20", ];
+p2 [shape=box, style=rounded, label="PROC $5\n/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:12.26-12.39", ];
+p3 [shape=box, style=rounded, label="PROC $1\n/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15.3-28.6", ];
+x4 [shape=point, ];
+n10:e -> c19:p17:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+x4:e -> n11:w [color="black", fontcolor="black", label=""];
+n12:e -> p3:w [color="black", fontcolor="black", label=""];
+n13:e -> p3:w [color="black", fontcolor="black", label=""];
+c16:p15:e -> p3:w [color="black", fontcolor="black", label=""];
+c18:p15:e -> p3:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c19:p15:e -> p3:w [color="black", fontcolor="black", label=""];
+p1:e -> n8:w [color="black", fontcolor="black", label=""];
+p3:e -> n8:w [color="black", fontcolor="black", label=""];
+n8:e -> c16:p14:w [color="black", fontcolor="black", label=""];
+n8:e -> p3:w [color="black", fontcolor="black", label=""];
+n8:e -> x4:w [color="black", fontcolor="black", label=""];
+p2:e -> n9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p3:e -> n9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n9:e -> c18:p14:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n9:e -> c19:p14:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n9:e -> p3:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+v0:e -> c18:p17:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+}
