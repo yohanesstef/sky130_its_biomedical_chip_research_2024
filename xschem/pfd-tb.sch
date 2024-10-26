@@ -13,8 +13,8 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.5e-07
+x1=4.7497149e-09
+x2=6.8532297e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,13 +38,13 @@ digital=1}
 B 2 30 -1240 830 -840 {flags=graph
 y1=0
 y2=2
-ypos1=0.6
-ypos2=2.6
+ypos1=0.1
+ypos2=2.1
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.5e-07
+x1=4.7497149e-09
+x2=6.8532297e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -67,13 +67,13 @@ digital=1}
 B 2 830 -1240 1630 -840 {flags=graph
 y1=-0.20129197
 y2=2.330708
-ypos1=0.68490803
-ypos2=3.216908
+ypos1=0.051908032
+ypos2=2.583908
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.5e-07
+x1=4.7497149e-09
+x2=6.8532297e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -101,13 +101,13 @@ digital=1}
 B 2 830 -840 1630 -440 {flags=graph
 y1=-0.20129197
 y2=2.330708
-ypos1=0.68490803
-ypos2=3.216908
+ypos1=-0.20129197
+ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.5e-07
+x1=4.7497149e-09
+x2=6.8532297e-09
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -176,38 +176,40 @@ simulator=ngspice
 only_toplevel=false 
 value="  
   .param max_freq=100e6 period=\{1/max_freq\} time_high=\{period/2\}
-  .param delay_vin1=\{time_high\} delay_vin2=\{time_high*3\}
+  .param delay_vin1=\{time_high\} delay_vin2=\{time_high\}
 
   .option wnflag=1
   .option safecurrents
 
   Vvdd vdd  gnd 1.8
-  Vin1 vin1 gnd pulse(0 1.8 \{delay_vin1\} 1p 1p \{time_high\} \{period\})
-  Vin2 vin2 gnd pulse(0 1.8 \{delay_vin2\} 1p 1p \{time_high\} \{period\})
+  Vin1 vin1 gnd pulse(0 1.8 \{delay_vin2\} 1p 1p \{time_high\} \{period\})
+  Vin2 vin2 gnd pulse(0 1.8 \{delay_vin1\} 1p 1p \{time_high\} \{period\})
 
   .control
+     reset
      save all
      write pfd-tb.raw
      set appendwrite
 
      *1=0 1.5=90 2=180 3=360
-     let phase=1
+     let phaseval=5e-9
 
-     while phase <= 2
-      alter @vin2[PULSE] [ 0 1.8 \{delay_vin2*$&phase\} 1p 1p \{time_high\} \{period\}) ]
+     while phaseval <= 16e-9
+      *alter @vin2[PULSE] [ 0 1.8 \{delay_vin2*$&phase\} 1p 1p \{time_high\} \{period\}) ]
+      alterparam delay_vin2 = $&phaseval
       reset
       save all
       tran 0.01n 150n
       write pfd-tb.raw
-      let phase = phase + 0.25
+      let phaseval = phaseval + 1.25e-9
      end
     quit 0
   .endc
 "}
-C {pfd.sym} 720 -250 0 0 {name=x1}
 C {devices/lab_pin.sym} 570 -260 0 0 {name=p1 sig_type=std_logic lab=vin2}
 C {devices/lab_pin.sym} 570 -280 0 0 {name=p3 sig_type=std_logic lab=vin1}
 C {devices/lab_pin.sym} 570 -240 0 0 {name=p13 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 570 -220 0 0 {name=p15 sig_type=std_logic lab=GND}
 C {devices/lab_pin.sym} 870 -280 0 1 {name=p79 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} 870 -260 0 1 {name=p80 sig_type=std_logic lab=D}
+C {pfd.sym} 720 -250 0 0 {name=x1}
