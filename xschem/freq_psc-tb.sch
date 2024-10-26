@@ -35,6 +35,10 @@ only_toplevel=true
 format="tcleval( @value )"
 value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+.include $::SKYWATER_STDCELLS/sky130_ef_sc_hd__decap_12.spice
+.include $::SKYWATER_STDCELLS/sky130_ef_sc_hd__fill_4.spice
+.include $::SKYWATER_STDCELLS/sky130_ef_sc_hd__fill_8.spice
+.include $::SKYWATER_STDCELLS/sky130_ef_sc_hd__fill_12.spice
 .param mc_mm_switch = 0
 .param mc_pr_switch = 0
 "}
@@ -89,7 +93,8 @@ value="
   .control
      reset
      save all
-     tran 0.01n 1u
+     tran 0.01n 100n uic
+     remzerovec
      write freq_psc-tb.raw
     quit 0
   .endc
