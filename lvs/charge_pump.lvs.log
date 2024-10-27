@@ -1,19 +1,31 @@
-Netgen 1.5.286 compiled on Fri Oct 25 06:15:24 PM WIB 2024
+Netgen 1.5.282 compiled on Sun Oct 13 23:01:02 WIB 2024
 Warning: netgen command 'format' use fully-qualified name '::netgen::format'
 Warning: netgen command 'global' use fully-qualified name '::netgen::global'
-Reading netlist file /home/kandiasrw/aic/sky130_its_biomedical_chip_research_2024/lvs/charge-pump.ext.spc
+Reading netlist file /home/gils/aic/sky130_its_biomedical_chip_research_2024/lvs/charge_pump.ext.spc
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
-Reading netlist file /home/kandiasrw/aic/sky130_its_biomedical_chip_research_2024/lvs/charge-pump.sch.spc
+Reading netlist file /home/gils/aic/sky130_its_biomedical_chip_research_2024/lvs/charge_pump.sch.spc
 Call to undefined subcircuit sky130_fd_pr__pfet_01v8
 Creating placeholder cell definition.
 Call to undefined subcircuit sky130_fd_pr__nfet_01v8
 Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_sc_hd__inv_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_sc_hd__buf_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__pfet_01v8_hvt
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_sc_hd__nand2_2
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_sc_hd__nor2_2
+Creating placeholder cell definition.
 
-Reading setup file /home/kandiasrw/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+Reading setup file /home/gils/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
 
+Model sky130_fd_pr__res_generic_po pin end_a == end_b
+No property mult found for device sky130_fd_pr__res_generic_po
 Model sky130_fd_pr__nfet_01v8 pin 1 == 3
 No property mult found for device sky130_fd_pr__nfet_01v8
 No property sa found for device sky130_fd_pr__nfet_01v8
@@ -64,32 +76,47 @@ No property nrs found for device sky130_fd_pr__pfet_01v8
 No property area found for device sky130_fd_pr__pfet_01v8
 No property perim found for device sky130_fd_pr__pfet_01v8
 No property topography found for device sky130_fd_pr__pfet_01v8
-Comparison output logged to file /home/kandiasrw/aic/sky130_its_biomedical_chip_research_2024/lvs/charge-pump.lvs.out
-Logging to file "/home/kandiasrw/aic/sky130_its_biomedical_chip_research_2024/lvs/charge-pump.lvs.out" enabled
+Model sky130_fd_pr__pfet_01v8_hvt pin 1 == 3
+No property as found for device sky130_fd_pr__pfet_01v8_hvt
+No property ad found for device sky130_fd_pr__pfet_01v8_hvt
+No property ps found for device sky130_fd_pr__pfet_01v8_hvt
+No property pd found for device sky130_fd_pr__pfet_01v8_hvt
+No property mult found for device sky130_fd_pr__pfet_01v8_hvt
+No property sa found for device sky130_fd_pr__pfet_01v8_hvt
+No property sb found for device sky130_fd_pr__pfet_01v8_hvt
+No property sd found for device sky130_fd_pr__pfet_01v8_hvt
+No property nf found for device sky130_fd_pr__pfet_01v8_hvt
+No property nrd found for device sky130_fd_pr__pfet_01v8_hvt
+No property nrs found for device sky130_fd_pr__pfet_01v8_hvt
+No property area found for device sky130_fd_pr__pfet_01v8_hvt
+No property perim found for device sky130_fd_pr__pfet_01v8_hvt
+No property topography found for device sky130_fd_pr__pfet_01v8_hvt
+No property value found for device sky130_fd_pr__diode_pw2nd_05v5
+No property mult found for device sky130_fd_pr__diode_pw2nd_05v5
+No property perim found for device sky130_fd_pr__diode_pw2nd_05v5
+Comparison output logged to file /home/gils/aic/sky130_its_biomedical_chip_research_2024/lvs/charge_pump.lvs.out
+Logging to file "/home/gils/aic/sky130_its_biomedical_chip_research_2024/lvs/charge_pump.lvs.out" enabled
 Circuit sky130_fd_pr__pfet_01v8 contains no devices.
 Circuit sky130_fd_pr__nfet_01v8 contains no devices.
 
-Contents of circuit 1:  Circuit: 'charge-pump'
-Circuit charge-pump contains 4 device instances.
+Contents of circuit 1:  Circuit: 'charge_pump'
+Circuit charge_pump contains 4 device instances.
   Class: sky130_fd_pr__nfet_01v8 instances:   2
   Class: sky130_fd_pr__pfet_01v8 instances:   2
 Circuit contains 6 nets.
-Contents of circuit 2:  Circuit: 'charge-pump'
-Circuit charge-pump contains 4 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:   2
-  Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 6 nets.
+Contents of circuit 2:  Circuit: 'charge_pump'
+Circuit charge_pump contains 8 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   4
+  Class: sky130_fd_pr__pfet_01v8_hvt instances:   3
+  Class: sky130_fd_pr__pfet_01v8 instances:   1
+Circuit contains 8 nets.
 
-Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
-Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
+Circuit 1 contains 4 devices, Circuit 2 contains 8 devices. *** MISMATCH ***
+Circuit 1 contains 6 nets,    Circuit 2 contains 8 nets. *** MISMATCH ***
 
 
 Final result: 
-Circuits match uniquely.
-Property errors were found.
+Top level cell failed pin matching.
 
-The following cells had property errors:
- charge-pump
-
-Logging to file "/home/kandiasrw/aic/sky130_its_biomedical_chip_research_2024/lvs/charge-pump.lvs.out" disabled
+Logging to file "/home/gils/aic/sky130_its_biomedical_chip_research_2024/lvs/charge_pump.lvs.out" disabled
 LVS Done.

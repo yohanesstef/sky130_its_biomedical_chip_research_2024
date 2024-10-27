@@ -1,0 +1,44 @@
+timestamp 1730021255
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__pfet_01v8_SC63VW sky130_fd_pr__pfet_01v8_SC63VW_4 1 0 879 0 -1 -62
+use sky130_fd_pr__pfet_01v8_SC63VW sky130_fd_pr__pfet_01v8_SC63VW_3 1 0 679 0 1 10
+use sky130_fd_pr__pfet_01v8_SC63VW sky130_fd_pr__pfet_01v8_SC63VW_1 -1 0 679 0 1 456
+use sky130_fd_pr__pfet_01v8_SC63VW sky130_fd_pr__pfet_01v8_SC63VW_0 -1 0 879 0 1 456
+port "preout" 5 921 93 921 93 m1
+port "drain2" 4 643 -215 644 -215 m1
+port "drain1" 3 633 235 633 235 m1
+port "VIN" 1 854 585 854 585 m1
+port "RST" 2 658 584 658 584 m1
+port "DVDD" 0 979 438 979 438 m1
+node "preout" 0 0 921 93 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "drain2" 0 0 643 -215 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_700_294#" 0 0 700 294 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "drain1" 0 0 633 235 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VIN" 0 0 854 585 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RST" 0 0 658 584 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DVDD" 0 0 979 438 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_0/VSUBS" "sky130_fd_pr__pfet_01v8_SC63VW_1/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_1/VSUBS" "sky130_fd_pr__pfet_01v8_SC63VW_3/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_3/VSUBS" "sky130_fd_pr__pfet_01v8_SC63VW_4/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_4/VSUBS" "VSUBS"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_0/a_n73_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_0/w_n109_n224#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_0/w_n109_n224#" "sky130_fd_pr__pfet_01v8_SC63VW_1/w_n109_n224#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_1/w_n109_n224#" "sky130_fd_pr__pfet_01v8_SC63VW_3/a_15_n162#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_3/a_15_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_3/w_n109_n224#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_3/w_n109_n224#" "sky130_fd_pr__pfet_01v8_SC63VW_4/a_n73_n162#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_4/a_n73_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_4/w_n109_n224#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_4/w_n109_n224#" "DVDD"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_4/a_15_n162#" "preout" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_0/a_15_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_1/a_n73_n162#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_1/a_n73_n162#" "m1_700_294#"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_1/a_15_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_3/a_n33_121#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_3/a_n33_121#" "drain1"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_3/a_n73_n162#" "sky130_fd_pr__pfet_01v8_SC63VW_4/a_n33_121#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_4/a_n33_121#" "drain2"
+merge "sky130_fd_pr__pfet_01v8_SC63VW_0/a_n33_121#" "VIN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_SC63VW_1/a_n33_121#" "RST" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
