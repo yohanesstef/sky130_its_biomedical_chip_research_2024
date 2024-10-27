@@ -1,4 +1,4 @@
-* NGSPICE file created from charge-pump.ext - technology: sky130A
+* NGSPICE file created from charge_pump.ext - technology: sky130A
 
 .subckt sky130_fd_pr__pfet_01v8_2V7TNJ a_n18_n506# w_n112_n542# a_n76_n480# a_18_n480#
 X0 a_18_n480# a_n18_n506# a_n76_n480# w_n112_n542# sky130_fd_pr__pfet_01v8 ad=1.392 pd=10.18 as=1.392 ps=10.18 w=4.8 l=0.18
@@ -16,7 +16,7 @@ X0 a_18_n151# a_n33_111# a_n76_n151# a_n178_n263# sky130_fd_pr__nfet_01v8 ad=0.3
 X0 a_36_n444# a_n36_n541# a_n94_n444# w_n130_n544# sky130_fd_pr__pfet_01v8 ad=1.392 pd=10.18 as=1.392 ps=10.18 w=4.8 l=0.36
 .ends
 
-.subckt charge-pump U D VCON VDD GND
+.subckt charge_pump U D VCON VDD GND
 Xsky130_fd_pr__pfet_01v8_2V7TNJ_0 U VDD m1_n46_84# VDD sky130_fd_pr__pfet_01v8_2V7TNJ
 XXM2 GND m1_n46_84# GND U sky130_fd_pr__nfet_01v8_4N4BM2
 XXM4 GND GND D VCON sky130_fd_pr__nfet_01v8_R32FGG
