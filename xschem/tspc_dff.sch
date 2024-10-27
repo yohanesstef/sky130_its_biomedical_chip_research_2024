@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -46,5 +46,5 @@ C {devices/lab_pin.sym} 350 -350 0 0 {name=p7 sig_type=std_logic lab=rst}
 C {devices/lab_pin.sym} 660 -350 0 1 {name=p8 sig_type=std_logic lab=preOut}
 C {devices/lab_pin.sym} 310 -270 0 0 {name=p9 sig_type=std_logic lab=DVDD}
 C {devices/lab_pin.sym} 310 -160 0 0 {name=p10 sig_type=std_logic lab=DVSS}
-C {pcell_pfd.sym} 510 -310 0 0 {name=x1}
-C {ncell_pfd.sym} 510 -200 0 0 {name=x2}
+C {/home/gils/aic/sky130_its_biomedical_chip_research_2024/xschem/pcell_pfd.sym} 510 -310 0 0 {name=x1}
+C {/home/gils/aic/sky130_its_biomedical_chip_research_2024/xschem/ncell_pfd.sym} 510 -200 0 0 {name=x2}
