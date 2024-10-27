@@ -17,7 +17,7 @@ T {*w   : widht
 N 360 -470 360 -440 {
 lab=vpbias}
 N 360 -260 360 -120 {
-lab=gnd}
+lab=AVSS}
 N 310 -520 320 -520 {
 lab=vpbias}
 N 310 -520 310 -470 {
@@ -151,127 +151,127 @@ lab=#net15}
 N 1170 -490 1170 -440 {
 lab=#net16}
 N 1480 -420 1480 -410 {
-lab=vdd}
+lab=AVDD}
 N 1400 -420 1480 -420 {
-lab=vdd}
+lab=AVDD}
 N 650 -420 650 -410 {
-lab=vdd}
+lab=AVDD}
 N 780 -420 780 -410 {
-lab=vdd}
+lab=AVDD}
 N 910 -420 910 -410 {
-lab=vdd}
+lab=AVDD}
 N 1040 -420 1040 -410 {
-lab=vdd}
+lab=AVDD}
 N 1170 -420 1170 -410 {
-lab=vdd}
+lab=AVDD}
 N 1320 -420 1320 -410 {
-lab=vdd}
+lab=AVDD}
 N 1480 -350 1480 -320 {
-lab=out}
+lab=VOUT}
 N 1170 -190 1170 -180 {
-lab=gnd}
+lab=AVSS}
 N 650 -190 650 -180 {
-lab=gnd}
+lab=AVSS}
 N 510 -190 510 -180 {
-lab=gnd}
+lab=AVSS}
 N 1040 -190 1170 -190 {
-lab=gnd}
+lab=AVSS}
 N 1040 -190 1040 -180 {
-lab=gnd}
+lab=AVSS}
 N 910 -190 910 -180 {
-lab=gnd}
+lab=AVSS}
 N 780 -190 780 -180 {
-lab=gnd}
+lab=AVSS}
 N 360 -530 360 -520 {
-lab=vdd}
+lab=AVDD}
 N 1040 -530 1170 -530 {
-lab=vdd}
+lab=AVDD}
 N 1170 -530 1170 -520 {
-lab=vdd}
+lab=AVDD}
 N 1040 -530 1040 -520 {
-lab=vdd}
+lab=AVDD}
 N 910 -530 910 -520 {
-lab=vdd}
+lab=AVDD}
 N 780 -530 780 -520 {
-lab=vdd}
+lab=AVDD}
 N 650 -530 650 -520 {
-lab=vdd}
+lab=AVDD}
 N 510 -530 510 -520 {
-lab=vdd}
+lab=AVDD}
 N 650 -300 650 -290 {
-lab=gnd}
+lab=AVSS}
 N 1405 -300 1480 -300 {
-lab=gnd}
+lab=AVSS}
 N 1480 -300 1480 -290 {
-lab=gnd}
+lab=AVSS}
 N 1320 -300 1320 -290 {
-lab=gnd}
+lab=AVSS}
 N 1170 -300 1170 -290 {
-lab=gnd}
+lab=AVSS}
 N 1040 -300 1040 -290 {
-lab=gnd}
+lab=AVSS}
 N 910 -300 910 -290 {
-lab=gnd}
+lab=AVSS}
 N 780 -300 780 -290 {
-lab=gnd}
+lab=AVSS}
 N 360 -580 360 -550 {
-lab=vdd}
+lab=AVDD}
 N 1170 -580 1320 -580 {
-lab=vdd}
+lab=AVDD}
 N 1400 -580 1480 -580 {
-lab=vdd}
+lab=AVDD}
 N 1480 -580 1480 -440 {
-lab=vdd}
+lab=AVDD}
 N 1320 -580 1320 -440 {
-lab=vdd}
+lab=AVDD}
 N 1170 -580 1170 -550 {
-lab=vdd}
+lab=AVDD}
 N 1040 -580 1040 -550 {
-lab=vdd}
+lab=AVDD}
 N 910 -580 910 -550 {
-lab=vdd}
+lab=AVDD}
 N 780 -580 780 -550 {
-lab=vdd}
+lab=AVDD}
 N 650 -580 650 -550 {
-lab=vdd}
+lab=AVDD}
 N 510 -580 510 -550 {
-lab=vdd}
+lab=AVDD}
 N 1405 -120 1480 -120 {
-lab=gnd}
+lab=AVSS}
 N 1480 -260 1480 -120 {
-lab=gnd}
+lab=AVSS}
 N 1320 -260 1320 -120 {
-lab=gnd}
+lab=AVSS}
 N 1170 -150 1170 -120 {
-lab=gnd}
+lab=AVSS}
 N 910 -150 910 -120 {
-lab=gnd}
+lab=AVSS}
 N 1040 -150 1040 -120 {
-lab=gnd}
+lab=AVSS}
 N 780 -150 780 -120 {
-lab=gnd}
+lab=AVSS}
 N 650 -150 650 -120 {
-lab=gnd}
+lab=AVSS}
 N 510 -150 510 -120 {
-lab=gnd}
+lab=AVSS}
 N 310 -410 320 -410 {
-lab=vcon}
+lab=VCON}
 N 340 -290 340 -120 {
-lab=gnd}
+lab=AVSS}
 N 340 -120 360 -120 {
-lab=gnd}
+lab=AVSS}
 N 1480 -350 1490 -350 {
-lab=out}
+lab=VOUT}
 N 360 -410 400 -410 {
-lab=gnd}
+lab=AVSS}
 N 435 -580 435 -530 {
-lab=vdd}
+lab=AVDD}
 N 580 -190 580 -120 {
-lab=gnd}
+lab=AVSS}
 N 1405 -300 1405 -120 {
-lab=gnd}
+lab=AVSS}
 N 1400 -580 1400 -420 {
-lab=vdd}
+lab=AVDD}
 N 510 -220 510 -210 {
 lab=vnbias}
 N 360 -490 360 -470 {
@@ -323,87 +323,87 @@ lab=#net9}
 N 600 -410 600 -340 {
 lab=#net9}
 N 650 -420 780 -420 {
-lab=vdd}
+lab=AVDD}
 N 780 -420 910 -420 {
-lab=vdd}
+lab=AVDD}
 N 910 -420 1040 -420 {
-lab=vdd}
+lab=AVDD}
 N 1040 -420 1170 -420 {
-lab=vdd}
+lab=AVDD}
 N 1170 -420 1320 -420 {
-lab=vdd}
+lab=AVDD}
 N 580 -190 650 -190 {
-lab=gnd}
+lab=AVSS}
 N 910 -190 1040 -190 {
-lab=gnd}
+lab=AVSS}
 N 780 -190 910 -190 {
-lab=gnd}
+lab=AVSS}
 N 650 -190 780 -190 {
-lab=gnd}
+lab=AVSS}
 N 910 -530 1040 -530 {
-lab=vdd}
+lab=AVDD}
 N 780 -530 910 -530 {
-lab=vdd}
+lab=AVDD}
 N 650 -530 780 -530 {
-lab=vdd}
+lab=AVDD}
 N 510 -530 650 -530 {
-lab=vdd}
+lab=AVDD}
 N 435 -530 510 -530 {
-lab=vdd}
+lab=AVDD}
 N 1170 -300 1320 -300 {
-lab=gnd}
+lab=AVSS}
 N 1040 -300 1170 -300 {
-lab=gnd}
+lab=AVSS}
 N 910 -300 1040 -300 {
-lab=gnd}
+lab=AVSS}
 N 780 -300 910 -300 {
-lab=gnd}
+lab=AVSS}
 N 650 -300 780 -300 {
-lab=gnd}
+lab=AVSS}
 N 1040 -580 1170 -580 {
-lab=vdd}
+lab=AVDD}
 N 910 -580 1040 -580 {
-lab=vdd}
+lab=AVDD}
 N 780 -580 910 -580 {
-lab=vdd}
+lab=AVDD}
 N 650 -580 780 -580 {
-lab=vdd}
+lab=AVDD}
 N 510 -580 650 -580 {
-lab=vdd}
+lab=AVDD}
 N 435 -580 510 -580 {
-lab=vdd}
+lab=AVDD}
 N 1170 -120 1320 -120 {
-lab=gnd}
+lab=AVSS}
 N 1040 -120 1170 -120 {
-lab=gnd}
+lab=AVSS}
 N 780 -120 910 -120 {
-lab=gnd}
+lab=AVSS}
 N 910 -120 1040 -120 {
-lab=gnd}
+lab=AVSS}
 N 650 -120 780 -120 {
-lab=gnd}
+lab=AVSS}
 N 580 -120 650 -120 {
-lab=gnd}
+lab=AVSS}
 N 360 -120 510 -120 {
-lab=gnd}
+lab=AVSS}
 N 1480 -380 1480 -350 {
-lab=out}
+lab=VOUT}
 N 360 -580 435 -580 {
-lab=vdd}
+lab=AVDD}
 N 360 -530 435 -530 {
-lab=vdd}
+lab=AVDD}
 N 510 -190 580 -190 {
-lab=gnd}
+lab=AVSS}
 N 510 -120 580 -120 {
-lab=gnd}
+lab=AVSS}
 N 1320 -300 1405 -300 {
-lab=gnd}
+lab=AVSS}
 N 1320 -120 1405 -120 {
-lab=gnd}
+lab=AVSS}
 N 1320 -580 1400 -580 {
-lab=vdd}
+lab=AVDD}
 N 1320 -420 1400 -420 {
-lab=vdd}
+lab=AVDD}
 N 360 -380 360 -320 {
 lab=#net17}
 N 510 -490 510 -220 {
@@ -814,12 +814,12 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 360 -580 0 0 {name=p1 sig_type=std_logic lab=vdd}
-C {devices/lab_pin.sym} 340 -120 0 0 {name=p2 sig_type=std_logic lab=gnd}
-C {devices/lab_pin.sym} 310 -410 0 0 {name=p3 sig_type=std_logic lab=vcon}
-C {devices/lab_pin.sym} 1490 -350 0 1 {name=p4 sig_type=std_logic lab=out}
-C {devices/ipin.sym} 200 -485 0 0 {name=p8 lab=vcon}
-C {devices/opin.sym} 185 -465 0 0 {name=p9 lab=out}
+C {devices/lab_pin.sym} 360 -580 0 0 {name=p1 sig_type=std_logic lab=AVDD}
+C {devices/lab_pin.sym} 340 -120 0 0 {name=p2 sig_type=std_logic lab=AVSS}
+C {devices/lab_pin.sym} 310 -410 0 0 {name=p3 sig_type=std_logic lab=VCON}
+C {devices/lab_pin.sym} 1490 -350 0 1 {name=p4 sig_type=std_logic lab=VOUT}
+C {devices/ipin.sym} 200 -485 0 0 {name=p8 lab=VCON}
+C {devices/opin.sym} 185 -465 0 0 {name=p9 lab=VOUT}
 C {sky130_fd_pr/res_xhigh_po.sym} 360 -290 0 0 {name=R3
 W=0.35
 L=lres
@@ -840,8 +840,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 400 -410 0 1 {name=p11 sig_type=std_logic lab=gnd}
 C {devices/lab_pin.sym} 310 -520 0 0 {name=p10 sig_type=std_logic lab=vpbias}
-C {devices/ipin.sym} 200 -445 0 0 {name=p5 lab=vdd}
-C {devices/ipin.sym} 200 -425 0 0 {name=p12 lab=gnd}
+C {devices/ipin.sym} 200 -445 0 0 {name=p5 lab=AVDD}
+C {devices/ipin.sym} 200 -425 0 0 {name=p12 lab=AVSS}
 C {devices/lab_pin.sym} 460 -220 0 0 {name=p6 sig_type=std_logic lab=vnbias}
+C {devices/lab_pin.sym} 400 -410 0 1 {name=p7 sig_type=std_logic lab=AVSS}
