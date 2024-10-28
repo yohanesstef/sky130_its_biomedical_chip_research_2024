@@ -1,0 +1,14 @@
+set circuit1 [readnet spice /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-42-45/66-magic-spiceextraction/freq_psc.spice]
+set circuit2 [readnet verilog /dev/null]
+puts "Reading SPICE netlist file '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice'..."
+readnet spice /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__decap_12.spice $circuit2
+puts "Reading SPICE netlist file '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice'..."
+readnet spice /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_12.spice $circuit2
+puts "Reading SPICE netlist file '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice'..."
+readnet spice /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_4.spice $circuit2
+puts "Reading SPICE netlist file '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice'..."
+readnet spice /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_ef_sc_hd__fill_8.spice $circuit2
+puts "Reading SPICE netlist file '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice'..."
+readnet spice /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice $circuit2
+readnet verilog /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-42-45/51-openroad-fillinsertion/freq_psc.pnl.v $circuit2
+lvs "$circuit1 freq_psc" "$circuit2 freq_psc" /nix/store/mr1ix0gwjfwmikfqyrq536nwhj83f0zp-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/netgen/setup.tcl /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-42-45/68-netgen-lvs/reports/lvs.netgen.rpt -blackbox -json

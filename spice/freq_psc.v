@@ -1,31 +1,24 @@
-`timescale 1ns / 1ps
-`default_nettype    none
+module prescaler#(
+    parameter DATA_WIDTH = 8
+)(
+    input wire clk,
+    input wire rst,
+    output reg out,
+    input wire [DATA_WIDTH - 1:0] psc
+);
 
-module freq_psc#(
-            parameter DATA_WIDTH = 32
-           )(
-            input wire clk,
-            input wire rst,
-            output wire out,
-            input wire [DATA_WIDTH - 1:0] psc
-           );
-  reg [DATA_WIDTH - 1:0] psc_cnt = 'b0;
-  reg out_psc = 'b0;
-  
-  always @(posedge clk or posedge rst) begin
-    if (rst) begin
-      psc_cnt <= 'b0;
-      out_psc <= 'b0;
-    end 
-    else begin
-      if(psc_cnt < psc) begin
-        psc_cnt <= psc_cnt + 1;
-      end else begin
-        psc_cnt <= 'b0;
-        out_psc <= ~out_psc;
-      end
+    reg [DATA_WIDTH-1:0] counter;
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            counter <= 0;
+            out <= 0;
+        end else begin
+            counter <= counter + 1;
+            if (counter >= (psc - 1)) begin
+                counter <= 0;
+            end
+            out <= (counter < (psc >> 1)) ? 1'b1 : 1'b0;
+        end
     end
-  end
-
-  assign out = out_psc;
 endmodule

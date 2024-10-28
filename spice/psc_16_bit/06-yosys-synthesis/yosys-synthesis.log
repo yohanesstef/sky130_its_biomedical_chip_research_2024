@@ -1,0 +1,1123 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v
+Parsing SystemVerilog input from `/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v' to AST representation.
+Storing AST representation for module `$abstract\freq_psc'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\freq_psc'.
+Generating RTLIL representation for module `\freq_psc'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \freq_psc
+
+4.2. Analyzing design hierarchy..
+Top module:  \freq_psc
+Removing unused module `$abstract\freq_psc'.
+Removed 1 unused modules.
+Renaming module freq_psc to freq_psc.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `/home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/hierarchy.dot'.
+Dumping module freq_psc to page 1.
+
+6. Executing TRIBUF pass.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \freq_psc
+
+7.2. Analyzing design hierarchy..
+Top module:  \freq_psc
+Removed 0 unused modules.
+
+8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1 in module freq_psc.
+Removed a total of 0 dead cases.
+
+10. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+11. Executing PROC_INIT pass (extract init attributes).
+
+12. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+
+13. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+14. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+     1/2: $0\out[0:0]
+     2/2: $0\counter[15:0]
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+16. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\freq_psc.\out' using process `\freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+  created $adff cell `$procdff$12' with positive edge clock and positive level reset.
+Creating register for signal `\freq_psc.\counter' using process `\freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+  created $adff cell `$procdff$15' with positive edge clock and positive level reset.
+
+17. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+18. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+Removing empty process `freq_psc.$proc$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15$1'.
+Cleaned up 1 empty switch.
+
+19. Executing CHECK pass (checking for obvious problems).
+Checking module freq_psc...
+Found and reported 0 problems.
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+<suppressed ~3 debug messages>
+
+21. Executing FLATTEN pass (flatten design).
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+24.9. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing FSM pass (extract and optimize FSM).
+
+25.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+25.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+25.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+25.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+25.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+25.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+25.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+26. Executing OPT pass (performing simple optimizations).
+
+26.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+26.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+26.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+26.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+26.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+26.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+26.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+26.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+26.9. Finished OPT passes. (There is nothing left to do.)
+
+27. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell freq_psc.$add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2 ($add).
+Removed top 16 bits (of 32) from port Y of cell freq_psc.$add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2 ($add).
+Removed top 31 bits (of 32) from port B of cell freq_psc.$sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3 ($sub).
+Removed top 15 bits (of 32) from port Y of cell freq_psc.$sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3 ($sub).
+Removed top 1 bits (of 16) from port B of cell freq_psc.$lt$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$6 ($lt).
+Removed top 16 bits (of 32) from wire freq_psc.$add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2_Y.
+
+28. Executing PEEPOPT pass (run peephole optimizers).
+
+29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+30. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module freq_psc:
+  creating $macc model for $add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2 ($add).
+  creating $macc model for $sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3 ($sub).
+  creating $alu model for $macc $sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3.
+  creating $alu model for $macc $add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2.
+  creating $alu model for $ge$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$4 ($ge): new $alu
+  creating $alu model for $lt$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$6 ($lt): new $alu
+  creating $alu cell for $lt$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$6: $auto$alumacc.cc:485:replace_alu$19
+  creating $alu cell for $ge$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$4: $auto$alumacc.cc:485:replace_alu$30
+  creating $alu cell for $add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2: $auto$alumacc.cc:485:replace_alu$43
+  creating $alu cell for $sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3: $auto$alumacc.cc:485:replace_alu$46
+  created 4 $alu and 0 $macc cells.
+
+31. Executing SHARE pass (SAT-based resource sharing).
+
+32. Executing OPT pass (performing simple optimizations).
+
+32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+<suppressed ~1 debug messages>
+
+32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+32.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+32.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+32.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+32.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+32.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 1 unused cells and 3 unused wires.
+<suppressed ~2 debug messages>
+
+32.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+32.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+32.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+32.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+32.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+32.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+32.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+32.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+32.16. Finished OPT passes. (There is nothing left to do.)
+
+33. Executing MEMORY pass.
+
+33.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+33.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+33.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+33.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+33.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+33.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+33.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+33.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+33.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+33.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+<suppressed ~1 debug messages>
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+35.5. Finished fast OPT passes.
+
+36. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+37.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+37.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+37.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+37.6. Executing OPT_SHARE pass.
+
+37.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+37.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+37.10. Finished OPT passes. (There is nothing left to do.)
+
+38. Executing TECHMAP pass (map to technology primitives).
+
+38.1. Executing Verilog-2005 frontend: /nix/store/c26m31cifv9fyym8p72j6cj5ilqgnh2z-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/c26m31cifv9fyym8p72j6cj5ilqgnh2z-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+38.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$d588c4475f18bc347201f0f2671d73b8c1e7b7ea\_90_alu for cells of type $alu.
+Using template $paramod$2af30114e9bd4ccb04dad757b3f0a8f6bf0615b0\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$2bd81f420048247ff6903399c560fe0f8bd48ccc\_90_alu for cells of type $alu.
+Using template $paramod$c8f9642fe0e0f4527ea400b1bd678c474f53d556\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~916 debug messages>
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+<suppressed ~346 debug messages>
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+<suppressed ~186 debug messages>
+Removed a total of 62 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 90 unused cells and 273 unused wires.
+<suppressed ~91 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+40.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+40.5. Finished fast OPT passes.
+
+41. Executing ABC pass (technology mapping using ABC).
+
+41.1. Extracting gate netlist of module `\freq_psc' to `<abc-temp-dir>/input.blif'..
+Extracted 339 gates and 372 wires to a netlist network with 32 inputs and 17 outputs.
+
+41.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+41.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       12
+ABC RESULTS:              XNOR cells:       11
+ABC RESULTS:             ORNOT cells:       18
+ABC RESULTS:                OR cells:       40
+ABC RESULTS:               XOR cells:       50
+ABC RESULTS:               NOR cells:       19
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:              NAND cells:       17
+ABC RESULTS:            ANDNOT cells:      114
+ABC RESULTS:        internal signals:      323
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+42. Executing OPT pass (performing simple optimizations).
+
+42.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+42.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+42.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+42.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 0 unused cells and 188 unused wires.
+<suppressed ~1 debug messages>
+
+42.5. Finished fast OPT passes.
+
+43. Executing HIERARCHY pass (managing design hierarchy).
+
+43.1. Analyzing design hierarchy..
+Top module:  \freq_psc
+
+43.2. Analyzing design hierarchy..
+Top module:  \freq_psc
+Removed 0 unused modules.
+
+44. Executing CHECK pass (checking for obvious problems).
+Checking module freq_psc...
+Found and reported 0 problems.
+
+45. Printing statistics.
+
+=== freq_psc ===
+
+   Number of wires:                269
+   Number of wire bits:            314
+   Number of public wires:           5
+   Number of public wire bits:      35
+   Number of ports:                  4
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                296
+     $_ANDNOT_                     114
+     $_AND_                          2
+     $_DFF_PP0_                     17
+     $_NAND_                        17
+     $_NOR_                         19
+     $_NOT_                         12
+     $_ORNOT_                       18
+     $_OR_                          36
+     $_XNOR_                        11
+     $_XOR_                         50
+
+46. Generating Graphviz representation of design.
+Writing dot description to `/home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module freq_psc to page 1.
+
+47. Executing OPT pass (performing simple optimizations).
+
+47.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+47.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+47.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \freq_psc..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+47.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \freq_psc.
+Performed a total of 0 changes.
+
+47.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\freq_psc'.
+Removed a total of 0 cells.
+
+47.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+47.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+
+47.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module freq_psc.
+
+47.9. Finished OPT passes. (There is nothing left to do.)
+
+48. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/tmp/f44ba385a81a4f3e8ce197698b28df9b.lib ",
+   "modules": {
+      "\\freq_psc": {
+         "num_wires":         269,
+         "num_wire_bits":     314,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         296,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 114,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 17,
+            "$_NAND_": 17,
+            "$_NOR_": 19,
+            "$_NOT_": 12,
+            "$_ORNOT_": 18,
+            "$_OR_": 36,
+            "$_XNOR_": 11,
+            "$_XOR_": 50
+         }
+      }
+   },
+      "design": {
+         "num_wires":         269,
+         "num_wire_bits":     314,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         296,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 114,
+            "$_AND_": 2,
+            "$_DFF_PP0_": 17,
+            "$_NAND_": 17,
+            "$_NOR_": 19,
+            "$_NOT_": 12,
+            "$_ORNOT_": 18,
+            "$_OR_": 36,
+            "$_XNOR_": 11,
+            "$_XOR_": 50
+         }
+      }
+}
+
+49. Printing statistics.
+
+=== freq_psc ===
+
+   Number of wires:                269
+   Number of wire bits:            314
+   Number of public wires:           5
+   Number of public wire bits:      35
+   Number of ports:                  4
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                296
+     $_ANDNOT_                     114
+     $_AND_                          2
+     $_DFF_PP0_                     17
+     $_NAND_                        17
+     $_NOR_                         19
+     $_NOT_                         12
+     $_ORNOT_                       18
+     $_OR_                          36
+     $_XNOR_                        11
+     $_XOR_                         50
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+52. Executing TECHMAP pass (map to technology primitives).
+
+52.1. Executing Verilog-2005 frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+52.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+53. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+54. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+54.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\freq_psc':
+  mapped 17 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/tmp/f44ba385a81a4f3e8ce197698b28df9b.lib ",
+   "modules": {
+      "\\freq_psc": {
+         "num_wires":         286,
+         "num_wire_bits":     331,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         313,
+         "area":              446.678400,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 114,
+            "$_AND_": 2,
+            "$_NAND_": 17,
+            "$_NOR_": 19,
+            "$_NOT_": 29,
+            "$_ORNOT_": 18,
+            "$_OR_": 36,
+            "$_XNOR_": 11,
+            "$_XOR_": 50,
+            "sky130_fd_sc_hd__dfrtp_2": 17
+         }
+      }
+   },
+      "design": {
+         "num_wires":         286,
+         "num_wire_bits":     331,
+         "num_pub_wires":     5,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         313,
+         "area":              446.678400,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 114,
+            "$_AND_": 2,
+            "$_NAND_": 17,
+            "$_NOR_": 19,
+            "$_NOT_": 29,
+            "$_ORNOT_": 18,
+            "$_OR_": 36,
+            "$_XNOR_": 11,
+            "$_XOR_": 50,
+            "sky130_fd_sc_hd__dfrtp_2": 17
+         }
+      }
+}
+
+55. Printing statistics.
+
+=== freq_psc ===
+
+   Number of wires:                286
+   Number of wire bits:            331
+   Number of public wires:           5
+   Number of public wire bits:      35
+   Number of ports:                  4
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                313
+     $_ANDNOT_                     114
+     $_AND_                          2
+     $_NAND_                        17
+     $_NOR_                         19
+     $_NOT_                         29
+     $_ORNOT_                       18
+     $_OR_                          36
+     $_XNOR_                        11
+     $_XOR_                         50
+     sky130_fd_sc_hd__dfrtp_2       17
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+
+   Chip area for module '\freq_psc': 446.678400
+     of which used for sequential elements: 446.678400 (100.00%)
+
+[INFO] Using generated ABC script '/home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/AREA_0.abc'…
+
+56. Executing ABC pass (technology mapping using ABC).
+
+56.1. Extracting gate netlist of module `\freq_psc' to `/tmp/yosys-abc-yibwhR/input.blif'..
+Extracted 296 gates and 329 wires to a netlist network with 33 inputs and 34 outputs.
+
+56.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-yibwhR/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-yibwhR/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-yibwhR/input.blif 
+ABC: + read_lib -w /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/tmp/f44ba385a81a4f3e8ce197698b28df9b.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/tmp/f44ba385a81a4f3e8ce197698b28df9b.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.54 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    176 ( 17.6 %)   Cap = 11.6 ff (  2.5 %)   Area =     1435.13 ( 81.8 %)   Delay =  3937.34 ps  ( 14.2 %)               
+ABC: Path  0 --       1 : 0    5 pi                       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  14.4 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      84 : 4    8 sky130_fd_sc_hd__or4_2   A =   8.76  Df = 753.4 -586.5 ps  S = 171.6 ps  Cin =  1.5 ff  Cout =  25.1 ff  Cmax = 310.4 ff  G = 1585  
+ABC: Path  2 --      96 : 4    4 sky130_fd_sc_hd__or4_2   A =   8.76  Df =1504.2-1151.8 ps  S = 150.7 ps  Cin =  1.5 ff  Cout =  16.1 ff  Cmax = 310.4 ff  G = 1034  
+ABC: Path  3 --     125 : 3    4 sky130_fd_sc_hd__or3_2   A =   7.51  Df =2016.4-1489.7 ps  S = 127.0 ps  Cin =  1.5 ff  Cout =  19.4 ff  Cmax = 310.4 ff  G = 1221  
+ABC: Path  4 --     128 : 3    2 sky130_fd_sc_hd__and3_2  A =   7.51  Df =2251.1 -373.0 ps  S =  59.1 ps  Cin =  1.5 ff  Cout =   6.1 ff  Cmax = 309.5 ff  G =  388  
+ABC: Path  5 --     136 : 4    1 sky130_fd_sc_hd__or4_2   A =   8.76  Df =2767.1 -498.0 ps  S =  90.7 ps  Cin =  1.5 ff  Cout =   1.6 ff  Cmax = 310.4 ff  G =   99  
+ABC: Path  6 --     142 : 4    1 sky130_fd_sc_hd__or4b_2  A =  10.01  Df =3373.2 -840.4 ps  S =  96.2 ps  Cin =  1.5 ff  Cout =   2.6 ff  Cmax = 265.5 ff  G =  163  
+ABC: Path  7 --     146 : 3   16 sky130_fd_sc_hd__o21a_2  A =   8.76  Df =3637.0 -850.6 ps  S = 139.6 ps  Cin =  2.4 ff  Cout =  24.8 ff  Cmax = 294.8 ff  G = 1004  
+ABC: Path  8 --     152 : 3    1 sky130_fd_sc_hd__and3b_2 A =  10.01  Df =3937.3 -837.3 ps  S = 182.2 ps  Cin =  1.5 ff  Cout =  33.4 ff  Cmax = 309.5 ff  G = 2264  
+ABC: Start-point = pi0 (\psc [0]).  End-point = po2 ($0\counter[15:0] [2]).
+ABC: netlist                       : i/o =   33/   34  lat =    0  nd =   176  edge =    465  area =1435.28  delay = 9.00  lev = 9
+ABC: + write_blif /tmp/yosys-abc-yibwhR/output.blif 
+
+56.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       31
+ABC RESULTS:        internal signals:      262
+ABC RESULTS:           input signals:       33
+ABC RESULTS:          output signals:       34
+Removing temp directory.
+
+57. Executing SETUNDEF pass (replace undef values with defined constants).
+
+58. Executing HILOMAP pass (mapping to constant drivers).
+
+59. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+60. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \freq_psc..
+Removed 0 unused cells and 329 unused wires.
+<suppressed ~1 debug messages>
+
+61. Executing INSBUF pass (insert buffer cells for connected wires).
+
+62. Executing CHECK pass (checking for obvious problems).
+Checking module freq_psc...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/freq_psc/runs/RUN_2024-10-28_14-44-52/tmp/f44ba385a81a4f3e8ce197698b28df9b.lib ",
+   "modules": {
+      "\\freq_psc": {
+         "num_wires":         196,
+         "num_wire_bits":     211,
+         "num_pub_wires":     20,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         193,
+         "area":              1881.804800,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 6,
+            "sky130_fd_sc_hd__a21oi_2": 6,
+            "sky130_fd_sc_hd__a221o_2": 3,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 5,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 3,
+            "sky130_fd_sc_hd__a32o_2": 1,
+            "sky130_fd_sc_hd__and2_2": 10,
+            "sky130_fd_sc_hd__and2b_2": 3,
+            "sky130_fd_sc_hd__and3_2": 11,
+            "sky130_fd_sc_hd__and3b_2": 11,
+            "sky130_fd_sc_hd__and4_2": 2,
+            "sky130_fd_sc_hd__and4bb_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 17,
+            "sky130_fd_sc_hd__inv_2": 31,
+            "sky130_fd_sc_hd__nand2_2": 10,
+            "sky130_fd_sc_hd__nand2b_2": 1,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nand4b_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 8,
+            "sky130_fd_sc_hd__o211a_2": 2,
+            "sky130_fd_sc_hd__o211ai_2": 2,
+            "sky130_fd_sc_hd__o21a_2": 1,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o221a_2": 2,
+            "sky130_fd_sc_hd__o22a_2": 8,
+            "sky130_fd_sc_hd__o22ai_2": 2,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 14,
+            "sky130_fd_sc_hd__or3_2": 5,
+            "sky130_fd_sc_hd__or4_2": 5,
+            "sky130_fd_sc_hd__or4b_2": 3,
+            "sky130_fd_sc_hd__xnor2_2": 7,
+            "sky130_fd_sc_hd__xor2_2": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         196,
+         "num_wire_bits":     211,
+         "num_pub_wires":     20,
+         "num_pub_wire_bits": 35,
+         "num_ports":         4,
+         "num_port_bits":     19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         193,
+         "area":              1881.804800,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 6,
+            "sky130_fd_sc_hd__a21oi_2": 6,
+            "sky130_fd_sc_hd__a221o_2": 3,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 5,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 3,
+            "sky130_fd_sc_hd__a32o_2": 1,
+            "sky130_fd_sc_hd__and2_2": 10,
+            "sky130_fd_sc_hd__and2b_2": 3,
+            "sky130_fd_sc_hd__and3_2": 11,
+            "sky130_fd_sc_hd__and3b_2": 11,
+            "sky130_fd_sc_hd__and4_2": 2,
+            "sky130_fd_sc_hd__and4bb_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 17,
+            "sky130_fd_sc_hd__inv_2": 31,
+            "sky130_fd_sc_hd__nand2_2": 10,
+            "sky130_fd_sc_hd__nand2b_2": 1,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nand4b_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 8,
+            "sky130_fd_sc_hd__o211a_2": 2,
+            "sky130_fd_sc_hd__o211ai_2": 2,
+            "sky130_fd_sc_hd__o21a_2": 1,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o221a_2": 2,
+            "sky130_fd_sc_hd__o22a_2": 8,
+            "sky130_fd_sc_hd__o22ai_2": 2,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 14,
+            "sky130_fd_sc_hd__or3_2": 5,
+            "sky130_fd_sc_hd__or4_2": 5,
+            "sky130_fd_sc_hd__or4b_2": 3,
+            "sky130_fd_sc_hd__xnor2_2": 7,
+            "sky130_fd_sc_hd__xor2_2": 1
+         }
+      }
+}
+
+63. Printing statistics.
+
+=== freq_psc ===
+
+   Number of wires:                196
+   Number of wire bits:            211
+   Number of public wires:          20
+   Number of public wire bits:      35
+   Number of ports:                  4
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                193
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2         6
+     sky130_fd_sc_hd__a21oi_2        6
+     sky130_fd_sc_hd__a221o_2        3
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2         5
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a31o_2         3
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__and2_2        10
+     sky130_fd_sc_hd__and2b_2        3
+     sky130_fd_sc_hd__and3_2        11
+     sky130_fd_sc_hd__and3b_2       11
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__and4bb_2       1
+     sky130_fd_sc_hd__dfrtp_2       17
+     sky130_fd_sc_hd__inv_2         31
+     sky130_fd_sc_hd__nand2_2       10
+     sky130_fd_sc_hd__nand2b_2       1
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nand4b_2       1
+     sky130_fd_sc_hd__nor2_2         8
+     sky130_fd_sc_hd__o211a_2        2
+     sky130_fd_sc_hd__o211ai_2       2
+     sky130_fd_sc_hd__o21a_2         1
+     sky130_fd_sc_hd__o21ai_2        3
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o221a_2        2
+     sky130_fd_sc_hd__o22a_2         8
+     sky130_fd_sc_hd__o22ai_2        2
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__or2_2         14
+     sky130_fd_sc_hd__or3_2          5
+     sky130_fd_sc_hd__or4_2          5
+     sky130_fd_sc_hd__or4b_2         3
+     sky130_fd_sc_hd__xnor2_2        7
+     sky130_fd_sc_hd__xor2_2         1
+
+   Chip area for module '\freq_psc': 1881.804800
+     of which used for sequential elements: 446.678400 (23.74%)
+
+64. Executing Verilog backend.
+Dumping module `\freq_psc'.
+
+65. Executing JSON backend.

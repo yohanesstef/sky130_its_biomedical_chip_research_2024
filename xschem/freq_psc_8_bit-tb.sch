@@ -13,8 +13,8 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=3.6385303e-07
-x2=3.9802395e-07
+x1=3.01139e-07
+x2=3.6953742e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=3.6385303e-07
-x2=3.9802395e-07
+x1=3.01139e-07
+x2=3.6953742e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -48,7 +48,7 @@ unitx=1
 logx=0
 logy=0
 digital=0}
-B 2 150 -1210 950 -810 {flags=graph
+B 2 950 -1210 1750 -810 {flags=graph
 y1=0
 y2=0.01
 ypos1=0
@@ -56,8 +56,8 @@ ypos2=0.01
 divy=5
 subdivy=1
 unity=1
-x1=3.6385303e-07
-x2=3.9802395e-07
+x1=3.01139e-07
+x2=3.6953742e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -69,6 +69,29 @@ unitx=1
 logx=0
 logy=0
 digital=1}
+B 2 150 -1210 950 -810 {flags=graph
+y1=-0.11
+y2=2
+ypos1=0
+ypos2=0.01
+divy=5
+subdivy=1
+unity=1
+x1=3.01139e-07
+x2=3.6953742e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=0
+color=4
+node=out}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {devices/simulator_commands.sym} 0 -360 0 0 {name=COMMANDS
 simulator=ngspice
@@ -87,7 +110,7 @@ value="
 
   Vpsc0  psc[0] gnd dc 0
   Vpsc1  psc[1] gnd dc 0
-  Vpsc2  psc[2] gnd dc 0
+  Vpsc2  psc[2] gnd dc 1
   Vpsc3  psc[3] gnd dc 0
   Vpsc4  psc[4] gnd dc 0
   Vpsc5  psc[5] gnd dc 0

@@ -1,0 +1,306 @@
+{
+  "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+  "modules": {
+    "freq_psc": {
+      "attributes": {
+        "hdlname": "freq_psc",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:4.1-27.10"
+      },
+      "parameter_default_values": {
+        "DATA_WIDTH": "00000000000000000000000000001000"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "rst": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "psc": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ]
+        }
+      },
+      "cells": {
+        "$add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2": {
+          "hide_name": 1,
+          "type": "$add",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20.24-20.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 ]
+          }
+        },
+        "$ge$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$4": {
+          "hide_name": 1,
+          "type": "$ge",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.17-21.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+            "B": [ 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84 ],
+            "Y": [ 85 ]
+          }
+        },
+        "$lt$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$6": {
+          "hide_name": 1,
+          "type": "$lt",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24.21-24.41"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+            "B": [ 6, 7, 8, 9, 10, 11, 12, "0" ],
+            "Y": [ 86 ]
+          }
+        },
+        "$procdff$12": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15.5-26.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 87 ],
+            "Q": [ 4 ]
+          }
+        },
+        "$procdff$15": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "00000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15.5-26.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 88, 89, 90, 91, 92, 93, 94, 95 ],
+            "Q": [ 13, 14, 15, 16, 17, 18, 19, 20 ]
+          }
+        },
+        "$procmux$8": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.17-21.37|/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.13-23.16"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 21, 22, 23, 24, 25, 26, 27, 28 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 85 ],
+            "Y": [ 88, 89, 90, 91, 92, 93, 94, 95 ]
+          }
+        },
+        "$sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3": {
+          "hide_name": 1,
+          "type": "$sub",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000100000",
+            "Y_WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.29-21.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "Y": [ 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84 ]
+          }
+        },
+        "$ternary$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$7": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24.20-24.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 86 ],
+            "Y": [ 87 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0\\counter[7:0]": {
+          "hide_name": 1,
+          "bits": [ 88, 89, 90, 91, 92, 93, 94, 95 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15.5-26.8"
+          }
+        },
+        "$0\\out[0:0]": {
+          "hide_name": 1,
+          "bits": [ 87 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:15.5-26.8"
+          }
+        },
+        "$add$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20$2_Y": {
+          "hide_name": 1,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:20.24-20.35",
+            "unused_bits": "8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "$ge$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$4_Y": {
+          "hide_name": 1,
+          "bits": [ 85 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.17-21.37"
+          }
+        },
+        "$lt$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24$6_Y": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:24.21-24.41"
+          }
+        },
+        "$sub$/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21$3_Y": {
+          "hide_name": 1,
+          "bits": [ 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:21.29-21.36"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:7.16-7.19"
+          }
+        },
+        "counter": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16, 17, 18, 19, 20 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:13.26-13.33"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:9.16-9.19"
+          }
+        },
+        "psc": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:10.35-10.38"
+          }
+        },
+        "rst": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/nakanomiku/DigitalDesign/freq_psc/freq_psc.v:8.16-8.19"
+          }
+        }
+      }
+    }
+  }
+}
