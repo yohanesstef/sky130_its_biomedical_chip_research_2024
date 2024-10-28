@@ -1,0 +1,428 @@
+* NGSPICE file created from pfd.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_7XSGLL a_n33_33# a_15_n73# a_n73_n73# VSUBS
+X0 a_15_n73# a_n33_33# a_n73_n73# VSUBS sky130_fd_pr__nfet_01v8 ad=0.1218 pd=1.42 as=0.1218 ps=1.42 w=0.42 l=0.15
+C0 a_n73_n73# a_15_n73# 0.069931f
+C1 a_n73_n73# a_n33_33# 0.012054f
+C2 a_15_n73# a_n33_33# 0.012054f
+C3 a_15_n73# VSUBS 0.066499f
+C4 a_n73_n73# VSUBS 0.066499f
+C5 a_n33_33# VSUBS 0.205602f
+.ends
+
+.subckt ncell_pfd DVSS RST VIN preout drain1 drain2 m1_102_34#
+Xsky130_fd_pr__nfet_01v8_7XSGLL_0 RST DVSS drain1 DVSS sky130_fd_pr__nfet_01v8_7XSGLL
+Xsky130_fd_pr__nfet_01v8_7XSGLL_1 VIN m1_102_34# DVSS DVSS sky130_fd_pr__nfet_01v8_7XSGLL
+Xsky130_fd_pr__nfet_01v8_7XSGLL_2 drain1 drain2 m1_102_34# DVSS sky130_fd_pr__nfet_01v8_7XSGLL
+Xsky130_fd_pr__nfet_01v8_7XSGLL_3 drain2 preout DVSS DVSS sky130_fd_pr__nfet_01v8_7XSGLL
+C0 drain2 RST 0.004983f
+C1 drain1 DVSS 0.033008f
+C2 m1_102_34# drain2 1.7e-19
+C3 DVSS RST 0.036021f
+C4 drain2 VIN 2.24e-19
+C5 m1_102_34# DVSS -0.017677f
+C6 drain1 RST 0.012485f
+C7 VIN DVSS 0.034225f
+C8 m1_102_34# drain1 0.054715f
+C9 m1_102_34# RST 2.06e-19
+C10 drain1 VIN 0.013075f
+C11 VIN RST 0.006785f
+C12 preout drain2 0.024894f
+C13 m1_102_34# VIN 0.002069f
+C14 preout DVSS 0.022041f
+C15 drain1 preout 2.3e-20
+C16 drain2 DVSS 0.046412f
+C17 drain1 drain2 0.140312f
+C18 preout 0 0.047714f
+C19 DVSS 0 -0.109267f
+C20 drain2 0 0.278567f
+C21 m1_102_34# 0 0.104809f
+C22 drain1 0 0.447838f
+C23 VIN 0 0.191875f
+C24 RST 0 0.203346f
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_SC63VW a_n73_n162# a_n33_121# w_n109_n224# a_15_n162#
++ VSUBS
+X0 a_15_n162# a_n33_121# a_n73_n162# w_n109_n224# sky130_fd_pr__pfet_01v8 ad=0.3654 pd=3.1 as=0.3654 ps=3.1 w=1.26 l=0.15
+C0 w_n109_n224# a_n33_121# 0.06427f
+C1 a_n73_n162# a_n33_121# 0.015928f
+C2 w_n109_n224# a_n73_n162# 0.008271f
+C3 a_15_n162# a_n33_121# 0.015928f
+C4 a_15_n162# w_n109_n224# 0.008271f
+C5 a_15_n162# a_n73_n162# 0.203436f
+C6 a_15_n162# VSUBS 0.129319f
+C7 a_n73_n162# VSUBS 0.129319f
+C8 a_n33_121# VSUBS 0.144315f
+C9 w_n109_n224# VSUBS 0.270756f
+.ends
+
+.subckt pcell_pfd DVDD VIN RST drain1 drain2 preout m1_700_294# VSUBS
+Xsky130_fd_pr__pfet_01v8_SC63VW_0 DVDD VIN DVDD m1_700_294# VSUBS sky130_fd_pr__pfet_01v8_SC63VW
+Xsky130_fd_pr__pfet_01v8_SC63VW_1 m1_700_294# RST DVDD drain1 VSUBS sky130_fd_pr__pfet_01v8_SC63VW
+Xsky130_fd_pr__pfet_01v8_SC63VW_3 drain2 drain1 DVDD DVDD VSUBS sky130_fd_pr__pfet_01v8_SC63VW
+Xsky130_fd_pr__pfet_01v8_SC63VW_4 DVDD drain2 DVDD preout VSUBS sky130_fd_pr__pfet_01v8_SC63VW
+C0 DVDD VIN 0.086581f
+C1 DVDD m1_700_294# 0.082306f
+C2 drain1 RST 0.022261f
+C3 drain2 VIN 0.005842f
+C4 drain2 m1_700_294# 2.81e-19
+C5 preout DVDD 0.117236f
+C6 m1_700_294# VIN 0.00254f
+C7 preout drain2 0.001773f
+C8 DVDD RST 0.071987f
+C9 preout VIN 2.81e-19
+C10 DVDD drain1 0.212252f
+C11 RST VIN 0.03438f
+C12 drain2 drain1 0.037782f
+C13 RST m1_700_294# 0.00254f
+C14 drain1 VIN 2.63e-19
+C15 drain1 m1_700_294# 0.005877f
+C16 drain2 DVDD 0.294737f
+C17 preout VSUBS 0.054941f
+C18 drain2 VSUBS 0.170961f
+C19 DVDD VSUBS 2.815901f
+C20 drain1 VSUBS 0.121202f
+C21 m1_700_294# VSUBS 0.03976f
+C22 RST VSUBS 0.062122f
+C23 VIN VSUBS 0.063438f
+.ends
+
+.subckt tspc_dff vin DVDD pcell_pfd_0/m1_700_294# ncell_pfd_0/m1_102_34# preout pcell_pfd_0/drain2
++ rst pcell_pfd_0/drain1 DVSS
+Xncell_pfd_0 DVSS rst vin preout pcell_pfd_0/drain1 pcell_pfd_0/drain2 ncell_pfd_0/m1_102_34#
++ ncell_pfd
+Xpcell_pfd_0 DVDD vin rst pcell_pfd_0/drain1 pcell_pfd_0/drain2 preout pcell_pfd_0/m1_700_294#
++ DVSS pcell_pfd
+C0 rst ncell_pfd_0/m1_102_34# 1.04e-19
+C1 DVDD rst 0.058655f
+C2 pcell_pfd_0/drain1 rst 0.130398f
+C3 pcell_pfd_0/drain2 ncell_pfd_0/m1_102_34# 1.7e-19
+C4 pcell_pfd_0/drain2 DVDD 0.058673f
+C5 pcell_pfd_0/drain1 pcell_pfd_0/m1_700_294# 6.29e-19
+C6 pcell_pfd_0/drain1 pcell_pfd_0/drain2 0.187719f
+C7 DVSS rst 0.141067f
+C8 rst preout 2.01e-19
+C9 DVSS pcell_pfd_0/m1_700_294# 6.39e-19
+C10 pcell_pfd_0/drain2 DVSS 0.011142f
+C11 vin rst 0.088305f
+C12 pcell_pfd_0/drain2 preout 0.794138f
+C13 vin pcell_pfd_0/m1_700_294# 0.038589f
+C14 vin pcell_pfd_0/drain2 0.014843f
+C15 DVDD ncell_pfd_0/m1_102_34# 0.004461f
+C16 pcell_pfd_0/drain1 ncell_pfd_0/m1_102_34# 0.025909f
+C17 pcell_pfd_0/drain1 DVDD 0.033153f
+C18 DVSS DVDD 0.155535f
+C19 pcell_pfd_0/drain1 DVSS 0.04101f
+C20 DVDD preout 0.106765f
+C21 pcell_pfd_0/drain1 preout 0.079576f
+C22 vin ncell_pfd_0/m1_102_34# 0.00149f
+C23 vin DVDD 0.056865f
+C24 vin pcell_pfd_0/drain1 0.065749f
+C25 DVSS preout 0.063122f
+C26 vin DVSS 0.055028f
+C27 vin preout 7.45e-19
+C28 pcell_pfd_0/drain2 rst 0.01919f
+C29 preout 0 0.483169f
+C30 pcell_pfd_0/drain2 0 0.29434f
+C31 DVDD 0 2.717255f
+C32 pcell_pfd_0/drain1 0 0.594319f
+C33 pcell_pfd_0/m1_700_294# 0 0.03976f
+C34 vin 0 0.370145f
+C35 DVSS 0 -0.291783f
+C36 ncell_pfd_0/m1_102_34# 0 0.104809f
+C37 rst 0 0.544802f
+.ends
+
+.subckt sky130_fd_sc_hd__and2_1 A B VGND VNB VPB VPWR X a_145_75# a_59_75#
+X0 VPWR B a_59_75# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.16655 pd=1.39 as=0.0567 ps=0.69 w=0.42 l=0.15
+X1 X a_59_75# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.475 pd=2.95 as=0.16655 ps=1.39 w=1 l=0.15
+X2 VGND B a_145_75# VNB sky130_fd_pr__nfet_01v8 ad=0.1118 pd=1.04 as=0.0567 ps=0.69 w=0.42 l=0.15
+X3 a_59_75# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+X4 X a_59_75# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.182 pd=1.86 as=0.1118 ps=1.04 w=0.65 l=0.15
+X5 a_145_75# A a_59_75# VNB sky130_fd_pr__nfet_01v8 ad=0.0567 pd=0.69 as=0.1176 ps=1.4 w=0.42 l=0.15
+C0 A VPB 0.080573f
+C1 B VPB 0.06287f
+C2 VPB VGND 0.007995f
+C3 VPWR X 0.111215f
+C4 a_59_75# VPWR 0.150282f
+C5 a_59_75# X 0.10872f
+C6 VPWR A 0.036234f
+C7 VPWR a_145_75# 6.31e-19
+C8 A X 1.68e-19
+C9 a_59_75# A 0.080877f
+C10 VPWR B 0.011747f
+C11 a_145_75# X 5.76e-19
+C12 a_59_75# a_145_75# 0.006584f
+C13 VPWR VGND 0.046078f
+C14 B X 0.002761f
+C15 a_59_75# B 0.14331f
+C16 X VGND 0.099328f
+C17 a_59_75# VGND 0.115643f
+C18 B A 0.097088f
+C19 A VGND 0.014715f
+C20 a_145_75# VGND 0.004685f
+C21 VPWR VPB 0.072934f
+C22 B VGND 0.011461f
+C23 X VPB 0.012653f
+C24 a_59_75# VPB 0.056305f
+C25 VGND VNB 0.311398f
+C26 X VNB 0.100184f
+C27 B VNB 0.112872f
+C28 A VNB 0.173792f
+C29 VPWR VNB 0.273451f
+C30 VPB VNB 0.516168f
+C31 a_59_75# VNB 0.177062f
+.ends
+
+.subckt sky130_fd_sc_hd__buf_8 A VGND VNB VPB VPWR X a_27_47#
+X0 X a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X1 X a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X2 X a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X3 VPWR a_27_47# X VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X4 X a_27_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X5 VGND a_27_47# X VNB sky130_fd_pr__nfet_01v8 ad=0.169 pd=1.82 as=0.08775 ps=0.92 w=0.65 l=0.15
+X6 VPWR A a_27_47# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X7 VPWR a_27_47# X VPB sky130_fd_pr__pfet_01v8_hvt ad=0.26 pd=2.52 as=0.135 ps=1.27 w=1 l=0.15
+X8 a_27_47# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X9 X a_27_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X10 a_27_47# A VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X11 X a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X12 VPWR a_27_47# X VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X13 X a_27_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X14 VGND A a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X15 VGND a_27_47# X VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X16 VPWR a_27_47# X VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X17 VGND a_27_47# X VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X18 VGND a_27_47# X VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.08775 ps=0.92 w=0.65 l=0.15
+X19 X a_27_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.135 ps=1.27 w=1 l=0.15
+X20 VPWR A a_27_47# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.135 pd=1.27 as=0.26 ps=2.52 w=1 l=0.15
+X21 VGND A a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0.08775 pd=0.92 as=0.169 ps=1.82 w=0.65 l=0.15
+C0 X VGND 0.485646f
+C1 X a_27_47# 0.629958f
+C2 A VPB 0.099483f
+C3 A VPWR 0.049241f
+C4 VPWR VPB 0.129764f
+C5 A VGND 0.05431f
+C6 A a_27_47# 0.366387f
+C7 A X 6.16e-19
+C8 VGND VPB 0.014158f
+C9 VPB a_27_47# 0.265516f
+C10 VPWR VGND 0.130194f
+C11 X VPB 0.01638f
+C12 VPWR a_27_47# 0.464773f
+C13 X VPWR 0.664309f
+C14 VGND a_27_47# 0.355141f
+C15 VGND VNB 0.654069f
+C16 X VNB 0.059666f
+C17 VPWR VNB 0.555848f
+C18 A VNB 0.321526f
+C19 VPB VNB 1.13634f
+C20 a_27_47# VNB 0.839069f
+.ends
+
+.subckt sky130_fd_sc_hd__buf_1 A VGND VNB VPB VPWR X a_27_47#
+X0 VPWR A a_27_47# VPB sky130_fd_pr__pfet_01v8_hvt ad=0.11455 pd=1.08 as=0.2054 ps=2.1 w=0.79 l=0.15
+X1 X a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.1352 pd=1.56 as=0.0754 ps=0.81 w=0.52 l=0.15
+X2 X a_27_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0.2054 pd=2.1 as=0.11455 ps=1.08 w=0.79 l=0.15
+X3 VGND A a_27_47# VNB sky130_fd_pr__nfet_01v8 ad=0.0754 pd=0.81 as=0.1352 ps=1.56 w=0.52 l=0.15
+C0 X VGND 0.054627f
+C1 X a_27_47# 0.107446f
+C2 A VPB 0.052393f
+C3 A VPWR 0.021545f
+C4 VPWR VPB 0.035491f
+C5 A VGND 0.018425f
+C6 A a_27_47# 0.181449f
+C7 A X 8.48e-19
+C8 VGND VPB 0.00505f
+C9 VPB a_27_47# 0.059175f
+C10 VPWR VGND 0.028968f
+C11 X VPB 0.012762f
+C12 VPWR a_27_47# 0.135101f
+C13 X VPWR 0.089678f
+C14 VGND a_27_47# 0.104759f
+C15 VGND VNB 0.207322f
+C16 X VNB 0.094114f
+C17 VPWR VNB 0.175402f
+C18 A VNB 0.164055f
+C19 VPB VNB 0.338976f
+C20 a_27_47# VNB 0.207781f
+.ends
+
+.subckt pfd-lay DVDD DVSS U D VIN1 VIN2
+Xx1 VIN1 DVDD x1/pcell_pfd_0/m1_700_294# x1/ncell_pfd_0/m1_102_34# x4/A x1/pcell_pfd_0/drain2
++ x6/X x1/pcell_pfd_0/drain1 DVSS tspc_dff
+Xx2 VIN2 DVDD x2/pcell_pfd_0/m1_700_294# x2/ncell_pfd_0/m1_102_34# x5/A x2/pcell_pfd_0/drain2
++ x6/X x2/pcell_pfd_0/drain1 DVSS tspc_dff
+Xx3 U D DVSS DVSS DVDD DVDD x6/A x3/a_145_75# x3/a_59_75# sky130_fd_sc_hd__and2_1
+Xx4 x4/A DVSS DVSS DVDD DVDD U x4/a_27_47# sky130_fd_sc_hd__buf_8
+Xx5 x5/A DVSS DVSS DVDD DVDD D x5/a_27_47# sky130_fd_sc_hd__buf_8
+Xx6 x6/A DVSS DVSS DVDD DVDD x6/X x6/a_27_47# sky130_fd_sc_hd__buf_1
+C0 DVDD x2/pcell_pfd_0/drain2 0.013013f
+C1 VIN2 x2/pcell_pfd_0/drain2 -3.55e-33
+C2 x1/pcell_pfd_0/m1_700_294# DVDD 0.02876f
+C3 DVSS x6/A 0.010791f
+C4 x4/a_27_47# DVSS -0.005334f
+C5 x2/ncell_pfd_0/m1_102_34# x5/A 4.35e-19
+C6 VIN1 DVSS 0.004567f
+C7 D x1/ncell_pfd_0/m1_102_34# 8.95e-21
+C8 DVDD x5/a_27_47# 0.10069f
+C9 VIN2 x5/a_27_47# 0.003691f
+C10 D x1/pcell_pfd_0/drain2 2.81e-19
+C11 x1/pcell_pfd_0/drain1 x1/pcell_pfd_0/drain2 5.68e-32
+C12 DVDD x6/a_27_47# 0.011746f
+C13 x1/pcell_pfd_0/drain2 x3/a_59_75# 2.21e-20
+C14 D x5/A 0.044549f
+C15 x1/pcell_pfd_0/drain1 x5/A 0.016842f
+C16 x1/pcell_pfd_0/drain2 x4/A 5.5e-19
+C17 DVDD U 0.443575f
+C18 x6/X x6/A 0.006728f
+C19 DVDD x2/pcell_pfd_0/drain1 0.020935f
+C20 VIN2 x2/pcell_pfd_0/drain1 -0.001026f
+C21 x3/a_145_75# U 8.64e-19
+C22 x4/a_27_47# x6/X 6.53e-19
+C23 VIN1 x6/X 0.022955f
+C24 x5/A x4/A 0.88292f
+C25 x1/pcell_pfd_0/drain2 x2/pcell_pfd_0/m1_700_294# 1.02e-19
+C26 x4/a_27_47# x2/pcell_pfd_0/drain2 8.45e-19
+C27 VIN1 x2/pcell_pfd_0/drain2 2.8e-19
+C28 DVSS x6/X 0.405438f
+C29 x1/pcell_pfd_0/m1_700_294# VIN1 -1.42e-32
+C30 x5/A x2/pcell_pfd_0/m1_700_294# 0.007799f
+C31 x4/a_27_47# x5/a_27_47# 0.102039f
+C32 DVSS x2/pcell_pfd_0/drain2 0.00338f
+C33 x1/pcell_pfd_0/m1_700_294# DVSS 2.55e-19
+C34 x6/A x6/a_27_47# 0.107384f
+C35 D DVDD 0.18356f
+C36 VIN2 D 0.00126f
+C37 x1/pcell_pfd_0/drain1 DVDD 0.069397f
+C38 x4/a_27_47# x6/a_27_47# 0.00628f
+C39 VIN2 x1/pcell_pfd_0/drain1 1.94e-19
+C40 D x3/a_145_75# 0.001956f
+C41 x1/pcell_pfd_0/drain1 x3/a_145_75# 8.47e-20
+C42 VIN1 x6/a_27_47# 7.47e-20
+C43 DVDD x3/a_59_75# 0.007457f
+C44 x5/A x1/pcell_pfd_0/drain2 4.13e-19
+C45 DVSS x5/a_27_47# 0.009276f
+C46 U x6/A 0.001702f
+C47 x4/a_27_47# U 0.030859f
+C48 DVSS x6/a_27_47# 0.006113f
+C49 DVDD x4/A 0.143518f
+C50 VIN2 x4/A 4.4e-19
+C51 VIN1 x2/pcell_pfd_0/drain1 1.94e-19
+C52 x2/pcell_pfd_0/drain2 x6/X 0.007363f
+C53 x1/pcell_pfd_0/m1_700_294# x6/X 0.025042f
+C54 DVSS U 0.240376f
+C55 DVDD x2/pcell_pfd_0/m1_700_294# 1.84e-19
+C56 DVSS x2/pcell_pfd_0/drain1 0.031154f
+C57 x1/pcell_pfd_0/m1_700_294# x2/pcell_pfd_0/drain2 1.02e-19
+C58 x5/a_27_47# x6/X 3.48e-19
+C59 DVDD x1/ncell_pfd_0/m1_102_34# 6.76e-19
+C60 x2/ncell_pfd_0/m1_102_34# DVSS 1.65e-19
+C61 D x6/A 0.010954f
+C62 x1/pcell_pfd_0/drain1 x6/A 3.93e-19
+C63 DVDD x1/pcell_pfd_0/drain2 0.011388f
+C64 x6/X x6/a_27_47# 0.011874f
+C65 VIN2 x1/pcell_pfd_0/drain2 2.8e-19
+C66 x4/a_27_47# D 0.036569f
+C67 x4/a_27_47# x1/pcell_pfd_0/drain1 3.24e-20
+C68 x3/a_59_75# x6/A 0.020006f
+C69 D VIN1 1.25e-20
+C70 x1/pcell_pfd_0/drain1 VIN1 -3.55e-33
+C71 x4/a_27_47# x3/a_59_75# 0.012662f
+C72 VIN1 x3/a_59_75# 3.62e-20
+C73 DVDD x5/A 0.418828f
+C74 VIN2 x5/A 0.004775f
+C75 x1/pcell_pfd_0/m1_700_294# x6/a_27_47# 9.22e-20
+C76 U x6/X 7.45e-19
+C77 x2/pcell_pfd_0/drain1 x6/X 3.75e-19
+C78 D DVSS 0.677116f
+C79 x1/pcell_pfd_0/drain1 DVSS 0.007271f
+C80 x4/a_27_47# x4/A 0.077929f
+C81 DVSS x3/a_59_75# 0.001282f
+C82 U x2/pcell_pfd_0/drain2 3.03e-19
+C83 DVSS x4/A 0.21999f
+C84 U x5/a_27_47# 0.001479f
+C85 x2/pcell_pfd_0/drain1 x5/a_27_47# 7.63e-20
+C86 DVSS x2/pcell_pfd_0/m1_700_294# 0.002698f
+C87 x1/pcell_pfd_0/drain2 x6/A 1.29e-20
+C88 U x6/a_27_47# 0.001438f
+C89 D x6/X 0.006545f
+C90 x1/pcell_pfd_0/drain1 x6/X 7.51e-19
+C91 x4/a_27_47# x1/pcell_pfd_0/drain2 5.04e-20
+C92 VIN2 DVDD 0.001705f
+C93 x3/a_59_75# x6/X 0.001584f
+C94 DVDD x3/a_145_75# -3.5e-20
+C95 D x2/pcell_pfd_0/drain2 2.76e-19
+C96 x1/pcell_pfd_0/drain1 x2/pcell_pfd_0/drain2 0.008448f
+C97 x4/a_27_47# x5/A 0.027265f
+C98 x1/pcell_pfd_0/m1_700_294# x1/pcell_pfd_0/drain1 -1.42e-32
+C99 DVSS x1/pcell_pfd_0/drain2 0.007681f
+C100 VIN1 x5/A 3.43e-19
+C101 x6/X x4/A 0.122169f
+C102 D x5/a_27_47# 0.031675f
+C103 x2/pcell_pfd_0/drain2 x4/A 0.004447f
+C104 DVSS x5/A 0.141017f
+C105 x2/pcell_pfd_0/m1_700_294# x6/X 2.32e-20
+C106 D x6/a_27_47# 0.002843f
+C107 x1/pcell_pfd_0/drain1 x6/a_27_47# 5.57e-19
+C108 x5/a_27_47# x4/A 1e-18
+C109 D U 0.163602f
+C110 x1/pcell_pfd_0/drain1 U 6.34e-20
+C111 D x2/pcell_pfd_0/drain1 4.7e-20
+C112 x1/pcell_pfd_0/drain2 x6/X 0.002997f
+C113 x1/pcell_pfd_0/drain1 x2/pcell_pfd_0/drain1 0.035895f
+C114 x6/a_27_47# x4/A 4.9e-20
+C115 DVDD x6/A 0.02095f
+C116 U x3/a_59_75# 0.015095f
+C117 x4/a_27_47# DVDD 0.093648f
+C118 DVDD VIN1 0.334038f
+C119 x1/pcell_pfd_0/drain2 x2/pcell_pfd_0/drain2 0.001844f
+C120 VIN2 VIN1 7.22e-19
+C121 x5/A x6/X 0.025088f
+C122 U x4/A 0.011725f
+C123 x2/pcell_pfd_0/drain1 x4/A 0.017626f
+C124 DVDD DVSS 0.558453f
+C125 x5/A x2/pcell_pfd_0/drain2 0.00143f
+C126 VIN2 DVSS 0.270802f
+C127 x3/a_145_75# DVSS 2.11e-19
+C128 x1/ncell_pfd_0/m1_102_34# x6/a_27_47# 1.23e-19
+C129 x1/pcell_pfd_0/drain2 x6/a_27_47# 9.25e-19
+C130 x1/pcell_pfd_0/drain1 D 0.005965f
+C131 x5/A x5/a_27_47# 0.075053f
+C132 D x3/a_59_75# 0.032467f
+C133 x1/pcell_pfd_0/drain1 x3/a_59_75# 1.43e-19
+C134 x1/pcell_pfd_0/drain2 U 6.47e-21
+C135 x1/pcell_pfd_0/drain2 x2/pcell_pfd_0/drain1 0.008448f
+C136 D x4/A 0.002976f
+C137 x1/pcell_pfd_0/drain1 x4/A 0.001033f
+C138 x4/a_27_47# x6/A 0.00858f
+C139 DVDD x6/X 1.026065f
+C140 VIN2 x6/X -0.017672f
+C141 VIN1 x6/A 8.42e-20
+C142 x5/A U 0.004103f
+C143 x5/A x2/pcell_pfd_0/drain1 0.015207f
+C144 x6/A 0 0.144532f
+C145 DVDD 0 8.760315f
+C146 x6/a_27_47# 0 0.207781f
+C147 D 0 0.316463f
+C148 x5/a_27_47# 0 0.839069f
+C149 U 0 0.294844f
+C150 x4/a_27_47# 0 0.839069f
+C151 x3/a_59_75# 0 0.177062f
+C152 x5/A 0 0.493549f
+C153 x2/pcell_pfd_0/drain2 0 0.29434f
+C154 x2/pcell_pfd_0/drain1 0 0.594319f
+C155 x2/pcell_pfd_0/m1_700_294# 0 0.03976f
+C156 VIN2 0 0.243495f
+C157 DVSS 0 0.414256f
+C158 x2/ncell_pfd_0/m1_102_34# 0 0.104809f
+C159 x6/X 0 1.842631f
+C160 x4/A 0 0.417619f
+C161 x1/pcell_pfd_0/drain2 0 0.29434f
+C162 x1/pcell_pfd_0/drain1 0 0.594319f
+C163 x1/pcell_pfd_0/m1_700_294# 0 0.03976f
+C164 VIN1 0 0.224353f
+C165 x1/ncell_pfd_0/m1_102_34# 0 0.104809f
+.ends
+
