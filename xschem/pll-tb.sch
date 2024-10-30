@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 170 -750 970 -350 {flags=graph
-y1=-0.0065
+y1=-0.016
 y2=1.9
 ypos1=0.091416442
 ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,8 +36,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -57,8 +57,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -83,8 +83,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -102,15 +102,15 @@ color=7
 node="\\"d@ 0 deg;d%0\\""
 digital=0}
 B 2 170 -1550 970 -1150 {flags=graph
-y1=0.2552
-y2=1.6862
+y1=-0.023
+y2=1.2
 ypos1=-0.20129197
 ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -136,8 +136,8 @@ ypos2=1.3045748
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.9676967e-06
+x2=4.1084342e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -159,10 +159,8 @@ digital=0}
 N 1120 -190 1120 -170 {
 lab=#net1}
 N 1000 -250 1020 -250 {
-lab=postvcon}
+lab=#net2}
 N 1080 -250 1120 -250 {
-lab=postvcon}
-N 1020 -250 1080 -250 {
 lab=postvcon}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {sky130_fd_pr/corner.sym} 10 -210 0 0 {*name=CORNER only_toplevel=false corner=tt
@@ -200,11 +198,11 @@ value="
      write pll-tb.raw
      set appendwrite
      
-     *alterparam lval = 100u
-     *reset
-     *save vref vfeed u d vcon postvcon vout
-     *tran 0.01n 5u uic
-     *write pll-tb.raw
+     alterparam lval = 100u
+     reset
+     save vref vfeed u d vcon postvcon vout
+     tran 0.01n 5u uic
+     write pll-tb.raw
     quit 0
   .endc
 "}
@@ -233,7 +231,7 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 970 -250 1 0 {name=R2
-value=20k
+value=30k
 footprint=1206
 device=resistor
 m=1}
@@ -250,3 +248,8 @@ C {devices/lab_pin.sym} 440 -160 0 0 {name=p11 sig_type=std_logic lab=DVSS}
 C {devices/lab_pin.sym} 740 -220 0 1 {name=p15 sig_type=std_logic lab=vcon}
 C {devices/lab_pin.sym} 740 -200 0 1 {name=p16 sig_type=std_logic lab=postvcon}
 C {devices/lab_pin.sym} 440 -240 0 0 {name=p1 sig_type=std_logic lab=vout}
+C {devices/ind.sym} 1050 -250 3 0 {name=L2
+m=1
+value='lval'
+footprint=1206
+device=inductor}

@@ -8,13 +8,13 @@ E {}
 B 2 150 -900 950 -500 {flags=graph
 y1=0
 y2=1.8
-ypos1=0
-ypos2=1.8
+ypos1=0.18182192
+ypos2=1.8063219
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-07
+x1=3.4874504e-07
+x2=3.8041097e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -33,15 +33,15 @@ node="u
 d"
 digital=1}
 B 2 950 -900 1750 -500 {flags=graph
-y1=-0.00019
-y2=0.12
+y1=-0.10295605
+y2=0.3967543
 ypos1=-0.22349517
 ypos2=1.3045748
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-07
+x1=3.4874504e-07
+x2=3.8041097e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -61,15 +61,46 @@ node="\\"vcon@lmos=0.54;vcon%0\\"
 postvcon"
 digital=0}
 B 2 150 -1300 950 -900 {flags=graph
-y1=-0.00075232016
-y2=0.0011151209
+y1=-0.00060210218
+y2=0.0019359842
 ypos1=-0.0014
 ypos2=0.0065
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=5e-07
+x1=3.4874504e-07
+x2=3.8041097e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+
+
+digital=0
+color="8 12 11 14"
+node="\\"Ip@lmos=0.54; i(vipmos)%0\\"
+\\"Ip@lmos=0.36; i(vipmos)%1\\"
+\\"In@lmos=0.54; i(vinmos)%0\\"
+\\"In@lmos=0.36; i(vinmos)%1\\""}
+B 2 950 -1300 1750 -900 {flags=graph
+y1=-0.00027
+y2=0.001
+ypos1=-0.0014
+ypos2=0.0065
+divy=5
+subdivy=1
+unity=1
+x1=3.4874504e-07
+x2=3.8041097e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -129,8 +160,8 @@ N 740 -220 800 -220 {
 lab=vcon}
 C {devices/title.sym} 160 -30 0 0 {name=l1 author="Yohanes Stefanus"}
 C {devices/param.sym} 160 -190 0 0 {name=s1 value="
-+wpmos=2.5
-+wnmos=2.5
++wpmos=5
++wnmos=5
 +lmos=1.2"}
 C {sky130_fd_pr/corner.sym} 0 -280 0 0 {*name=CORNER only_toplevel=false corner=tt
 
@@ -163,7 +194,7 @@ value="
      write charge_pump-tb.raw
      set appendwrite
 
-     alterparam lmos=0.36
+     alterparam lmos=0.54
      reset
      save all
      tran 0.01n 500n
@@ -200,7 +231,7 @@ tclcommand="textwindow $netlist_dir/charge_pump.raw"
 C {devices/lab_pin.sym} 710 -220 1 1 {name=p5 sig_type=std_logic lab=vcon}
 C {devices/capa-2.sym} 830 -110 0 0 {name=C2
 m=1
-value=33p
+value=10p
 footprint=1206
 device=polarized_capacitor}
 C {devices/res.sym} 780 -320 1 0 {name=R2
@@ -244,7 +275,7 @@ C {devices/lab_pin.sym} 420 -310 0 0 {name=p9 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} 450 -200 0 0 {name=p10 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 590 -250 0 1 {name=p11 sig_type=std_logic lab=vcon}
 C {devices/lab_pin.sym} 520 -310 3 0 {name=p12 sig_type=std_logic lab=Ub}
-C {sky130_stdcells/inv_8.sym} 460 -310 0 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 460 -310 0 0 {name=x2 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/ammeter.sym} 580 -380 0 0 {name=Vipmos savecurrent=true}
 C {devices/ammeter.sym} 580 -140 0 0 {name=Vinmos savecurrent=true}
-C {sky130_stdcells/buf_8.sym} 490 -200 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 490 -200 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }

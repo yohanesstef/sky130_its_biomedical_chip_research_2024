@@ -75,7 +75,7 @@ C {devices/param.sym} 420 -380 0 0 {name=s1 value="
 +wpmos=2.5
 +wnmos=2.5
 +lmos=1.2"}
-C {sky130_stdcells/buf_8.sym} 660 -150 0 0 {name=x1 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_8.sym} 630 -260 0 0 {name=x2 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 660 -150 0 0 {name=x1 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 630 -260 0 0 {name=x2 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} 530 -170 0 0 {name=p11 lab=DVDD}
 C {devices/ipin.sym} 530 -150 0 0 {name=p12 lab=DVSS}
