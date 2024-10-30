@@ -113,7 +113,7 @@ value="
     quit 0
   .endc
 "}
-C {devices/launcher.sym} 250 -300 0 0 {name=h5
+C {devices/launcher.sym} 230 -300 0 0 {name=h5
 descr="load tran" 
 tclcommand="xschem raw_read $netlist_dir/freq_psc_16_bit-tb.raw tran"
 }

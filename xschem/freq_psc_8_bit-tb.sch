@@ -13,15 +13,15 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=3.01139e-07
-x2=3.6953742e-07
+x1=-4.6373419e-07
+x2=2.240805e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="\\"out\\"
 clk"
-color="15 4"
+color="7 4"
 dataset=-1
 unitx=1
 logx=0
@@ -35,8 +35,8 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=3.01139e-07
-x2=3.6953742e-07
+x1=-4.6373419e-07
+x2=2.240805e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -56,8 +56,8 @@ ypos2=0.01
 divy=5
 subdivy=1
 unity=1
-x1=3.01139e-07
-x2=3.6953742e-07
+x1=-4.6373419e-07
+x2=2.240805e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -77,8 +77,8 @@ ypos2=0.01
 divy=5
 subdivy=1
 unity=1
-x1=3.01139e-07
-x2=3.6953742e-07
+x1=-4.6373419e-07
+x2=2.240805e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -90,27 +90,28 @@ unitx=1
 logx=0
 logy=0
 digital=0
-color=4
+color=7
 node=out}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
-C {devices/simulator_commands.sym} 0 -360 0 0 {name=COMMANDS
+C {devices/simulator_commands.sym} 0 -370 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="
   .include ~/sky130_projects/sky130_its_biomedical_chip_research_2024/spice/freq_psc_8_bit.spice
-  .param max_freq=100e6 period=\{1/max_freq\} time_high=\{period/2\}
+  .param max_freq=8e6 period=\{1/max_freq\} time_high=\{period/2\}
   .param delay_vin1=\{time_high\} delay_vin2=\{time_high*1.5\}
 
   .option wnflag=1
   .option safecurrents
 
   Vvdd VDD GND dc 1.8
-  Vrst rst GND pulse(0 1.8 \{delay_vin1*20\} 1p 1p \{time_high*20\} \{period*50\})
+  *Vrst rst GND pulse(0 1.8 \{delay_vin1*20\} 1p 1p \{time_high*20\} \{period*50\})
+  Vrst rst GND dc 0
   Vin1 clk GND pulse(0 1.8 \{delay_vin1\} 1p 1p \{time_high\} \{period\})
 
-  Vpsc0  psc[0] gnd dc 0
-  Vpsc1  psc[1] gnd dc 0
-  Vpsc2  psc[2] gnd dc 1
+  Vpsc0  psc[0] gnd dc 1.8
+  Vpsc1  psc[1] gnd dc 1.8
+  Vpsc2  psc[2] gnd dc 1.8
   Vpsc3  psc[3] gnd dc 0
   Vpsc4  psc[4] gnd dc 0
   Vpsc5  psc[5] gnd dc 0
@@ -121,13 +122,13 @@ value="
      reset
      save out clk psc[0] psc[1] psc[2] psc[3] psc[4] psc[5]
      +psc[6] psc[7] rst
-     tran 0.01n 500n uic
+     tran 0.01n 2u uic
      remzerovec
      write freq_psc_8_bit-tb.raw
     quit 0
   .endc
 "}
-C {devices/launcher.sym} 250 -300 0 0 {name=h5
+C {devices/launcher.sym} 240 -300 0 0 {name=h5
 descr="load tran" 
 tclcommand="xschem raw_read $netlist_dir/freq_psc_8_bit-tb.raw tran"
 }

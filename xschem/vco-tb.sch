@@ -8,52 +8,126 @@ E {}
 B 2 165 -910 965 -510 {flags=graph
 y1=-0.044
 y2=1.9
-ypos1=-0.53949042
-ypos2=1.4813747
+ypos1=2.386
+ypos2=4.33
 divy=5
 subdivy=1
 unity=1
-x1=1.8273543e-07
-x2=1.9633759e-07
+x1=-1.25e-07
+x2=3.75e-07
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"out@vcon=0; out%0\\"
-\\"out@vcon=0.1; out%1\\"
-\\"out@vcon=0.2; out%2\\"
-\\"out@vcon=0.3; out%3\\"
-\\"out@vcon=0.4; out%4\\"
-\\"out@vcon=0.5; out%5\\"
-\\"out@vcon=0.6; out%6\\"
-\\"out@vcon=0.7; out%7\\"
-\\"out@vcon=0.8; out%8\\"
-\\"out@vcon=0.9; out%9\\"
-\\"out@vcon=1; out%10\\"
-\\"out@vcon=1.1; out%11\\"
-\\"out@vcon=1.2; out%12\\"
-\\"out@vcon=1.3; out%13\\"
-\\"out@vcon=1.4; out%14\\"
-\\"out@vcon=1.5; out%15\\"
-\\"out@vcon=1.6; out%16\\"
-\\"out@vcon=1.7; out%17\\"
-\\"out@vcon=1.8; out%18\\""
-color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 6 7"
+node="\\"out@vcon=0; out%0\\""
+color=7
 dataset=-1
 unitx=1
 logx=0
 logy=0
-digital=1
+digital=0
 rainbow=1}
-T {*w   : widht
-*l   : length
-*p   : pmos
-*n   : nmos
-*o   : oscilator
-*cb  : current bias
-*vb  : voltage bias
-*vc  : voltage control
-*buff: buffer} 0 -700 0 0 0.3 0.3 {}
+B 2 165 -1310 965 -910 {flags=graph
+y1=1.1303612e-05
+y2=3.5022911e-05
+ypos1=-0.044
+ypos2=1.9
+divy=5
+subdivy=1
+unity=1
+x1=-1.25e-07
+x2=3.75e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"i(v.x1.viref);i(v.x1.viref)%0\\"
+\\"i(v.x1.vib);i(v.x1.vib)%0\\""
+color="7 4"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=0
+rainbow=1}
+B 2 965 -910 1765 -510 {flags=graph
+y1=1e-11
+y2=1.6e-05
+ypos1=1.86e-05
+ypos2=3.66e-05
+divy=5
+subdivy=1
+unity=1
+x1=-1.25e-07
+x2=3.75e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"i(viref)@0.0; i(v.x1.viref)%0\\"
+\\"i(viref)@0.1; i(v.x1.viref)%1\\"
+\\"i(viref)@0.2; i(v.x1.viref)%2\\"
+\\"i(viref)@0.3; i(v.x1.viref)%3\\"
+\\"i(viref)@0.4; i(v.x1.viref)%4\\"
+\\"i(viref)@0.5; i(v.x1.viref)%5\\"
+\\"i(viref)@0.6; i(v.x1.viref)%6\\"
+\\"i(viref)@0.7; i(v.x1.viref)%7\\"
+\\"i(viref)@0.8; i(v.x1.viref)%8\\"
+\\"i(viref)@0.9; i(v.x1.viref)%9\\"
+\\"i(viref)@1.0; i(v.x1.viref)%10\\"
+\\"i(viref)@1.1; i(v.x1.viref)%11\\"
+\\"i(viref)@1.2; i(v.x1.viref)%12\\"
+\\"i(viref)@1.3; i(v.x1.viref)%13\\"
+\\"i(viref)@1.4; i(v.x1.viref)%14\\"
+\\"i(viref)@1.5; i(v.x1.viref)%15\\"
+\\"i(viref)@1.6; i(v.x1.viref)%16\\"
+\\"i(viref)@1.7; i(v.x1.viref)%17\\"
+\\"i(viref)@1.8; i(v.x1.viref)%18\\""
+color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 20 21"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}
+B 2 965 -1310 1765 -910 {flags=graph
+y1=2.3e-10
+y2=3.9e-05
+ypos1=4.0799992e-05
+ypos2=7.4799976e-05
+divy=5
+subdivy=1
+unity=1
+x1=-1.25e-07
+x2=3.75e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"i(vib)@0.0;i(v.x1.vib)%0\\"
+\\"i(vib)@0.1;i(v.x1.vib)%1\\"
+\\"i(vib)@0.2;i(v.x1.vib)%2\\"
+\\"i(vib)@0.3;i(v.x1.vib)%3\\"
+\\"i(vib)@0.4;i(v.x1.vib)%4\\"
+\\"i(vib)@0.5;i(v.x1.vib)%5\\"
+\\"i(vib)@0.6;i(v.x1.vib)%6\\"
+\\"i(vib)@0.7;i(v.x1.vib)%7\\"
+\\"i(vib)@0.8;i(v.x1.vib)%8\\"
+\\"i(vib)@0.9;i(v.x1.vib)%9\\"
+\\"i(vib)@1.0;i(v.x1.vib)%10\\"
+\\"i(vib)@1.1;i(v.x1.vib)%11\\"
+\\"i(vib)@1.2;i(v.x1.vib)%12\\"
+\\"i(vib)@1.3;i(v.x1.vib)%13\\"
+\\"i(vib)@1.4;i(v.x1.vib)%14\\"
+\\"i(vib)@1.5;i(v.x1.vib)%15\\"
+\\"i(vib)@1.6;i(v.x1.vib)%16\\"
+\\"i(vib)@1.7;i(v.x1.vib)%17\\"
+\\"i(vib)@1.8;i(v.x1.vib)%18\\""
+color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}
 C {devices/launcher.sym} 225 -490 0 0 {name=h5
 descr="load tran" 
 tclcommand="xschem raw_read $netlist_dir/vco-tb.raw tran"}
@@ -66,50 +140,21 @@ descr="load dc"
 tclcommand="xschem raw_read $netlist_dir/vco-tb.raw dc"
 }
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
-C {devices/param.sym} 5 -490 0 0 {name=s2 value="
-+wpo=4.8 
-+lpo=0.54
-+wno=2.4 
-+lno=0.54
-+
-+wpcb=4.8
-+lpcb=0.36
-+wncb=0.96
-+lncb=0.36
-+
-+wpvb=6
-+lpvb=0.9
-+
-+wnvc=96
-+lnvc=0.9
-+
-+wpbuff=4.8
-+lpbuff=0.18
-+wnbuff=1.2
-+lnbuff=0.18
-+
-+rin=100
-+rex=10k
-"
-
-
-}
-C {sky130_fd_pr/corner.sym} 200 -390 0 0 {*name=CORNER only_toplevel=false corner=sf
+C {sky130_fd_pr/corner.sym} 170 -230 0 0 {*name=CORNER only_toplevel=false corner=tt
 
 name=TT_MODELS1
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice sf
+value=".lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
 
 .param mc_mm_switch = 0
 .param mc_pr_switch = 0
 "}
-C {devices/simulator_commands.sym} 360 -380 0 0 {name=COMMANDS1
+C {devices/simulator_commands.sym} 170 -380 0 0 {name=COMMANDS1
 simulator=ngspice
 only_toplevel=false 
 value="
   .param val=0.5
-  .param lres=3.5
 
   .option wnflag=1
   .option safecurrents
@@ -124,7 +169,7 @@ value="
     set appendwrite
 
     let vval=0
-    while vval <= 1.9
+    while vval <= 1.8
       alterparam val=$&vval
       reset
       save all

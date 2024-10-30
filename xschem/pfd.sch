@@ -18,12 +18,8 @@ lab=D}
 N 940 -210 940 -190 {
 lab=D}
 N 1060 -230 1070 -230 {
-lab=#net3}
+lab=rst}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
-C {sky130_stdcells/and2_1.sym} 1000 -230 0 0 {name=x3 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_8.sym} 860 -280 0 0 {name=x4 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_8.sym} 860 -190 0 0 {name=x5 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_1.sym} 1110 -230 0 0 {name=x6 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} 390 -280 0 0 {name=p1 lab=vin1}
 C {devices/ipin.sym} 390 -260 0 0 {name=p2 lab=vin2}
 C {devices/opin.sym} 370 -240 0 0 {name=p3 lab=U}
@@ -36,10 +32,13 @@ C {devices/lab_pin.sym} 940 -280 0 1 {name=p9 sig_type=std_logic lab=U}
 C {devices/lab_pin.sym} 940 -190 0 1 {name=p10 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} 500 -260 0 0 {name=p11 sig_type=std_logic lab=rst}
 C {devices/lab_pin.sym} 500 -170 0 0 {name=p12 sig_type=std_logic lab=rst}
-C {devices/lab_pin.sym} 1150 -230 0 1 {name=p13 sig_type=std_logic lab=rst}
+C {devices/lab_pin.sym} 1070 -230 0 1 {name=p13 sig_type=std_logic lab=rst}
 C {devices/lab_pin.sym} 500 -240 0 0 {name=p15 sig_type=std_logic lab=DVDD}
 C {devices/lab_pin.sym} 500 -150 0 0 {name=p16 sig_type=std_logic lab=DVDD}
 C {devices/lab_pin.sym} 500 -220 0 0 {name=p17 sig_type=std_logic lab=DVSS}
 C {devices/lab_pin.sym} 500 -130 0 0 {name=p18 sig_type=std_logic lab=DVSS}
 C {tspc_dff.sym} 650 -250 0 0 {name=x1}
 C {tspc_dff.sym} 650 -160 0 0 {name=x2}
+C {sky130_stdcells/buf_8.sym} 860 -280 0 0 {name=x4 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_8.sym} 860 -190 0 0 {name=x5 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_1.sym} 1000 -230 0 0 {name=x3 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }

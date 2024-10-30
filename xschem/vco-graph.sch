@@ -222,3 +222,127 @@ unitx=1
 logx=0
 logy=0
 digital=0}
+B 2 125 -2000 925 -1600 {flags=graph
+y1=-5.2e-05
+y2=0.0002
+ypos1=-0.4328
+ypos2=1.5112
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="i(vi1)
+i(vi2)"
+color="7 4"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=0
+rainbow=1}
+B 2 125 -1600 925 -1200 {flags=graph
+y1=-5.2e-05
+y2=0.0002
+ypos1=-0.4328
+ypos2=1.5112
+divy=5
+subdivy=1
+unity=1
+x1=0
+x2=5e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="i(vi3)
+i(vi4)"
+color="7 4"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=0
+rainbow=1}
+B 2 1665 -1500 2465 -1100 {flags=graph
+y1=1.5e-05
+y2=3.3e-05
+ypos1=1.86e-05
+ypos2=3.66e-05
+divy=5
+subdivy=1
+unity=1
+x1=5e-08
+x2=5.5e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"i(viref)@0.0; i(viref)%0\\"
+\\"i(viref)@0.1; i(viref)%1\\"
+\\"i(viref)@0.2; i(viref)%2\\"
+\\"i(viref)@0.3; i(viref)%3\\"
+\\"i(viref)@0.4; i(viref)%4\\"
+\\"i(viref)@0.5; i(viref)%5\\"
+\\"i(viref)@0.6; i(viref)%6\\"
+\\"i(viref)@0.7; i(viref)%7\\"
+\\"i(viref)@0.8; i(viref)%8\\"
+\\"i(viref)@0.9; i(viref)%9\\"
+\\"i(viref)@1.0; i(viref)%10\\"
+\\"i(viref)@1.1; i(viref)%11\\"
+\\"i(viref)@1.2; i(viref)%12\\"
+\\"i(viref)@1.3; i(viref)%13\\"
+\\"i(viref)@1.4; i(viref)%14\\"
+\\"i(viref)@1.5; i(viref)%15\\"
+\\"i(viref)@1.6; i(viref)%16\\"
+\\"i(viref)@1.7; i(viref)%17\\"
+\\"i(viref)@1.8; i(viref)%18\\""
+color="7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4 5 20 21"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}
+B 2 1665 -1900 2465 -1500 {flags=graph
+y1=1.5e-11
+y2=3.4e-05
+ypos1=-4e-06
+ypos2=2.7e-05
+divy=5
+subdivy=1
+unity=1
+x1=5e-08
+x2=5.5e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"i(vib)@0.0;i(vib)%0\\"
+\\"i(vib)@0.1;i(vib)%1\\"
+\\"i(vib)@0.2;i(vib)%2\\"
+\\"i(vib)@0.3;i(vib)%3\\"
+\\"i(vib)@0.4;i(vib)%4\\"
+\\"i(vib)@0.5;i(vib)%5\\"
+\\"i(vib)@0.6;i(vib)%6\\"
+\\"i(vib)@0.7;i(vib)%7\\"
+\\"i(vib)@0.8;i(vib)%8\\"
+\\"i(vib)@0.9;i(vib)%9\\"
+\\"i(vib)@1.0;i(vib)%10\\"
+\\"i(vib)@1.1;i(vib)%11\\"
+\\"i(vib)@1.2;i(vib)%12\\"
+\\"i(vib)@1.3;i(vib)%13\\"
+\\"i(vib)@1.4;i(vib)%14\\"
+\\"i(vib)@1.5;i(vib)%15\\"
+\\"i(vib)@1.6;i(vib)%16\\"
+\\"i(vib)@1.7;i(vib)%17\\"
+\\"i(vib)@1.8;i(vib)%18\\""
+color="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 4"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=1}

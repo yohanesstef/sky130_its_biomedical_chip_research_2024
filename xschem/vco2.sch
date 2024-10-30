@@ -411,13 +411,19 @@ lab=AVSS}
 N 1240 -140 1240 -100 {
 lab=AVSS}
 N 430 -470 430 -360 {
-lab=#net18}
+lab=vnbias}
 N 430 -300 430 -200 {
 lab=vnbias}
+N 280 -240 280 -200 {
+lab=AVSS}
 N 280 -140 280 -100 {
 lab=AVSS}
 N 1090 -400 1090 -390 {
 lab=AVDD}
+N 280 -200 280 -140 {
+lab=AVSS}
+N 430 -360 430 -300 {
+lab=vnbias}
 N 1240 -510 1240 -450 {
 lab=AVDD}
 N 1400 -510 1400 -450 {
@@ -425,10 +431,6 @@ lab=AVDD}
 N 1240 -200 1240 -140 {
 lab=AVSS}
 N 1400 -200 1400 -140 {
-lab=AVSS}
-N 280 -240 280 -220 {
-lab=#net19}
-N 280 -160 280 -140 {
 lab=AVSS}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {devices/param.sym} 5 -670 0 0 {name=s1 value="
@@ -444,9 +446,9 @@ C {devices/param.sym} 5 -670 0 0 {name=s1 value="
 +lncb=0.36
 +
 +wpo=2.4
-+lpo=0.54
++lpo=0.36
 +wno=1.2
-+lno=0.54
++lno=0.36
 +
 +wpbuff=2.4
 +lpbuff=0.18
@@ -809,8 +811,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 1220 -390 0 0 {name=M25
-W=wpbuff
-L=lpbuff
+W=wpo
+L=lpo
 nf=1
 mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -823,8 +825,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 1380 -390 0 0 {name=M26
-W=wpbuff
-L=lpbuff
+W=wpo
+L=lpo
 nf=1
 mult=2
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -864,5 +866,3 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ammeter.sym} 280 -190 0 0 {name=Viref savecurrent=true}
-C {devices/ammeter.sym} 430 -330 0 0 {name=Vib savecurrent=true}

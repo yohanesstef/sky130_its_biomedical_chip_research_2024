@@ -13,8 +13,8 @@ ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=1.3366318e-08
-x2=1.6225822e-08
+x1=8.9608238e-08
+x2=1.1532345e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -43,8 +43,8 @@ ypos2=2.2
 divy=5
 subdivy=1
 unity=1
-x1=1.3366318e-08
-x2=1.6225822e-08
+x1=8.9608238e-08
+x2=1.1532345e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,8 +72,8 @@ ypos2=2.710508
 divy=5
 subdivy=1
 unity=1
-x1=1.3366318e-08
-x2=1.6225822e-08
+x1=8.9608238e-08
+x2=1.1532345e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -106,8 +106,8 @@ ypos2=2.583908
 divy=5
 subdivy=1
 unity=1
-x1=1.3366318e-08
-x2=1.6225822e-08
+x1=8.9608238e-08
+x2=1.1532345e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -132,6 +132,58 @@ node="\\"d@ 0 deg;d%0\\"
 \\"d@ 315 deg;d%7\\"
 \\"d@ 360 deg;d%8\\""
 digital=1}
+B 2 1630 -1240 2430 -840 {flags=graph
+y1=-0.20129197
+y2=2.330708
+ypos1=0.17850803
+ypos2=2.710508
+divy=5
+subdivy=1
+unity=1
+x1=8.9608238e-08
+x2=1.1532345e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+color=7
+node="\\"u@ 180 deg;u%4\\""
+digital=0}
+B 2 1630 -840 2430 -440 {flags=graph
+y1=-0.12676067
+y2=2.9116393
+ypos1=0.051908028
+ypos2=2.583908
+divy=5
+subdivy=1
+unity=1
+x1=8.9608238e-08
+x2=1.1532345e-07
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+color=7
+node="\\"d@ 180 deg;d%5\\""
+digital=0}
 T {*w   : widht
 *l   : length
 *p   : pmos
