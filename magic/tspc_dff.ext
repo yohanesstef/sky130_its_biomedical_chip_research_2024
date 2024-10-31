@@ -1,0 +1,83 @@
+timestamp 1730031749
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use pcell_pfd pcell_pfd_0 -1 0 379 0 1 281
+use ncell_pfd ncell_pfd_0 0 -1 195 -1 0 900
+port "preout" 4 467 577 467 577 m1
+port "DVDD" 2 -606 627 -606 627 m1
+port "DVSS" 3 537 716 537 716 m1
+port "vin" 0 13 889 13 890 m2
+port "rst" 1 -79 1036 -79 1036 m1
+node "m1_n342_42#" 3 185.531 -342 42 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43700 1992 0 0 0 0 0 0 0 0 0 0
+node "preout" 5 568.45 467 577 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 84866 3822 0 0 0 0 0 0 0 0 0 0
+node "m1_n282_468#" 2 278.971 -282 468 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7072 480 34580 1440 0 0 0 0 0 0 0 0
+node "DVDD" 0 35.1257 -606 627 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2538 202 0 0 0 0 0 0 0 0 0 0
+node "DVSS" 0 24.8723 537 716 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1428 152 0 0 0 0 0 0 0 0 0 0
+node "vin" 2 294.197 13 889 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6916 474 33402 1430 0 0 0 0 0 0 0 0
+node "rst" 3 459.924 -79 1036 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63546 2594 0 0 0 0 0 0 0 0 0 0
+node "w_n613_82#" 1611 10.764 -613 82 nw 0 0 0 0 3588 248 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n623_605#" 1091 7.614 -623 605 nw 0 0 0 0 2538 202 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "preout" "DVDD" 3.28889
+cap "preout" "w_n613_82#" 2.31247
+cap "m1_n342_42#" "m1_n282_468#" 110.389
+cap "m1_n282_468#" "rst" 13.279
+cap "DVDD" "w_n623_605#" 1.63574
+cap "m1_n282_468#" "DVDD" 2.18039
+cap "m1_n342_42#" "vin" 12.6179
+cap "rst" "vin" 91.4879
+cap "preout" "m1_n282_468#" 102.065
+cap "m1_n342_42#" "rst" 23.3315
+cap "preout" "vin" 3.55978
+cap "preout" "m1_n342_42#" 528.925
+cap "preout" "rst" 21.59
+cap "m1_n282_468#" "vin" 43.3372
+cap "DVSS" "rst" 14.4138
+cap "pcell_pfd_0/preout" "pcell_pfd_0/DVDD" 101.164
+cap "pcell_pfd_0/drain1" "ncell_pfd_0/sky130_fd_pr__nfet_01v8_7XSGLL_2/a_n73_n73#" 25.9087
+cap "pcell_pfd_0/VIN" "ncell_pfd_0/sky130_fd_pr__nfet_01v8_7XSGLL_2/a_n73_n73#" 1.49042
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/preout" -22.489
+cap "pcell_pfd_0/VIN" "pcell_pfd_0/preout" -2.8148
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/DVDD" 30.9723
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/VIN" 22.412
+cap "pcell_pfd_0/VIN" "pcell_pfd_0/DVDD" 56.8649
+cap "pcell_pfd_0/RST" "ncell_pfd_0/DVSS" 126.653
+cap "pcell_pfd_0/RST" "pcell_pfd_0/drain2" -4.14177
+cap "pcell_pfd_0/RST" "ncell_pfd_0/sky130_fd_pr__nfet_01v8_7XSGLL_2/a_n73_n73#" 0.104425
+cap "pcell_pfd_0/RST" "pcell_pfd_0/preout" -21.3887
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/RST" 117.119
+cap "pcell_pfd_0/RST" "pcell_pfd_0/DVDD" 58.6546
+cap "pcell_pfd_0/RST" "pcell_pfd_0/VIN" -3.18259
+cap "pcell_pfd_0/sky130_fd_pr__pfet_01v8_SC63VW_0/a_15_n162#" "ncell_pfd_0/DVSS" 0.638914
+cap "ncell_pfd_0/DVSS" "pcell_pfd_0/drain2" 11.1419
+cap "ncell_pfd_0/DVSS" "pcell_pfd_0/preout" 63.1216
+cap "ncell_pfd_0/sky130_fd_pr__nfet_01v8_7XSGLL_2/a_n73_n73#" "pcell_pfd_0/drain2" 0.169803
+cap "pcell_pfd_0/preout" "pcell_pfd_0/drain2" 265.213
+cap "ncell_pfd_0/DVSS" "pcell_pfd_0/DVDD" 155.535
+cap "pcell_pfd_0/drain1" "ncell_pfd_0/DVSS" 41.0096
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/sky130_fd_pr__pfet_01v8_SC63VW_0/a_15_n162#" 0.629341
+cap "pcell_pfd_0/DVDD" "pcell_pfd_0/drain2" 58.6729
+cap "ncell_pfd_0/DVSS" "pcell_pfd_0/VIN" 55.0283
+cap "pcell_pfd_0/drain1" "pcell_pfd_0/drain2" 77.3296
+cap "pcell_pfd_0/sky130_fd_pr__pfet_01v8_SC63VW_0/a_15_n162#" "pcell_pfd_0/VIN" 38.5895
+cap "pcell_pfd_0/VIN" "pcell_pfd_0/drain2" 2.22507
+cap "ncell_pfd_0/sky130_fd_pr__nfet_01v8_7XSGLL_2/a_n73_n73#" "pcell_pfd_0/DVDD" 4.46075
+merge "ncell_pfd_0/DVSS" "DVSS" -207.388 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1428 -152 0 0 0 0 0 0 0 0 0 0
+merge "DVSS" "pcell_pfd_0/VSUBS"
+merge "pcell_pfd_0/VSUBS" "VSUBS"
+merge "ncell_pfd_0/RST" "pcell_pfd_0/RST" -180.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5610 -424 0 0 0 0 0 0 0 0 0 0
+merge "pcell_pfd_0/RST" "rst"
+merge "ncell_pfd_0/drain1" "pcell_pfd_0/drain1" -253.692 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6480 -466 0 0 0 0 0 0 0 0 0 0
+merge "pcell_pfd_0/drain1" "m1_n282_468#"
+merge "ncell_pfd_0/drain2" "pcell_pfd_0/drain2" -340.719 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7636 -516 0 0 0 0 0 0 0 0 0 0
+merge "pcell_pfd_0/drain2" "m1_n342_42#"
+merge "ncell_pfd_0/preout" "pcell_pfd_0/preout" -187.936 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3540 -368 0 0 0 0 0 0 0 0 0 0
+merge "pcell_pfd_0/preout" "preout"
+merge "pcell_pfd_0/DVDD" "DVDD" -152.15 0 0 0 0 -6126 -450 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2538 -202 0 0 0 0 0 0 0 0 0 0
+merge "DVDD" "w_n613_82#"
+merge "w_n613_82#" "w_n623_605#"
+merge "ncell_pfd_0/VIN" "pcell_pfd_0/VIN" -179.366 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6448 -456 0 0 0 0 0 0 0 0 0 0
+merge "pcell_pfd_0/VIN" "vin"
