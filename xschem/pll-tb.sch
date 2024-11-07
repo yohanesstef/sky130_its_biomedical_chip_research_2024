@@ -6,50 +6,28 @@ V {}
 S {}
 E {}
 B 2 170 -750 970 -350 {flags=graph
-y1=-0.0065
+y1=-0.016
 y2=1.9
 ypos1=0.091416442
 ypos2=2.9877431
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.4896381e-06
+x2=3.5472841e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="\\"vout@l=47u;vout%0\\"
-\\"vout@l=470u;vout%1\\"
-vref"
-color="8 11 7"
+node="\\"vout=100;vout%0\\"
+\\"vref=100;vref%0\\""
+color="8 7"
 dataset=-1
 unitx=1
 logx=0
 logy=0
 digital=0}
-B 2 170 -1150 970 -750 {flags=graph
-y1=0
-y2=1.8
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=vref
-color=7
-dataset=-1
-unitx=1
-logx=0
-logy=0
-digital=0}
-B 2 970 -1150 1770 -750 {flags=graph
+B 2 970 -750 1770 -350 {flags=graph
 y1=-0.029
 y2=1.9
 ypos1=-0.20129197
@@ -57,8 +35,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.4896381e-06
+x2=3.5472841e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,10 +50,10 @@ logy=0
 
 
 
-color=7
-node="\\"u@ 0 deg;u%0\\""
+color=11
+node="\\"u@f=100MHz;u%0\\""
 digital=0}
-B 2 970 -750 1770 -350 {flags=graph
+B 2 1770 -750 2570 -350 {flags=graph
 y1=-0.058
 y2=1.9
 ypos1=-0.20129197
@@ -83,8 +61,8 @@ ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.4896381e-06
+x2=3.5472841e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -98,19 +76,19 @@ logy=0
 
 
 
-color=7
-node="\\"d@ 0 deg;d%0\\""
+color=11
+node="\\"d@f=100MHz;d%0\\""
 digital=0}
 B 2 170 -1550 970 -1150 {flags=graph
-y1=0.2552
-y2=1.6862
+y1=-0.023
+y2=1.2
 ypos1=-0.20129197
 ypos2=2.330708
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.4896381e-06
+x2=3.5472841e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -125,8 +103,8 @@ logy=0
 
 
 color="8 4"
-node="\\"postvcon@l=47u;postvcon%0\\"
-\\"postvcon@l=470u;postvcon%1\\""
+node="\\"postvcon=100;postvcon%0\\"
+\\"postvcon=8;postvcon%1\\""
 digital=0}
 B 2 970 -1550 1770 -1150 {flags=graph
 y1=-0.63
@@ -136,8 +114,8 @@ ypos2=1.3045748
 divy=5
 subdivy=1
 unity=1
-x1=4.6750647e-06
-x2=4.7119582e-06
+x1=3.4896381e-06
+x2=3.5472841e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -156,13 +134,85 @@ node="\\"vcon@l=47u;vcon%0\\"
 \\"vcon@l=470u;vcon%1\\"
 postvcon"
 digital=0}
+B 2 170 -1150 970 -750 {flags=graph
+y1=-0.016
+y2=1.9
+ypos1=0.091416442
+ypos2=2.9877431
+divy=5
+subdivy=1
+unity=1
+x1=3.4896381e-06
+x2=3.5472841e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node="\\"vout=8;vout%1\\"
+\\"vref=8;vref%1\\""
+color="8 7"
+dataset=-1
+unitx=1
+logx=0
+logy=0
+digital=0}
+B 2 970 -1150 1770 -750 {flags=graph
+y1=-0.029
+y2=1.9
+ypos1=-0.20129197
+ypos2=2.330708
+divy=5
+subdivy=1
+unity=1
+x1=3.4896381e-06
+x2=3.5472841e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+color=11
+node="\\"u@f=8MHz;u%1\\""
+digital=0}
+B 2 1770 -1150 2570 -750 {flags=graph
+y1=-0.058
+y2=1.9
+ypos1=-0.20129197
+ypos2=2.330708
+divy=5
+subdivy=1
+unity=1
+x1=3.4896381e-06
+x2=3.5472841e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+
+
+dataset=-1
+unitx=1
+logx=0
+logy=0
+
+
+
+color=11
+node="\\"d@f=8MHz;d%1\\""
+digital=0}
 N 1120 -190 1120 -170 {
 lab=#net1}
 N 1000 -250 1020 -250 {
-lab=postvcon}
+lab=#net2}
 N 1080 -250 1120 -250 {
-lab=postvcon}
-N 1020 -250 1080 -250 {
 lab=postvcon}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {sky130_fd_pr/corner.sym} 10 -210 0 0 {*name=CORNER only_toplevel=false corner=tt
@@ -181,7 +231,7 @@ only_toplevel=false
 value="  
   .param max_freq=100e6 period=\{1/max_freq\} time_high=\{period/2\}
   .param delay_vin1=\{time_high\} delay_vin2=\{time_high*1.5\}
-  .param lval=47u
+  .param lval=100u
 
   .option wnflag=1
   .option safecurrents
@@ -200,11 +250,11 @@ value="
      write pll-tb.raw
      set appendwrite
      
-     *alterparam lval = 100u
-     *reset
-     *save vref vfeed u d vcon postvcon vout
-     *tran 0.01n 5u uic
-     *write pll-tb.raw
+     alterparam max_freq=8e6
+     reset
+     save vref vfeed u d vcon postvcon vout
+     tran 0.01n 5u uic
+     write pll-tb.raw
     quit 0
   .endc
 "}
@@ -233,7 +283,7 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} 970 -250 1 0 {name=R2
-value=20k
+value=30k
 footprint=1206
 device=resistor
 m=1}
@@ -250,3 +300,8 @@ C {devices/lab_pin.sym} 440 -160 0 0 {name=p11 sig_type=std_logic lab=DVSS}
 C {devices/lab_pin.sym} 740 -220 0 1 {name=p15 sig_type=std_logic lab=vcon}
 C {devices/lab_pin.sym} 740 -200 0 1 {name=p16 sig_type=std_logic lab=postvcon}
 C {devices/lab_pin.sym} 440 -240 0 0 {name=p1 sig_type=std_logic lab=vout}
+C {devices/ind.sym} 1050 -250 3 0 {name=L2
+m=1
+value='lval'
+footprint=1206
+device=inductor}
