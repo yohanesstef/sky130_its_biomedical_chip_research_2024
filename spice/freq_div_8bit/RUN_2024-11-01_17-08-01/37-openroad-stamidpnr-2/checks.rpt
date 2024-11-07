@@ -1,0 +1,150 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: div_i[7] (input port clocked by clk)
+Endpoint: div_ready_o (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                      0.000000    0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock network delay (ideal)
+                                  1.000000    1.000000 v input external delay
+     1    0.007250    0.018488    0.011716    1.011716 v div_i[7] (in)
+                                                         div_i[7] (net)
+                      0.018488    0.000000    1.011716 v input9/A (sky130_fd_sc_hd__buf_8)
+     4    0.008721    0.023471    0.103392    1.115108 v input9/X (sky130_fd_sc_hd__buf_8)
+                                                         net9 (net)
+                      0.023471    0.000036    1.115144 v _189_/B (sky130_fd_sc_hd__or2_4)
+     1    0.002882    0.043202    0.210366    1.325509 v _189_/X (sky130_fd_sc_hd__or2_4)
+                                                         _042_ (net)
+                      0.043202    0.000008    1.325517 v _193_/A2 (sky130_fd_sc_hd__a22o_1)
+     1    0.002986    0.042361    0.222639    1.548156 v _193_/X (sky130_fd_sc_hd__a22o_1)
+                                                         _046_ (net)
+                      0.042361    0.000009    1.548166 v _194_/A (sky130_fd_sc_hd__or4_4)
+     2    0.008933    0.092171    0.540636    2.088802 v _194_/X (sky130_fd_sc_hd__or4_4)
+                                                         _047_ (net)
+                      0.092171    0.000124    2.088926 v _196_/B (sky130_fd_sc_hd__nor2_2)
+     1    0.003104    0.068718    0.090240    2.179166 ^ _196_/Y (sky130_fd_sc_hd__nor2_2)
+                                                         _049_ (net)
+                      0.068718    0.000009    2.179175 ^ _197_/A1 (sky130_fd_sc_hd__a31o_1)
+     1    0.005667    0.069325    0.150108    2.329283 ^ _197_/X (sky130_fd_sc_hd__a31o_1)
+                                                         net23 (net)
+                      0.069325    0.000026    2.329309 ^ output23/A (sky130_fd_sc_hd__buf_6)
+     1    0.034788    0.077779    0.134416    2.463725 ^ output23/X (sky130_fd_sc_hd__buf_6)
+                                                         div_ready_o (net)
+                      0.077779    0.000272    2.463998 ^ div_ready_o (out)
+                                              2.463998   data arrival time
+
+                      0.000000    5.000000    5.000000   clock clk (rise edge)
+                                  0.000000    5.000000   clock network delay (ideal)
+                                 -0.250000    4.750000   clock uncertainty
+                                  0.000000    4.750000   clock reconvergence pessimism
+                                 -1.000000    3.750000   output external delay
+                                              3.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              3.750000   data required time
+                                             -2.463998   data arrival time
+---------------------------------------------------------------------------------------------
+                                              1.286002   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 0 unannotated drivers.
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_1v80: 0
+max fanout violation count 0
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_1v80: 0
+max cap violation count 0
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_1v80: 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 25 unclocked register/latch pins.
+  _284_/CLK
+  _285_/CLK
+  _286_/CLK
+  _287_/CLK
+  _288_/CLK
+  _289_/CLK
+  _290_/CLK
+  _291_/CLK
+  _292_/CLK
+  _293_/CLK
+  _294_/CLK
+  _295_/CLK
+  _296_/CLK
+  _297_/CLK
+  _298_/CLK
+  _299_/CLK
+  _300_/CLK
+  _301_/CLK
+  _302_/CLK
+  _303_/CLK
+  _304_/CLK
+  _305_/CLK
+  _306_/CLK
+  _307_/CLK
+  _308_/GATE
+Warning: There are 33 unconstrained endpoints.
+  cycl_count_o[0]
+  cycl_count_o[1]
+  cycl_count_o[2]
+  cycl_count_o[3]
+  cycl_count_o[4]
+  cycl_count_o[5]
+  cycl_count_o[6]
+  cycl_count_o[7]
+  _284_/D
+  _285_/D
+  _286_/D
+  _287_/D
+  _288_/D
+  _289_/D
+  _290_/D
+  _291_/D
+  _292_/D
+  _293_/D
+  _294_/D
+  _295_/D
+  _296_/D
+  _297_/D
+  _298_/D
+  _299_/D
+  _300_/D
+  _301_/D
+  _302_/D
+  _303_/D
+  _304_/D
+  _305_/D
+  _306_/D
+  _307_/D
+  _308_/D

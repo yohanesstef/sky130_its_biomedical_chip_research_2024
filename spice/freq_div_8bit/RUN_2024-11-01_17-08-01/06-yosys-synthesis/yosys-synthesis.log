@@ -1,0 +1,1469 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv
+Parsing SystemVerilog input from `/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv' to AST representation.
+Storing AST representation for module `$abstract\clk_int_div'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv
+Parsing SystemVerilog input from `/home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv' to AST representation.
+Storing AST representation for module `$abstract\tc_clk_gating'.
+Storing AST representation for module `$abstract\tc_clk_mux2'.
+Storing AST representation for module `$abstract\tc_clk_xor2'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\clk_int_div'.
+Generating RTLIL representation for module `\clk_int_div'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Parameter \IS_FUNCTIONAL = 1
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\tc_clk_gating'.
+Parameter \IS_FUNCTIONAL = 1
+Generating RTLIL representation for module `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001'.
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\tc_clk_mux2'.
+Generating RTLIL representation for module `\tc_clk_mux2'.
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\tc_clk_xor2'.
+Generating RTLIL representation for module `\tc_clk_xor2'.
+
+5.5. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Used module:     $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001
+Used module:     \tc_clk_mux2
+Used module:     \tc_clk_xor2
+
+5.6. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Used module:     $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001
+Used module:     \tc_clk_mux2
+Used module:     \tc_clk_xor2
+Removing unused module `$abstract\tc_clk_xor2'.
+Removing unused module `$abstract\tc_clk_mux2'.
+Removing unused module `$abstract\tc_clk_gating'.
+Removing unused module `$abstract\clk_int_div'.
+Removed 4 unused modules.
+Renaming module clk_int_div to clk_int_div.
+
+6. Generating Graphviz representation of design.
+Writing dot description to `/home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/hierarchy.dot'.
+Dumping module clk_int_div to page 1.
+
+7. Executing TRIBUF pass.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Used module:     $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001
+Used module:     \tc_clk_mux2
+Used module:     \tc_clk_xor2
+
+8.2. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Used module:     $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001
+Used module:     \tc_clk_mux2
+Used module:     \tc_clk_xor2
+Removed 0 unused modules.
+
+9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:372$47 in module clk_int_div.
+Marked 2 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32 in module clk_int_div.
+Marked 1 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27 in module clk_int_div.
+Marked 2 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25 in module clk_int_div.
+Marked 2 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23 in module clk_int_div.
+Marked 1 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:267$21 in module clk_int_div.
+Marked 3 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$16 in module clk_int_div.
+Marked 1 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14 in module clk_int_div.
+Marked 6 switch rules as full_case in process $proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4 in module clk_int_div.
+Removed a total of 0 dead cases.
+
+11. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 7 redundant assignments.
+Promoted 17 assignments to connections.
+
+12. Executing PROC_INIT pass (extract init attributes).
+
+13. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:372$47'.
+Found async reset \rst_ni in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25'.
+Found async reset \rst_ni in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23'.
+Found async reset \rst_ni in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:267$21'.
+Found async reset \rst_ni in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+
+14. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~15 debug messages>
+
+15. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:372$47'.
+     1/1: $0\gate_is_open_q[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32'.
+     1/4: $2\t_ff2_en[0:0]
+     2/4: $2\t_ff1_en[0:0]
+     3/4: $1\t_ff2_en[0:0]
+     4/4: $1\t_ff1_en[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27'.
+     1/2: $1\t_ff2_d[0:0]
+     2/2: $1\t_ff1_d[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25'.
+     1/2: $2\t_ff2_q[0:0]
+     2/2: $1\t_ff2_q[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23'.
+     1/2: $2\t_ff1_q[0:0]
+     2/2: $1\t_ff1_q[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:267$21'.
+     1/1: $0\cycle_cntr_q[7:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$16'.
+     1/3: $3\cycle_cntr_d[7:0]
+     2/3: $2\cycle_cntr_d[7:0]
+     3/3: $1\cycle_cntr_d[7:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+     1/5: $0\gate_en_q[0:0]
+     2/5: $0\clk_gate_state_q[1:0]
+     3/5: $0\div_q[7:0]
+     4/5: $0\clk_div_bypass_en_q[0:0]
+     5/5: $0\use_odd_division_q[0:0]
+Creating decoders for process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+     1/29: $5\clk_gate_state_d[1:0]
+     2/29: $4\clk_gate_state_d[1:0]
+     3/29: $2\clk_div_bypass_en_d[0:0]
+     4/29: $2\use_odd_division_d[0:0]
+     5/29: $2\clear_toggle_flops[0:0]
+     6/29: $2\clear_cycle_counter[0:0]
+     7/29: $4\div_ready_o[0:0]
+     8/29: $2\div_d[7:0]
+     9/29: $4\toggle_ffs_en[0:0]
+    10/29: $3\toggle_ffs_en[0:0]
+    11/29: $3\cycle_counter_en[0:0]
+    12/29: $3\div_ready_o[0:0]
+    13/29: $3\clk_gate_state_d[1:0]
+    14/29: $3\gate_en_d[0:0]
+    15/29: $2\clk_gate_state_d[1:0]
+    16/29: $2\gate_en_d[0:0]
+    17/29: $2\div_ready_o[0:0]
+    18/29: $2\cycle_counter_en[0:0]
+    19/29: $2\toggle_ffs_en[0:0]
+    20/29: $1\clk_gate_state_d[1:0]
+    21/29: $1\gate_en_d[0:0]
+    22/29: $1\cycle_counter_en[0:0]
+    23/29: $1\toggle_ffs_en[0:0]
+    24/29: $1\div_ready_o[0:0]
+    25/29: $1\clear_toggle_flops[0:0]
+    26/29: $1\clear_cycle_counter[0:0]
+    27/29: $1\use_odd_division_d[0:0]
+    28/29: $1\clk_div_bypass_en_d[0:0]
+    29/29: $1\div_d[7:0]
+Creating decoders for process `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv:0$51'.
+     1/1: $0\clk_en[0:0]
+
+16. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\clk_int_div.\t_ff1_en' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32'.
+No latch inferred for signal `\clk_int_div.\t_ff2_en' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32'.
+No latch inferred for signal `\clk_int_div.\t_ff1_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27'.
+No latch inferred for signal `\clk_int_div.\t_ff2_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27'.
+No latch inferred for signal `\clk_int_div.\cycle_cntr_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$16'.
+No latch inferred for signal `\clk_int_div.\div_ready_o' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\div_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\toggle_ffs_en' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\cycle_counter_en' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\clk_div_bypass_en_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\use_odd_division_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\gate_en_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\clear_cycle_counter' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\clear_toggle_flops' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+No latch inferred for signal `\clk_int_div.\clk_gate_state_d' from process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+Latch inferred for signal `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.\clk_en' from process `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv:0$51': $auto$proc_dlatch.cc:433:proc_dlatch$309
+
+17. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\clk_int_div.\gate_is_open_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:372$47'.
+  created $adff cell `$procdff$324' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\t_ff2_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25'.
+  created $adff cell `$procdff$329' with negative edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\t_ff1_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23'.
+  created $adff cell `$procdff$334' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\cycle_cntr_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:267$21'.
+  created $adff cell `$procdff$339' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\div_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+  created $adff cell `$procdff$344' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\clk_div_bypass_en_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+  created $adff cell `$procdff$349' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\use_odd_division_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+  created $adff cell `$procdff$354' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\gate_en_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+  created $adff cell `$procdff$359' with positive edge clock and positive level reset.
+Creating register for signal `\clk_int_div.\clk_gate_state_q' using process `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+  created $adff cell `$procdff$364' with positive edge clock and positive level reset.
+
+18. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+19. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:372$47'.
+Found and cleaned up 2 empty switches in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$32'.
+Found and cleaned up 1 empty switch in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$27'.
+Found and cleaned up 1 empty switch in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:300$25'.
+Found and cleaned up 1 empty switch in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:288$23'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:267$21'.
+Found and cleaned up 3 empty switches in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$16'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$16'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:229$14'.
+Found and cleaned up 6 empty switches in `\clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+Removing empty process `clk_int_div.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:0$4'.
+Found and cleaned up 1 empty switch in `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv:0$51'.
+Removing empty process `$paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.$proc$/home/nakanomiku/DigitalDesign/clk_int_div/tc_clk.sv:0$51'.
+Cleaned up 15 empty switches.
+
+20. Executing CHECK pass (checking for obvious problems).
+Checking module clk_int_div...
+Checking module tc_clk_mux2...
+Checking module $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001...
+Checking module tc_clk_xor2...
+Found and reported 0 problems.
+
+21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+<suppressed ~42 debug messages>
+Optimizing module tc_clk_mux2.
+Optimizing module $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.
+<suppressed ~10 debug messages>
+Optimizing module tc_clk_xor2.
+
+22. Executing FLATTEN pass (flatten design).
+Deleting now unused module tc_clk_mux2.
+Deleting now unused module $paramod\tc_clk_gating\IS_FUNCTIONAL=s32'00000000000000000000000000000001.
+Deleting now unused module tc_clk_xor2.
+<suppressed ~4 debug messages>
+
+23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 15 unused cells and 162 unused wires.
+<suppressed ~17 debug messages>
+
+25. Executing OPT pass (performing simple optimizations).
+
+25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+<suppressed ~108 debug messages>
+Removed a total of 36 cells.
+
+25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$100.
+    dead port 2/2 on $mux $procmux$109.
+    dead port 2/2 on $mux $procmux$116.
+    dead port 2/2 on $mux $procmux$123.
+    dead port 2/2 on $mux $procmux$130.
+    dead port 2/2 on $mux $procmux$137.
+    dead port 2/2 on $mux $procmux$144.
+    dead port 2/2 on $mux $procmux$151.
+    dead port 2/2 on $mux $procmux$158.
+    dead port 2/2 on $mux $procmux$165.
+    dead port 1/2 on $mux $procmux$174.
+    dead port 2/2 on $mux $procmux$176.
+    dead port 1/2 on $mux $procmux$185.
+    dead port 2/2 on $mux $procmux$187.
+    dead port 2/2 on $mux $procmux$196.
+    dead port 2/2 on $mux $procmux$198.
+    dead port 2/2 on $mux $procmux$207.
+    dead port 2/2 on $mux $procmux$209.
+    dead port 2/2 on $mux $procmux$218.
+    dead port 2/2 on $mux $procmux$220.
+    dead port 2/2 on $mux $procmux$228.
+    dead port 2/2 on $mux $procmux$236.
+    dead port 2/2 on $mux $procmux$244.
+    dead port 2/2 on $mux $procmux$252.
+    dead port 2/2 on $mux $procmux$260.
+    dead port 2/2 on $mux $procmux$61.
+    dead port 2/2 on $mux $procmux$67.
+    dead port 2/2 on $mux $procmux$91.
+    dead port 1/2 on $mux $procmux$94.
+    dead port 2/2 on $mux $ternary$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:315$29.
+    dead port 2/2 on $mux $ternary$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:316$31.
+Removed 31 multiplexer ports.
+<suppressed ~17 debug messages>
+
+25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 0 unused cells and 72 unused wires.
+<suppressed ~1 debug messages>
+
+25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+25.16. Finished OPT passes. (There is nothing left to do.)
+
+26. Executing FSM pass (extract and optimize FSM).
+
+26.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking clk_int_div.clk_gate_state_q as FSM state register:
+    Circuit seems to be self-resetting.
+
+26.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+26.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+26.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+26.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+26.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+27. Executing OPT pass (performing simple optimizations).
+
+27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+27.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+27.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+27.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+27.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$364 ($adff) from module clk_int_div (D = \clk_gate_state_d, Q = \clk_gate_state_q).
+Adding EN signal on $procdff$354 ($adff) from module clk_int_div (D = \div_i_normalized [0], Q = \use_odd_division_q).
+Adding EN signal on $procdff$349 ($adff) from module clk_int_div (D = $eq$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:203$11_Y, Q = \clk_div_bypass_en_q).
+Adding EN signal on $procdff$344 ($adff) from module clk_int_div (D = \div_i_normalized, Q = \div_q).
+Adding EN signal on $procdff$339 ($adff) from module clk_int_div (D = \cycle_cntr_d, Q = \cycle_cntr_q).
+Adding EN signal on $procdff$334 ($adff) from module clk_int_div (D = \t_ff1_d, Q = \t_ff1_q).
+Adding EN signal on $procdff$329 ($adff) from module clk_int_div (D = \t_ff2_d, Q = \t_ff2_q).
+
+27.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 8 unused cells and 8 unused wires.
+<suppressed ~12 debug messages>
+
+27.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+<suppressed ~1 debug messages>
+
+27.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+27.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+27.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+27.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+27.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+27.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+27.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+27.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+27.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+27.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+27.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+27.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+27.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+27.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+27.23. Finished OPT passes. (There is nothing left to do.)
+
+28. Executing WREDUCE pass (reducing word size of cells).
+Removed top 24 bits (of 32) from mux cell clk_int_div.$ternary$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:149$3 ($mux).
+Removed top 7 bits (of 8) from port B of cell clk_int_div.$eq$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:203$11 ($eq).
+Removed top 31 bits (of 32) from port B of cell clk_int_div.$sub$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:215$12 ($sub).
+Removed top 23 bits (of 32) from port Y of cell clk_int_div.$sub$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:215$12 ($sub).
+Removed top 31 bits (of 32) from port B of cell clk_int_div.$add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20 ($add).
+Removed top 24 bits (of 32) from port Y of cell clk_int_div.$add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20 ($add).
+Removed top 31 bits (of 32) from port B of cell clk_int_div.$add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$37 ($add).
+Removed top 23 bits (of 32) from port Y of cell clk_int_div.$add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$37 ($add).
+Removed top 23 bits (of 31) from port A of cell clk_int_div.$eq$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$39 ($eq).
+Removed top 23 bits (of 31) from port B of cell clk_int_div.$eq$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$39 ($eq).
+Removed top 1 bits (of 8) from port B of cell clk_int_div.$eq$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:331$43 ($eq).
+Removed top 1 bits (of 2) from port B of cell clk_int_div.$procmux$117_CMP0 ($eq).
+Removed top 24 bits (of 32) from wire clk_int_div.$add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20_Y.
+
+29. Executing PEEPOPT pass (run peephole optimizers).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+31. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module clk_int_div:
+  creating $macc model for $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20 ($add).
+  creating $macc model for $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$37 ($add).
+  creating $macc model for $sub$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:215$12 ($sub).
+  creating $alu model for $macc $sub$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:215$12.
+  creating $alu model for $macc $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$37.
+  creating $alu model for $macc $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20.
+  creating $alu cell for $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:261$20: $auto$alumacc.cc:485:replace_alu$395
+  creating $alu cell for $add$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:329$37: $auto$alumacc.cc:485:replace_alu$398
+  creating $alu cell for $sub$/home/nakanomiku/DigitalDesign/clk_int_div/clk_int_div.sv:215$12: $auto$alumacc.cc:485:replace_alu$401
+  created 3 $alu and 0 $macc cells.
+
+32. Executing SHARE pass (SAT-based resource sharing).
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+33.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+33.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+33.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+33.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+33.9. Finished OPT passes. (There is nothing left to do.)
+
+34. Executing MEMORY pass.
+
+34.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+34.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+34.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+34.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+34.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+34.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+34.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+34.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+34.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+34.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+36. Executing OPT pass (performing simple optimizations).
+
+36.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+<suppressed ~20 debug messages>
+
+36.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+36.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+36.5. Finished fast OPT passes.
+
+37. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+38. Executing OPT pass (performing simple optimizations).
+
+38.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+38.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+38.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+38.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+    New ctrl vector for $pmux cell $procmux$263: { $procmux$177_CMP $procmux$117_CMP }
+  Optimizing cells in module \clk_int_div.
+Performed a total of 1 changes.
+
+38.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+38.6. Executing OPT_SHARE pass.
+
+38.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+38.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+38.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+38.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+38.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+38.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+38.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+38.14. Executing OPT_SHARE pass.
+
+38.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+38.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+38.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+38.18. Finished OPT passes. (There is nothing left to do.)
+
+39. Executing TECHMAP pass (map to technology primitives).
+
+39.1. Executing Verilog-2005 frontend: /nix/store/c26m31cifv9fyym8p72j6cj5ilqgnh2z-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/c26m31cifv9fyym8p72j6cj5ilqgnh2z-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+39.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$a2af9b43308e3114c3b5dd3f4dc3329b2387395d\_90_alu for cells of type $alu.
+Using template $paramod$19189243523493d505a4933d1bad417c570ea8a6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $dlatch.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001001 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $reduce_or.
+No more expansions possible.
+<suppressed ~592 debug messages>
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+<suppressed ~173 debug messages>
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+<suppressed ~39 debug messages>
+Removed a total of 13 cells.
+
+40.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 10 unused cells and 195 unused wires.
+<suppressed ~11 debug messages>
+
+40.5. Finished fast OPT passes.
+
+41. Executing OPT pass (performing simple optimizations).
+
+41.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+41.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+41.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+41.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+41.5. Finished fast OPT passes.
+
+42. Executing ABC pass (technology mapping using ABC).
+
+42.1. Extracting gate netlist of module `\clk_int_div' to `<abc-temp-dir>/input.blif'..
+Extracted 249 gates and 288 wires to a netlist network with 37 inputs and 32 outputs.
+
+42.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+42.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       19
+ABC RESULTS:             ORNOT cells:        4
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:       49
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:               AND cells:        5
+ABC RESULTS:               NOR cells:       11
+ABC RESULTS:            ANDNOT cells:       63
+ABC RESULTS:                OR cells:       63
+ABC RESULTS:        internal signals:      219
+ABC RESULTS:           input signals:       37
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+
+43. Executing OPT pass (performing simple optimizations).
+
+43.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+<suppressed ~3 debug messages>
+
+43.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+43.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+43.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 1 unused cells and 190 unused wires.
+<suppressed ~14 debug messages>
+
+43.5. Finished fast OPT passes.
+
+44. Executing HIERARCHY pass (managing design hierarchy).
+
+44.1. Analyzing design hierarchy..
+Top module:  \clk_int_div
+
+44.2. Analyzing design hierarchy..
+Top module:  \clk_int_div
+Removed 0 unused modules.
+
+45. Executing CHECK pass (checking for obvious problems).
+Checking module clk_int_div...
+Found and reported 0 problems.
+
+46. Printing statistics.
+
+=== clk_int_div ===
+
+   Number of wires:                231
+   Number of wire bits:            275
+   Number of public wires:          38
+   Number of public wire bits:      82
+   Number of ports:                  9
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                249
+     $_ANDNOT_                      62
+     $_AND_                          5
+     $_DFFE_NN0P_                    1
+     $_DFFE_PN0P_                   19
+     $_DFFE_PN1P_                    2
+     $_DFF_NN0_                      1
+     $_DFF_PN0_                      1
+     $_DLATCH_P_                     1
+     $_MUX_                          3
+     $_NAND_                         6
+     $_NOR_                         10
+     $_NOT_                         18
+     $_ORNOT_                        4
+     $_OR_                          60
+     $_XNOR_                         4
+     $_XOR_                         48
+     $scopeinfo                      4
+
+47. Generating Graphviz representation of design.
+Writing dot description to `/home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module clk_int_div to page 1.
+
+48. Executing OPT pass (performing simple optimizations).
+
+48.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+48.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+48.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clk_int_div..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+48.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clk_int_div.
+Performed a total of 0 changes.
+
+48.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clk_int_div'.
+Removed a total of 0 cells.
+
+48.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+48.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+
+48.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clk_int_div.
+
+48.9. Finished OPT passes. (There is nothing left to do.)
+
+49. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 4 unused cells and 10 unused wires.
+<suppressed ~14 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/tmp/5374e4f5301042ac8193ad643a273f1d.lib ",
+   "modules": {
+      "\\clk_int_div": {
+         "num_wires":         221,
+         "num_wire_bits":     258,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 65,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         245,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 62,
+            "$_AND_": 5,
+            "$_DFFE_NN0P_": 1,
+            "$_DFFE_PN0P_": 19,
+            "$_DFFE_PN1P_": 2,
+            "$_DFF_NN0_": 1,
+            "$_DFF_PN0_": 1,
+            "$_DLATCH_P_": 1,
+            "$_MUX_": 3,
+            "$_NAND_": 6,
+            "$_NOR_": 10,
+            "$_NOT_": 18,
+            "$_ORNOT_": 4,
+            "$_OR_": 60,
+            "$_XNOR_": 4,
+            "$_XOR_": 48
+         }
+      }
+   },
+      "design": {
+         "num_wires":         221,
+         "num_wire_bits":     258,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 65,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         245,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 62,
+            "$_AND_": 5,
+            "$_DFFE_NN0P_": 1,
+            "$_DFFE_PN0P_": 19,
+            "$_DFFE_PN1P_": 2,
+            "$_DFF_NN0_": 1,
+            "$_DFF_PN0_": 1,
+            "$_DLATCH_P_": 1,
+            "$_MUX_": 3,
+            "$_NAND_": 6,
+            "$_NOR_": 10,
+            "$_NOT_": 18,
+            "$_ORNOT_": 4,
+            "$_OR_": 60,
+            "$_XNOR_": 4,
+            "$_XOR_": 48
+         }
+      }
+}
+
+50. Printing statistics.
+
+=== clk_int_div ===
+
+   Number of wires:                221
+   Number of wire bits:            258
+   Number of public wires:          28
+   Number of public wire bits:      65
+   Number of ports:                  9
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                245
+     $_ANDNOT_                      62
+     $_AND_                          5
+     $_DFFE_NN0P_                    1
+     $_DFFE_PN0P_                   19
+     $_DFFE_PN1P_                    2
+     $_DFF_NN0_                      1
+     $_DFF_PN0_                      1
+     $_DLATCH_P_                     1
+     $_MUX_                          3
+     $_NAND_                         6
+     $_NOR_                         10
+     $_NOT_                         18
+     $_ORNOT_                        4
+     $_OR_                          60
+     $_XNOR_                         4
+     $_XOR_                         48
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_NN0_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFFE_NN0P_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+   Area for cell type $_DFFE_PN1P_ is unknown!
+   Area for cell type $_DLATCH_P_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+51. Executing TECHMAP pass (map to technology primitives).
+
+51.1. Executing Verilog-2005 frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+51.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+52. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+53. Executing TECHMAP pass (map to technology primitives).
+
+53.1. Executing Verilog-2005 frontend: /home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/nakanomiku/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+53.2. Continuing TECHMAP pass.
+Using template \$_DLATCH_P_ for cells of type $_DLATCH_P_.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+54. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+55. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+55.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\clk_int_div':
+  mapped 22 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+  mapped 2 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/tmp/5374e4f5301042ac8193ad643a273f1d.lib ",
+   "modules": {
+      "\\clk_int_div": {
+         "num_wires":         248,
+         "num_wire_bits":     285,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 65,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         269,
+         "area":              645.619200,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 62,
+            "$_AND_": 5,
+            "$_MUX_": 25,
+            "$_NAND_": 6,
+            "$_NOR_": 10,
+            "$_NOT_": 20,
+            "$_ORNOT_": 4,
+            "$_OR_": 60,
+            "$_XNOR_": 4,
+            "$_XOR_": 48,
+            "sky130_fd_sc_hd__dfrtp_2": 22,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dlxtp_1": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         248,
+         "num_wire_bits":     285,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 65,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         269,
+         "area":              645.619200,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 62,
+            "$_AND_": 5,
+            "$_MUX_": 25,
+            "$_NAND_": 6,
+            "$_NOR_": 10,
+            "$_NOT_": 20,
+            "$_ORNOT_": 4,
+            "$_OR_": 60,
+            "$_XNOR_": 4,
+            "$_XOR_": 48,
+            "sky130_fd_sc_hd__dfrtp_2": 22,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dlxtp_1": 1
+         }
+      }
+}
+
+56. Printing statistics.
+
+=== clk_int_div ===
+
+   Number of wires:                248
+   Number of wire bits:            285
+   Number of public wires:          28
+   Number of public wire bits:      65
+   Number of ports:                  9
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                269
+     $_ANDNOT_                      62
+     $_AND_                          5
+     $_MUX_                         25
+     $_NAND_                         6
+     $_NOR_                         10
+     $_NOT_                         20
+     $_ORNOT_                        4
+     $_OR_                          60
+     $_XNOR_                         4
+     $_XOR_                         48
+     sky130_fd_sc_hd__dfrtp_2       22
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__dlxtp_1        1
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\clk_int_div': 645.619200
+     of which used for sequential elements: 630.604800 (97.67%)
+
+[INFO] Using generated ABC script '/home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/AREA_0.abc'…
+
+57. Executing ABC pass (technology mapping using ABC).
+
+57.1. Extracting gate netlist of module `\clk_int_div' to `/tmp/yosys-abc-894U5D/input.blif'..
+Extracted 244 gates and 281 wires to a netlist network with 37 inputs and 30 outputs.
+
+57.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-894U5D/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-894U5D/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-894U5D/input.blif 
+ABC: + read_lib -w /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/tmp/5374e4f5301042ac8193ad643a273f1d.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/tmp/5374e4f5301042ac8193ad643a273f1d.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.54 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    144 (  5.6 %)   Cap = 12.8 ff (  3.5 %)   Area =     1396.34 ( 84.7 %)   Delay =  2466.25 ps  (  9.0 %)               
+ABC: Path  0 --      14 : 0   11 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  42.7 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     137 : 4    6 sky130_fd_sc_hd__or4_2    A =   8.76  Df = 745.7 -585.2 ps  S = 166.5 ps  Cin =  1.5 ff  Cout =  23.3 ff  Cmax = 310.4 ff  G = 1462  
+ABC: Path  2 --     142 : 4    3 sky130_fd_sc_hd__or4_2    A =   8.76  Df =1357.3-1041.8 ps  S = 128.0 ps  Cin =  1.5 ff  Cout =   9.6 ff  Cmax = 310.4 ff  G =  614  
+ABC: Path  3 --     157 : 5    1 sky130_fd_sc_hd__o2111a_2 A =  12.51  Df =1621.8 -881.7 ps  S =  37.2 ps  Cin =  2.4 ff  Cout =   1.6 ff  Cmax = 299.4 ff  G =   64  
+ABC: Path  4 --     162 : 4    2 sky130_fd_sc_hd__and4_2   A =  10.01  Df =1857.6 -343.4 ps  S =  74.8 ps  Cin =  1.5 ff  Cout =   7.5 ff  Cmax = 300.3 ff  G =  470  
+ABC: Path  5 --     178 : 3    8 sky130_fd_sc_hd__a21oi_2  A =   8.76  Df =2102.3 -388.0 ps  S = 247.2 ps  Cin =  4.6 ff  Cout =  18.4 ff  Cmax = 128.2 ff  G =  388  
+ABC: Path  6 --     179 : 3    1 sky130_fd_sc_hd__mux2_1   A =  11.26  Df =2466.3 -316.8 ps  S = 300.4 ps  Cin =  2.3 ff  Cout =  33.4 ff  Cmax = 173.0 ff  G = 1465  
+ABC: Start-point = pi13 (\div_q [0]).  End-point = po12 ($auto$rtlil.cc:2739:MuxGate$1409).
+ABC: netlist                       : i/o =   37/   30  lat =    0  nd =   144  edge =    398  area =1396.59  delay = 6.00  lev = 6
+ABC: + write_blif /tmp/yosys-abc-894U5D/output.blif 
+
+57.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o41a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       18
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        7
+ABC RESULTS:        internal signals:      214
+ABC RESULTS:           input signals:       37
+ABC RESULTS:          output signals:       30
+Removing temp directory.
+
+58. Executing SETUNDEF pass (replace undef values with defined constants).
+
+59. Executing HILOMAP pass (mapping to constant drivers).
+
+60. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+61. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clk_int_div..
+Removed 0 unused cells and 284 unused wires.
+<suppressed ~24 debug messages>
+
+62. Executing INSBUF pass (insert buffer cells for connected wires).
+
+63. Executing CHECK pass (checking for obvious problems).
+Checking module clk_int_div...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/nakanomiku/DigitalDesign/clk_int_div/runs/RUN_2024-11-01_17-08-01/tmp/5374e4f5301042ac8193ad643a273f1d.lib ",
+   "modules": {
+      "\\clk_int_div": {
+         "num_wires":         168,
+         "num_wire_bits":     182,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 42,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         169,
+         "area":              2041.958400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 7,
+            "sky130_fd_sc_hd__a21oi_2": 1,
+            "sky130_fd_sc_hd__a221o_2": 1,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 3,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 2,
+            "sky130_fd_sc_hd__a32o_2": 6,
+            "sky130_fd_sc_hd__and2_2": 2,
+            "sky130_fd_sc_hd__and2b_2": 3,
+            "sky130_fd_sc_hd__and3_2": 2,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__and4_2": 6,
+            "sky130_fd_sc_hd__and4b_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 22,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dlxtp_1": 1,
+            "sky130_fd_sc_hd__inv_2": 8,
+            "sky130_fd_sc_hd__mux2_1": 12,
+            "sky130_fd_sc_hd__nand2_2": 18,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nand3_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 7,
+            "sky130_fd_sc_hd__nor4_2": 1,
+            "sky130_fd_sc_hd__o2111a_2": 2,
+            "sky130_fd_sc_hd__o211a_2": 2,
+            "sky130_fd_sc_hd__o21a_2": 1,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o41a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 10,
+            "sky130_fd_sc_hd__or3_2": 4,
+            "sky130_fd_sc_hd__or4_2": 7,
+            "sky130_fd_sc_hd__xnor2_2": 11,
+            "sky130_fd_sc_hd__xor2_2": 12
+         }
+      }
+   },
+      "design": {
+         "num_wires":         168,
+         "num_wire_bits":     182,
+         "num_pub_wires":     28,
+         "num_pub_wire_bits": 42,
+         "num_ports":         9,
+         "num_port_bits":     23,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         169,
+         "area":              2041.958400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 1,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 7,
+            "sky130_fd_sc_hd__a21oi_2": 1,
+            "sky130_fd_sc_hd__a221o_2": 1,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 3,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 2,
+            "sky130_fd_sc_hd__a32o_2": 6,
+            "sky130_fd_sc_hd__and2_2": 2,
+            "sky130_fd_sc_hd__and2b_2": 3,
+            "sky130_fd_sc_hd__and3_2": 2,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__and4_2": 6,
+            "sky130_fd_sc_hd__and4b_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 22,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dlxtp_1": 1,
+            "sky130_fd_sc_hd__inv_2": 8,
+            "sky130_fd_sc_hd__mux2_1": 12,
+            "sky130_fd_sc_hd__nand2_2": 18,
+            "sky130_fd_sc_hd__nand2b_2": 2,
+            "sky130_fd_sc_hd__nand3_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 7,
+            "sky130_fd_sc_hd__nor4_2": 1,
+            "sky130_fd_sc_hd__o2111a_2": 2,
+            "sky130_fd_sc_hd__o211a_2": 2,
+            "sky130_fd_sc_hd__o21a_2": 1,
+            "sky130_fd_sc_hd__o21ai_2": 3,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__o41a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 10,
+            "sky130_fd_sc_hd__or3_2": 4,
+            "sky130_fd_sc_hd__or4_2": 7,
+            "sky130_fd_sc_hd__xnor2_2": 11,
+            "sky130_fd_sc_hd__xor2_2": 12
+         }
+      }
+}
+
+64. Printing statistics.
+
+=== clk_int_div ===
+
+   Number of wires:                168
+   Number of wire bits:            182
+   Number of public wires:          28
+   Number of public wire bits:      42
+   Number of ports:                  9
+   Number of port bits:             23
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                169
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2         7
+     sky130_fd_sc_hd__a21oi_2        1
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2         3
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a31o_2         2
+     sky130_fd_sc_hd__a32o_2         6
+     sky130_fd_sc_hd__and2_2         2
+     sky130_fd_sc_hd__and2b_2        3
+     sky130_fd_sc_hd__and3_2         2
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__and4_2         6
+     sky130_fd_sc_hd__and4b_2        1
+     sky130_fd_sc_hd__dfrtp_2       22
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__dlxtp_1        1
+     sky130_fd_sc_hd__inv_2          8
+     sky130_fd_sc_hd__mux2_1        12
+     sky130_fd_sc_hd__nand2_2       18
+     sky130_fd_sc_hd__nand2b_2       2
+     sky130_fd_sc_hd__nand3_2        2
+     sky130_fd_sc_hd__nor2_2         7
+     sky130_fd_sc_hd__nor4_2         1
+     sky130_fd_sc_hd__o2111a_2       2
+     sky130_fd_sc_hd__o211a_2        2
+     sky130_fd_sc_hd__o21a_2         1
+     sky130_fd_sc_hd__o21ai_2        3
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2         10
+     sky130_fd_sc_hd__or3_2          4
+     sky130_fd_sc_hd__or4_2          7
+     sky130_fd_sc_hd__xnor2_2       11
+     sky130_fd_sc_hd__xor2_2        12
+
+   Chip area for module '\clk_int_div': 2041.958400
+     of which used for sequential elements: 630.604800 (30.88%)
+
+65. Executing Verilog backend.
+Dumping module `\clk_int_div'.
+
+66. Executing JSON backend.
