@@ -31,10 +31,24 @@ N 750 -200 760 -200 {
 lab=vcon}
 N 670 -260 700 -260 {
 lab=Ub}
+N 950 -230 990 -230 {
+lab=AVDD}
+N 910 -200 950 -200 {
+lab=AVDD}
+N 910 -260 910 -200 {
+lab=AVDD}
+N 910 -260 950 -260 {
+lab=AVDD}
+N 910 -90 950 -90 {
+lab=AVSS}
+N 910 -150 910 -90 {
+lab=AVSS}
+N 910 -150 950 -150 {
+lab=AVSS}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Yohanes Stefanus"}
 C {sky130_fd_pr/pfet_01v8.sym} 730 -260 0 0 {name=M1
-W=wpmos
-L=lmos
+W=2.5
+L=0.5
 nf=1
 mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -47,8 +61,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 730 -150 0 0 {name=M2
-W=wnmos
-L=lmos
+W=2.5
+L=0.5
 nf=1 
 mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -71,11 +85,39 @@ C {devices/ipin.sym} 530 -250 0 0 {name=p7 lab=D}
 C {devices/opin.sym} 510 -230 0 0 {name=p8 lab=vcon}
 C {devices/ipin.sym} 530 -210 0 0 {name=p9 lab=AVDD}
 C {devices/ipin.sym} 530 -190 0 0 {name=p10 lab=AVSS}
-C {devices/param.sym} 420 -380 0 0 {name=s1 value="
-+wpmos=2.5
-+wnmos=2.5
-+lmos=1.2"}
 C {sky130_stdcells/buf_1.sym} 660 -150 0 0 {name=x1 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/inv_1.sym} 630 -260 0 0 {name=x2 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} 530 -170 0 0 {name=p11 lab=DVDD}
 C {devices/ipin.sym} 530 -150 0 0 {name=p12 lab=DVSS}
+C {sky130_fd_pr/pfet_01v8.sym} 930 -230 0 0 {name=M3
+W=2.5
+L=0.15
+nf=1
+mult=4
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 930 -120 0 0 {name=M4
+W=2.5
+L=0.15
+nf=1 
+mult=4
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 990 -230 0 1 {name=p14 sig_type=std_logic lab=AVDD}
+C {devices/lab_pin.sym} 910 -260 0 0 {name=p15 sig_type=std_logic lab=AVDD}
+C {devices/lab_pin.sym} 950 -120 0 1 {name=p16 sig_type=std_logic lab=AVSS}
+C {devices/lab_pin.sym} 910 -150 0 0 {name=p17 sig_type=std_logic lab=AVSS}
