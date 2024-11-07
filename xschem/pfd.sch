@@ -1,4 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
+v {xschem version=3.4.6RC file_version=1.2
 }
 G {}
 K {}
@@ -37,8 +37,13 @@ C {devices/lab_pin.sym} 500 -240 0 0 {name=p15 sig_type=std_logic lab=DVDD}
 C {devices/lab_pin.sym} 500 -150 0 0 {name=p16 sig_type=std_logic lab=DVDD}
 C {devices/lab_pin.sym} 500 -220 0 0 {name=p17 sig_type=std_logic lab=DVSS}
 C {devices/lab_pin.sym} 500 -130 0 0 {name=p18 sig_type=std_logic lab=DVSS}
+<<<<<<< HEAD
 C {tspc_dff.sym} 650 -250 0 0 {name=x1}
 C {tspc_dff.sym} 650 -160 0 0 {name=x2}
 C {sky130_stdcells/buf_8.sym} 860 -280 0 0 {name=x4 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/buf_8.sym} 860 -190 0 0 {name=x5 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/and2_1.sym} 1000 -230 0 0 {name=x3 VGND=DVSS VNB=DVSS VPB=DVDD VPWR=DVDD prefix=sky130_fd_sc_hd__ }
+=======
+C {/home/gils/aic/sky130_its_biomedical_chip_research_2024/xschem/tspc_dff.sym} 650 -250 0 0 {name=x1}
+C {/home/gils/aic/sky130_its_biomedical_chip_research_2024/xschem/tspc_dff.sym} 650 -160 0 0 {name=x2}
+>>>>>>> main
